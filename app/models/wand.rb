@@ -1,3 +1,4 @@
+# typed: ignore
 class Wand < ApplicationRecord
 
   enum core_type: {

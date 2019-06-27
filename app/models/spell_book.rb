@@ -1,3 +1,4 @@
+# typed: ignore
 class SpellBook < ApplicationRecord
 
   validates :name, length: { minimum: 5 }, presence: true

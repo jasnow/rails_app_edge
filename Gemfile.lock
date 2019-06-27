@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 1518ce3dc8dc092a32cf1020ff7c67f2337b3993
+  revision: 7e08b6d2b2b67edbd0314b3a15c9ed5633f1c753
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -128,6 +128,7 @@ GEM
     ruby_dep (1.5.0)
     sorbet (0.4.4334)
       sorbet-static (= 0.4.4334)
+    sorbet-rails (0.2.0)
     sorbet-runtime (0.4.4334)
     sorbet-static (0.4.4334-universal-darwin-14)
     sprockets (3.7.2)
@@ -156,6 +157,7 @@ DEPENDENCIES
   puma
   rails!
   sorbet
+  sorbet-rails
   sorbet-runtime
   sqlite3
   tzinfo-data
