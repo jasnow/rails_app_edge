@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 89afd816bdf8e5625237891c2ff0ac2db71ea5d6
+  revision: 4b621df3840542c369a2db40529396033af3ec55
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -126,11 +126,11 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     ruby_dep (1.5.0)
-    sorbet (0.4.4356)
-      sorbet-static (= 0.4.4356)
+    sorbet (0.4.4358)
+      sorbet-static (= 0.4.4358)
     sorbet-rails (0.2.0)
-    sorbet-runtime (0.4.4356)
-    sorbet-static (0.4.4356-universal-darwin-14)
+    sorbet-runtime (0.4.4358)
+    sorbet-static (0.4.4358-universal-darwin-14)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
