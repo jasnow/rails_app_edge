@@ -128,7 +128,6 @@ GEM
     ruby_dep (1.5.0)
     sorbet (0.4.4394)
       sorbet-static (= 0.4.4394)
-    sorbet-rails (0.3.0)
     sorbet-runtime (0.4.4394)
     sorbet-static (0.4.4394-universal-darwin-14)
     sprockets (3.7.2)
@@ -157,7 +156,6 @@ DEPENDENCIES
   puma
   rails!
   sorbet
-  sorbet-rails
   sorbet-runtime
   sqlite3
   tzinfo-data
