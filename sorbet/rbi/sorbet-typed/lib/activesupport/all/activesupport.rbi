@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/activesupport/all/activesupport.rbi
 #
-# typed: true
+# typed: strong
 
 module ActiveSupport
   sig {params(kind: Symbol, blk: T.proc.bind(T.class_of(ActionController::Base)).void).void}
@@ -66,7 +66,7 @@ class Object
 
   sig do
     params(
-      options: Hash,
+      options: T::Hash[T.untyped, T.untyped],
       block: T.nilable(T.proc.returns(T.untyped))
     ).returns(T.untyped)
   end

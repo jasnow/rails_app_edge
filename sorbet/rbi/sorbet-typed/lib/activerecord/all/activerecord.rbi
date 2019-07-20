@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/activerecord/all/activerecord.rbi
 #
-# typed: true
+# typed: strong
 
 VariadicUntypedFunction = T.type_alias(
   T.any(
@@ -740,14 +740,14 @@ module ActiveRecord::Persistence::ClassMethods
   end
   def insert(attributes, returning: nil, unique_by: nil); end
 
-  sig { params(attributes: T.untyped, column_types: Hash, blk: T.proc.void).returns(T.untyped) }
+  sig { params(attributes: T.untyped, column_types: T::Hash[T.untyped, T.untyped], blk: T.proc.void).returns(T.untyped) }
   def instantiate(attributes, column_types = {}, &blk); end
 
   sig do
     params(
       id: T.any(T.untyped, T::Array[T.untyped], Symbol),
       attributes: T::Hash[T.any(Symbol, String), T.untyped]
-    ).returns(T.any(Array, T.untyped))
+    ).returns(T.any(T::Array[T.untyped], T.untyped))
   end
   def update(id = :all, attributes); end
 
@@ -871,7 +871,7 @@ module ActiveRecord
 end
 
 class ActiveRecord::Schema < ActiveRecord::Migration::Current
-  sig {params(info: Hash, blk: T.proc.bind(ActiveRecord::Schema).void).void}
+  sig {params(info: T::Hash[T.untyped, T.untyped], blk: T.proc.bind(ActiveRecord::Schema).void).void}
   def self.define(info = nil, &blk); end
 end
 
