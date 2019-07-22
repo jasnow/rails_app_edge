@@ -20,9 +20,12 @@ module ActiveRecord::AttributeMethods::Write; end
 module ActiveRecord::Attributes; end
 module ActiveRecord::AutosaveAssociation; end
 module ActiveRecord::Callbacks; end
+module ActiveRecord::CollectionCacheKey; end
 module ActiveRecord::ConnectionHandling; end
 module ActiveRecord::Core; end
 module ActiveRecord::CounterCache; end
+module ActiveRecord::DefineCallbacks; end
+module ActiveRecord::Delegation::DelegateCache; end
 module ActiveRecord::DynamicMatchers; end
 module ActiveRecord::Enum; end
 module ActiveRecord::Explain; end
@@ -36,9 +39,12 @@ module ActiveRecord::Querying; end
 module ActiveRecord::ReadonlyAttributes; end
 module ActiveRecord::Reflection; end
 module ActiveRecord::Sanitization; end
+module ActiveRecord::SecureToken; end
 module ActiveRecord::Serialization; end
 module ActiveRecord::Store; end
+module ActiveRecord::Suppressor; end
 module ActiveRecord::Timestamp; end
+module ActiveRecord::TouchLater; end
 module ActiveRecord::Transactions; end
 module ActiveRecord::Translation; end
 module ActiveSupport::ActionController::Base; end
