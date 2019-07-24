@@ -21,6 +21,7 @@ module ActiveRecord::Attributes; end
 module ActiveRecord::AutosaveAssociation; end
 module ActiveRecord::Callbacks; end
 module ActiveRecord::CollectionCacheKey; end
+module ActiveRecord::ConnectionAdapters::TableDefinition; end
 module ActiveRecord::ConnectionHandling; end
 module ActiveRecord::Core; end
 module ActiveRecord::CounterCache; end
