@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/activerecord/all/activerecord.rbi
 #
-# typed: ignore
+# typed: strong
 
 VariadicUntypedFunction = T.type_alias(
   T.any(
@@ -172,12 +172,12 @@ module ActiveRecord::Associations::ClassMethods
       autosave: T.nilable(T::Boolean),
       before_add: T.nilable(T.any(Symbol, String, T.proc.void)),
       before_remove: T.nilable(T.any(Symbol, String, T.proc.void)),
-      blk: T.nilable(T.proc.void),
       class_name: T.nilable(T.any(Symbol, String)),
       extend: T.nilable(T.any(Module, T::Array[Module])),
       foreign_key: T.nilable(T.any(Symbol, String)),
       join_table: T.nilable(T.any(Symbol, String)),
       validate: T.nilable(T::Boolean),
+      blk: T.nilable(T.proc.void)
     ).void
   end
   def has_and_belongs_to_many(
