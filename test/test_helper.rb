@@ -1,11 +1,11 @@
-# typed: false
-ENV['RAILS_ENV'] ||= 'test'
-require_relative '../config/environment'
-require 'rails/test_help'
+# typed: strong
+#HID: ENV['RAILS_ENV'] ||= 'test'
+#HID: require_relative '../config/environment'
+#HID: require 'rails/test_help'
 
-class ActiveSupport::TestCase
+#HID: class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+#HID:   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-end
+#HID: end
