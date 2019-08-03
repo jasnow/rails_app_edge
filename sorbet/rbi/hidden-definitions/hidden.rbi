@@ -5194,15 +5194,11 @@ class Array
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   include ::JSON::Ext::Generator::GeneratorMethods::Array
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def append(*_); end
-
   def bsearch(); end
 
   def bsearch_index(); end
 
   def collect!(); end
-
-  def difference(*_); end
 
   def dig(*_); end
 
@@ -5212,15 +5208,12 @@ class Array
 
   def pack(*_); end
 
-  def prepend(*_); end
-
   def replace(_); end
 
   def shelljoin(); end
 
   def to_h(); end
 
-  def union(*_); end
 end
 
 class Array
@@ -20232,14 +20225,6 @@ end
 
 class ThreadGroup
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def add(_); end
-
-  def enclose(); end
-
-  def enclosed?(); end
-
-  def list(); end
-  Default = ::T.let(nil, ::T.untyped)
 end
 
 module ThreadSafe

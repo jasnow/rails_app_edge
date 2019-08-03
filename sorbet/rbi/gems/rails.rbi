@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-f3c68c59ed57
+# rails-99650550e8db
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -11818,7 +11818,7 @@ class ActiveRecord::ConnectionAdapters::ConnectionHandler
   def self.create_owner_to_pool; end
   def self.discard_unowned_pools(pid_map); end
   def self.unowned_pool_finalizer(pid_map); end
-  def while_preventing_writes; end
+  def while_preventing_writes(enabled = nil); end
 end
 class ActiveRecord::InsertAll
   def connection; end

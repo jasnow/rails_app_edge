@@ -25,8 +25,6 @@
 # wrong constant name <RESERVED_111>
 # wrong constant name <RESERVED_112>
 # wrong constant name <RESERVED_113>
-# wrong constant name <RESERVED_114>
-# wrong constant name <RESERVED_115>
 # wrong constant name <RESERVED_11>
 # wrong constant name <RESERVED_12>
 # wrong constant name <RESERVED_13>
@@ -2313,12 +2311,10 @@
 # Did you mean?  to_s
 # wrong constant name []$2
 # wrong constant name []=$2
-# wrong constant name append
 # wrong constant name bsearch
 # wrong constant name bsearch_index
 # wrong constant name collect!
 # wrong constant name concat$1
-# wrong constant name difference
 # wrong constant name dig
 # wrong constant name fetch$2
 # wrong constant name fill$2
@@ -2333,7 +2329,6 @@
 # wrong constant name pack
 # wrong constant name permutation$2
 # wrong constant name pop$2
-# wrong constant name prepend
 # wrong constant name replace
 # wrong constant name rindex$2
 # wrong constant name rotate$1
@@ -2348,7 +2343,6 @@
 # wrong constant name sum$2
 # wrong constant name to_h
 # wrong constant name to_s$1
-# wrong constant name union
 # wrong constant name try_convert
 # wrong constant name <Class:BasicObject>
 # wrong constant name initialize
@@ -10657,10 +10651,6 @@
 # wrong constant name report_on_exception=
 # wrong constant name start
 # wrong constant name stop
-# wrong constant name add
-# wrong constant name enclose
-# wrong constant name enclosed?
-# wrong constant name list
 # wrong constant name <Class:AtomicReferenceCacheBackend>
 # wrong constant name <Class:SynchronizedCacheBackend>
 # wrong constant name <Class:Util>
