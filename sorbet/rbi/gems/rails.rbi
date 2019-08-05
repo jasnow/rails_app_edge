@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-5f3848a979e6
+# rails-170f5113d7d5
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -409,12 +409,12 @@ class Module
   def self.attr_internal_naming_format; end
   def self.attr_internal_naming_format=(arg0); end
   def silence_redefinition_of_method(method); end
-  def thread_cattr_accessor(*syms, instance_reader: nil, instance_writer: nil, instance_accessor: nil); end
-  def thread_cattr_reader(*syms, instance_reader: nil, instance_accessor: nil); end
-  def thread_cattr_writer(*syms, instance_writer: nil, instance_accessor: nil); end
-  def thread_mattr_accessor(*syms, instance_reader: nil, instance_writer: nil, instance_accessor: nil); end
-  def thread_mattr_reader(*syms, instance_reader: nil, instance_accessor: nil); end
-  def thread_mattr_writer(*syms, instance_writer: nil, instance_accessor: nil); end
+  def thread_cattr_accessor(*syms, instance_reader: nil, instance_writer: nil, instance_accessor: nil, default: nil); end
+  def thread_cattr_reader(*syms, instance_reader: nil, instance_accessor: nil, default: nil); end
+  def thread_cattr_writer(*syms, instance_writer: nil, instance_accessor: nil, default: nil); end
+  def thread_mattr_accessor(*syms, instance_reader: nil, instance_writer: nil, instance_accessor: nil, default: nil); end
+  def thread_mattr_reader(*syms, instance_reader: nil, instance_accessor: nil, default: nil); end
+  def thread_mattr_writer(*syms, instance_writer: nil, instance_accessor: nil, default: nil); end
   include ActiveSupport::Dependencies::ModuleConstMissing
   include Module::Concerning
 end
@@ -7963,11 +7963,10 @@ module ActionView::Helpers::SanitizeHelper::ClassMethods
   def full_sanitizer=(arg0); end
   def link_sanitizer; end
   def link_sanitizer=(arg0); end
+  def safe_list_sanitizer; end
+  def safe_list_sanitizer=(arg0); end
   def sanitized_allowed_attributes; end
   def sanitized_allowed_tags; end
-  def sanitizer_vendor; end
-  def white_list_sanitizer; end
-  def white_list_sanitizer=(arg0); end
 end
 module ActionView::Helpers::TextHelper
   def concat(string); end
