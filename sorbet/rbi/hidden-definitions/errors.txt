@@ -23,8 +23,6 @@
 # wrong constant name <RESERVED_10>
 # wrong constant name <RESERVED_110>
 # wrong constant name <RESERVED_111>
-# wrong constant name <RESERVED_112>
-# wrong constant name <RESERVED_113>
 # wrong constant name <RESERVED_11>
 # wrong constant name <RESERVED_12>
 # wrong constant name <RESERVED_13>
@@ -3262,97 +3260,12 @@
 # uninitialized constant FileUtils::DryRun::LN_SUPPORTED
 # uninitialized constant FileUtils::DryRun::RUBY
 # uninitialized constant FileUtils::DryRun::VERSION
-# wrong constant name blockdev?
-# wrong constant name chardev?
-# wrong constant name chmod
-# wrong constant name chown
-# wrong constant name copy
-# wrong constant name copy_file
-# wrong constant name copy_metadata
-# wrong constant name dereference?
-# wrong constant name directory?
-# wrong constant name door?
-# wrong constant name entries
-# wrong constant name exist?
-# wrong constant name file?
-# wrong constant name initialize
-# wrong constant name link
-# wrong constant name lstat
-# wrong constant name lstat!
-# wrong constant name path
-# wrong constant name pipe?
-# wrong constant name platform_support
-# wrong constant name postorder_traverse
-# wrong constant name prefix
-# wrong constant name preorder_traverse
-# wrong constant name rel
-# wrong constant name remove
-# wrong constant name remove_dir1
-# wrong constant name remove_file
-# wrong constant name socket?
-# wrong constant name stat
-# wrong constant name stat!
-# wrong constant name symlink?
-# wrong constant name traverse
-# wrong constant name wrap_traverse
 # uninitialized constant FileUtils::NoWrite::LN_SUPPORTED
 # uninitialized constant FileUtils::NoWrite::RUBY
 # uninitialized constant FileUtils::NoWrite::VERSION
 # uninitialized constant FileUtils::Verbose::LN_SUPPORTED
 # uninitialized constant FileUtils::Verbose::RUBY
 # uninitialized constant FileUtils::Verbose::VERSION
-# undefined singleton method `cp_r$1' for `FileUtils'
-# undefined singleton method `mkdir_p$1' for `FileUtils'
-# wrong constant name cd
-# wrong constant name chdir
-# wrong constant name chmod
-# wrong constant name chmod_R
-# wrong constant name chown
-# wrong constant name chown_R
-# wrong constant name cmp
-# wrong constant name collect_method
-# wrong constant name commands
-# wrong constant name compare_file
-# wrong constant name compare_stream
-# wrong constant name copy
-# wrong constant name copy_entry
-# wrong constant name copy_file
-# wrong constant name copy_stream
-# wrong constant name cp
-# wrong constant name cp_lr
-# wrong constant name cp_r$1
-# wrong constant name getwd
-# wrong constant name have_option?
-# wrong constant name identical?
-# wrong constant name install
-# wrong constant name link
-# wrong constant name link_entry
-# wrong constant name ln
-# wrong constant name ln_s
-# wrong constant name ln_sf
-# wrong constant name makedirs
-# wrong constant name mkdir
-# wrong constant name mkdir_p$1
-# wrong constant name mkpath
-# wrong constant name move
-# wrong constant name mv
-# wrong constant name options
-# wrong constant name options_of
-# wrong constant name private_module_function
-# wrong constant name pwd
-# wrong constant name remove
-# wrong constant name remove_dir
-# wrong constant name remove_entry
-# wrong constant name remove_entry_secure
-# wrong constant name remove_file
-# wrong constant name rm
-# wrong constant name rm_f
-# wrong constant name rm_rf
-# wrong constant name rmdir
-# wrong constant name rmtree
-# wrong constant name safe_unlink
-# wrong constant name symlink
-# wrong constant name uptodate?
 # undefined method `rationalize$2' for class `Float'
 # Did you mean?  Rational
 # uninitialized constant Float::EXABYTE
@@ -5252,7 +5165,6 @@
 # wrong constant name transform_values
 # wrong constant name transform_values!
 # wrong constant name update
-# wrong constant name from_trusted_xml
 # wrong constant name try_convert
 # wrong constant name <Class:Gettext>
 # wrong constant name <Class:Locale>
@@ -10425,10 +10337,10 @@
 # wrong constant name disable_tracepoints
 # wrong constant name finish
 # wrong constant name install_tracepoints
-# wrong constant name method_added
-# wrong constant name module_created
-# wrong constant name module_extended
-# wrong constant name module_included
+# wrong constant name on_method_added
+# wrong constant name on_module_created
+# wrong constant name on_module_extended
+# wrong constant name on_module_included
 # wrong constant name pre_cache_module_methods
 # wrong constant name register_delegate_class
 # wrong constant name start
@@ -10751,11 +10663,8 @@
 # undefined method `upcase$1' for class `Symbol'
 # wrong constant name []$2
 # wrong constant name capitalize$1
-# wrong constant name casecmp?
 # wrong constant name downcase$1
 # wrong constant name match$1
-# wrong constant name match?
-# wrong constant name next
 # wrong constant name slice$2
 # wrong constant name swapcase$1
 # wrong constant name upcase$1
