@@ -2350,6 +2350,10 @@ class ActiveJob::QueueAdapters::InlineAdapter
 end
 
 class ActiveJob::QueueAdapters::TestAdapter
+  def at(); end
+
+  def at=(at); end
+
   def enqueue(job); end
 
   def enqueue_at(job, timestamp); end
@@ -2396,7 +2400,7 @@ end
 module ActiveJob::TestHelper
   def after_teardown(); end
 
-  def assert_enqueued_jobs(number, only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil)); end
+  def assert_enqueued_jobs(number, only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), at: T.unsafe(nil)); end
 
   def assert_enqueued_with(job: T.unsafe(nil), args: T.unsafe(nil), at: T.unsafe(nil), queue: T.unsafe(nil)); end
 
@@ -2414,7 +2418,7 @@ module ActiveJob::TestHelper
 
   def enqueued_jobs=(arg); end
 
-  def perform_enqueued_jobs(only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil)); end
+  def perform_enqueued_jobs(only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), at: T.unsafe(nil)); end
 
   def performed_jobs(*args, &block); end
 
@@ -4095,6 +4099,8 @@ module ActiveRecord::Tasks::DatabaseTasks
   def schema_file(format=T.unsafe(nil)); end
 
   def schema_file_type(format=T.unsafe(nil)); end
+
+  def schema_up_to_date?(configuration, format=T.unsafe(nil), file=T.unsafe(nil), environment=T.unsafe(nil), spec_name=T.unsafe(nil)); end
 
   def seed_loader(); end
 

@@ -1154,6 +1154,8 @@
 # wrong constant name enqueue
 # wrong constant name enqueue_at
 # wrong constant name <static-init>
+# wrong constant name at
+# wrong constant name at=
 # wrong constant name enqueue
 # wrong constant name enqueue_at
 # wrong constant name enqueued_jobs
@@ -1870,6 +1872,7 @@
 # wrong constant name root=
 # wrong constant name schema_file
 # wrong constant name schema_file_type
+# wrong constant name schema_up_to_date?
 # wrong constant name seed_loader
 # wrong constant name seed_loader=
 # wrong constant name setup_initial_database_yaml
