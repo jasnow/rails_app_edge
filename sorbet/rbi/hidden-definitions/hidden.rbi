@@ -2400,7 +2400,7 @@ end
 module ActiveJob::TestHelper
   def after_teardown(); end
 
-  def assert_enqueued_jobs(number, only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), at: T.unsafe(nil)); end
+  def assert_enqueued_jobs(number, only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil)); end
 
   def assert_enqueued_with(job: T.unsafe(nil), args: T.unsafe(nil), at: T.unsafe(nil), queue: T.unsafe(nil)); end
 
