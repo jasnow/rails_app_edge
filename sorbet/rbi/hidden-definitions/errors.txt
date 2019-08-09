@@ -5168,7 +5168,7 @@
 # wrong constant name transform_values
 # wrong constant name transform_values!
 # wrong constant name update
-# wrong constant name try_convert
+# wrong constant name from_trusted_xml
 # wrong constant name <Class:Gettext>
 # wrong constant name <Class:Locale>
 # wrong constant name <Class:Middleware>
@@ -8694,6 +8694,9 @@
 # uninitialized constant Puma::Binder::HTTP_HOST
 # uninitialized constant Puma::Binder::HTTP_VERSION
 # uninitialized constant Puma::Binder::HTTP_X_FORWARDED_FOR
+# uninitialized constant Puma::Binder::HTTP_X_FORWARDED_PROTO
+# uninitialized constant Puma::Binder::HTTP_X_FORWARDED_SCHEME
+# uninitialized constant Puma::Binder::HTTP_X_FORWARDED_SSL
 # uninitialized constant Puma::Binder::KEEP_ALIVE
 # uninitialized constant Puma::Binder::LINE_END
 # uninitialized constant Puma::Binder::LOCALHOST
@@ -8771,6 +8774,9 @@
 # uninitialized constant Puma::Client::HTTP_HOST
 # uninitialized constant Puma::Client::HTTP_VERSION
 # uninitialized constant Puma::Client::HTTP_X_FORWARDED_FOR
+# uninitialized constant Puma::Client::HTTP_X_FORWARDED_PROTO
+# uninitialized constant Puma::Client::HTTP_X_FORWARDED_SCHEME
+# uninitialized constant Puma::Client::HTTP_X_FORWARDED_SSL
 # uninitialized constant Puma::Client::KEEP_ALIVE
 # uninitialized constant Puma::Client::LINE_END
 # uninitialized constant Puma::Client::LOCALHOST
@@ -8848,6 +8854,9 @@
 # uninitialized constant Puma::Events::HTTP_HOST
 # uninitialized constant Puma::Events::HTTP_VERSION
 # uninitialized constant Puma::Events::HTTP_X_FORWARDED_FOR
+# uninitialized constant Puma::Events::HTTP_X_FORWARDED_PROTO
+# uninitialized constant Puma::Events::HTTP_X_FORWARDED_SCHEME
+# uninitialized constant Puma::Events::HTTP_X_FORWARDED_SSL
 # uninitialized constant Puma::Events::KEEP_ALIVE
 # uninitialized constant Puma::Events::LINE_END
 # uninitialized constant Puma::Events::LOCALHOST
@@ -8928,6 +8937,9 @@
 # uninitialized constant Puma::Server::HTTP_HOST
 # uninitialized constant Puma::Server::HTTP_VERSION
 # uninitialized constant Puma::Server::HTTP_X_FORWARDED_FOR
+# uninitialized constant Puma::Server::HTTP_X_FORWARDED_PROTO
+# uninitialized constant Puma::Server::HTTP_X_FORWARDED_SCHEME
+# uninitialized constant Puma::Server::HTTP_X_FORWARDED_SSL
 # uninitialized constant Puma::Server::KEEP_ALIVE
 # uninitialized constant Puma::Server::LINE_END
 # uninitialized constant Puma::Server::LOCALHOST

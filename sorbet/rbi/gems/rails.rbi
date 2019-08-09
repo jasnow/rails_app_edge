@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-6170a2a50226
+# rails-bdfd47053108
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -37,8 +37,8 @@ class Hash
   def reverse_merge!(other_hash); end
   def reverse_merge(other_hash); end
   def reverse_update(other_hash); end
-  def self.from_trusted_xml(xml); end
   def self.from_xml(xml, disallowed_types = nil); end
+  def self.try_convert(arg0); end
   def slice!(*keys); end
   def stringify_keys!; end
   def stringify_keys; end
@@ -846,8 +846,8 @@ class ActiveSupport::HashWithIndifferentAccess < Hash
   def initialize(constructor = nil); end
   def key?(key); end
   def member?(key); end
-  def merge!(other_hash); end
-  def merge(hash, &block); end
+  def merge!(*other_hashes, &block); end
+  def merge(*hashes, &block); end
   def nested_under_indifferent_access; end
   def regular_update(*arg0); end
   def regular_writer(arg0, arg1); end
@@ -870,7 +870,8 @@ class ActiveSupport::HashWithIndifferentAccess < Hash
   def transform_keys!; end
   def transform_keys(*args, &block); end
   def transform_values(*args, &block); end
-  def update(other_hash); end
+  def update(*other_hashes, &block); end
+  def update_with_single_argument(other_hash, block); end
   def values_at(*keys); end
   def with_defaults!(other_hash); end
   def with_defaults(other_hash); end
@@ -7967,6 +7968,7 @@ module ActionView::Helpers::SanitizeHelper::ClassMethods
   def safe_list_sanitizer=(arg0); end
   def sanitized_allowed_attributes; end
   def sanitized_allowed_tags; end
+  def sanitizer_vendor; end
 end
 module ActionView::Helpers::TextHelper
   def concat(string); end
