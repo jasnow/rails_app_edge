@@ -2021,9 +2021,6 @@ end
 class ActionView::Template::Inline
 end
 
-class ActionView::Template::LegacyTemplate
-end
-
 class ActionView::Template::RawFile
   def format(); end
 
@@ -3007,9 +3004,6 @@ module ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
   ID_ATTRIBUTE_METHODS = ::T.let(nil, ::T.untyped)
 end
 
-class ActiveRecord::AttributeMethods::TimeZoneConversion::TimeZoneConverter
-end
-
 module ActiveRecord::Base::GeneratedAttributeMethods
   extend ::Mutex_m
 end
@@ -3272,7 +3266,6 @@ module ActiveRecord::FinderMethods
 end
 
 class ActiveRecord::InternalMetadata
-  include ::ActiveRecord::InternalMetadata::GeneratedAttributeMethods
   include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
@@ -3280,9 +3273,6 @@ module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-end
-
-module ActiveRecord::InternalMetadata::GeneratedAttributeMethods
 end
 
 module ActiveRecord::InternalMetadata::GeneratedAttributeMethods
@@ -3318,9 +3308,6 @@ end
 
 module ActiveRecord::LegacyYamlAdapter
   def self.convert(klass, coder); end
-end
-
-class ActiveRecord::Locking::LockingType
 end
 
 class ActiveRecord::LogSubscriber
@@ -3847,6 +3834,9 @@ class ActiveRecord::Result
   def to_hash(); end
 end
 
+class ActiveRecord::Result
+end
+
 class ActiveRecord::RuntimeRegistry
   def connection_handler(); end
 
@@ -3872,8 +3862,11 @@ class ActiveRecord::Schema
   def define(info, &block); end
 end
 
+class ActiveRecord::Schema
+  def self.define(info=T.unsafe(nil), &block); end
+end
+
 class ActiveRecord::SchemaMigration
-  include ::ActiveRecord::SchemaMigration::GeneratedAttributeMethods
   include ::ActiveRecord::SchemaMigration::GeneratedAssociationMethods
   def version(); end
 end
@@ -3882,9 +3875,6 @@ module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
 end
 
 module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
-end
-
-module ActiveRecord::SchemaMigration::GeneratedAttributeMethods
 end
 
 module ActiveRecord::SchemaMigration::GeneratedAttributeMethods
@@ -4090,6 +4080,8 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def raise_for_multi_db(environment=T.unsafe(nil), command:); end
 
+  def reconstruct_from_schema(configuration, format=T.unsafe(nil), file=T.unsafe(nil), environment=T.unsafe(nil), spec_name=T.unsafe(nil)); end
+
   def register_task(pattern, task); end
 
   def root(); end
@@ -4215,8 +4207,6 @@ end
 
 module ActiveRecord::TestDatabases
   def self.create_and_load_schema(i, env_name:); end
-
-  def self.drop(env_name:); end
 end
 
 module ActiveRecord::TestFixtures
@@ -4260,19 +4250,19 @@ ActiveRecord::Type::BigInteger = ActiveModel::Type::BigInteger
 
 ActiveRecord::Type::Binary = ActiveModel::Type::Binary
 
+ActiveRecord::Type::Boolean = ActiveModel::Type::Boolean
+
 ActiveRecord::Type::Decimal = ActiveModel::Type::Decimal
 
 ActiveRecord::Type::Float = ActiveModel::Type::Float
 
 ActiveRecord::Type::Integer = ActiveModel::Type::Integer
 
-class ActiveRecord::Type::Serialized
-end
-
 ActiveRecord::Type::String = ActiveModel::Type::String
 
-class ActiveRecord::Type::Time::Value
-end
+ActiveRecord::Type::Value = ActiveModel::Type::Value
+
+ActiveRecord::UnknownAttributeError = ActiveModel::UnknownAttributeError
 
 module ActiveRecord::VERSION
   MAJOR = ::T.let(nil, ::T.untyped)
@@ -7161,13 +7151,13 @@ class File::Stat
 end
 
 class File
-  def self.empty?(_); end
-
   def self.exists?(_); end
 
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
+
+  def self.probe_stat_in(dir); end
 
 end
 
@@ -13767,9 +13757,6 @@ end
 module Mail::Parsers
 end
 
-class Mail::PartsList
-end
-
 class Mail::PhraseList
   def initialize(string); end
 
@@ -14334,8 +14321,6 @@ class Net::HTTP
   ENVIRONMENT_VARIABLE_IS_MULTIUSER_SAFE = ::T.let(nil, ::T.untyped)
 end
 
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
-
 class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -14373,9 +14358,13 @@ class Net::HTTPGenericRequest::Chunker
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTPInformation
+end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -14452,7 +14441,15 @@ Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
 
 Net::HTTPServerErrorCode = Net::HTTPServerError
 
-Net::HTTPSession = Net::HTTP
+class Net::HTTP
+end
+
+Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+
+Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
+
+class Net::HTTP
+end
 
 Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 
@@ -15307,6 +15304,14 @@ end
 
 class OpenStruct
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+end
+
+module Parlour
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+class Parlour::RbiGenerator::Parameter
+  PREFIXES = ::T.let(nil, ::T.untyped)
 end
 
 ParseError = Racc::ParseError
@@ -20140,6 +20145,8 @@ class Sorbet::Private::TodoRBI
   def self.output_file(); end
 end
 
+SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter
+
 class SortedSet
   def initialize(*args, &block); end
 end
@@ -20149,8 +20156,6 @@ class SortedSet
 end
 
 class SpellBook
-  include ::SpellBook::GeneratedAttributeMethods
-  include ::SpellBook::GeneratedAssociationMethods
   def autosave_associated_records_for_wizard(*args); end
 end
 
@@ -20162,23 +20167,10 @@ module SpellBook::GeneratedAssociationMethods
   def create_wizard!(*args, &block); end
 
   def reload_wizard(); end
-
-  def wizard(); end
-
-  def wizard=(value); end
-end
-
-module SpellBook::GeneratedAssociationMethods
-end
-
-module SpellBook::GeneratedAttributeMethods
 end
 
 module SpellBook::GeneratedAttributeMethods
   extend ::Mutex_m
-end
-
-class SpellBook
 end
 
 class StopIteration
@@ -21197,8 +21189,6 @@ class WEBrick::HTTPServlet::AbstractServlet
 end
 
 class Wand
-  include ::Wand::GeneratedAttributeMethods
-  include ::Wand::GeneratedAssociationMethods
   def autosave_associated_records_for_wizard(*args); end
 
   def wood_type(); end
@@ -21212,16 +21202,6 @@ module Wand::GeneratedAssociationMethods
   def create_wizard!(*args, &block); end
 
   def reload_wizard(); end
-
-  def wizard(); end
-
-  def wizard=(value); end
-end
-
-module Wand::GeneratedAssociationMethods
-end
-
-module Wand::GeneratedAttributeMethods
 end
 
 module Wand::GeneratedAttributeMethods
@@ -21229,12 +21209,6 @@ module Wand::GeneratedAttributeMethods
 end
 
 class Wand
-  def self.basilisk_horn(*args); end
-
-  def self.core_types(); end
-
-  def self.dragon_heartstring(*args); end
-
   def self.not_basilisk_horn(*args); end
 
   def self.not_dragon_heartstring(*args); end
@@ -21242,10 +21216,6 @@ class Wand
   def self.not_phoenix_feather(*args); end
 
   def self.not_unicorn_tail_hair(*args); end
-
-  def self.phoenix_feather(*args); end
-
-  def self.unicorn_tail_hair(*args); end
 end
 
 module Warning
@@ -21272,8 +21242,6 @@ class WeakRef
 end
 
 class Wizard
-  include ::Wizard::GeneratedAttributeMethods
-  include ::Wizard::GeneratedAssociationMethods
   def after_add_for_spell_books(); end
 
   def after_add_for_spell_books=(val); end
@@ -21317,20 +21285,6 @@ module Wizard::GeneratedAssociationMethods
   def spell_book_ids(); end
 
   def spell_book_ids=(ids); end
-
-  def spell_books(); end
-
-  def spell_books=(value); end
-
-  def wand(); end
-
-  def wand=(value); end
-end
-
-module Wizard::GeneratedAssociationMethods
-end
-
-module Wizard::GeneratedAttributeMethods
 end
 
 module Wizard::GeneratedAttributeMethods
@@ -21338,14 +21292,6 @@ module Wizard::GeneratedAttributeMethods
 end
 
 class Wizard
-  def self.Gryffindor(*args); end
-
-  def self.Hufflepuff(*args); end
-
-  def self.Ravenclaw(*args); end
-
-  def self.Slytherin(*args); end
-
   def self.after_add_for_spell_books(); end
 
   def self.after_add_for_spell_books=(val); end
@@ -21369,8 +21315,6 @@ class Wizard
   def self.before_remove_for_spell_books=(val); end
 
   def self.before_remove_for_spell_books?(); end
-
-  def self.houses(); end
 
   def self.not_Gryffindor(*args); end
 

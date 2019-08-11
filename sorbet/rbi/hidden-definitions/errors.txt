@@ -1497,13 +1497,10 @@
 # uninitialized constant ActiveRecord::InternalMetadata::CALLBACK_FILTER_TYPES
 # uninitialized constant ActiveRecord::InternalMetadata::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedAssociationMethods>
-# wrong constant name <Class:GeneratedAttributeMethods>
 # uninitialized constant ActiveRecord::InternalMetadata::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant ActiveRecord::InternalMetadata::NAME_COMPILABLE_REGEXP
 # uninitialized constant ActiveRecord::InternalMetadata::RESTRICTED_CLASS_METHODS
 # uninitialized constant ActiveRecord::InternalMetadata::UNASSIGNABLE_KEYS
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name []
 # wrong constant name []=
@@ -1753,6 +1750,7 @@
 # wrong constant name to_a
 # wrong constant name to_ary
 # wrong constant name to_hash
+# wrong constant name <static-init>
 # wrong constant name connection_handler
 # wrong constant name connection_handler=
 # wrong constant name sql_runtime
@@ -1764,19 +1762,18 @@
 # wrong constant name sql_runtime=
 # uninitialized constant ActiveRecord::Schema::MigrationFilenameRegexp
 # wrong constant name define
+# wrong constant name <static-init>
+# wrong constant name define
 # uninitialized constant ActiveRecord::SchemaMigration::ACTIONS
 # uninitialized constant ActiveRecord::SchemaMigration::CALLBACKS
 # uninitialized constant ActiveRecord::SchemaMigration::CALLBACK_FILTER_TYPES
 # uninitialized constant ActiveRecord::SchemaMigration::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedAssociationMethods>
-# wrong constant name <Class:GeneratedAttributeMethods>
 # uninitialized constant ActiveRecord::SchemaMigration::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant ActiveRecord::SchemaMigration::NAME_COMPILABLE_REGEXP
 # uninitialized constant ActiveRecord::SchemaMigration::RESTRICTED_CLASS_METHODS
 # uninitialized constant ActiveRecord::SchemaMigration::UNASSIGNABLE_KEYS
 # wrong constant name version
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name all_versions
 # wrong constant name create_table
@@ -1867,6 +1864,7 @@
 # wrong constant name purge_all
 # wrong constant name purge_current
 # wrong constant name raise_for_multi_db
+# wrong constant name reconstruct_from_schema
 # wrong constant name register_task
 # wrong constant name root
 # wrong constant name root=
@@ -1921,7 +1919,6 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name create_and_load_schema
-# wrong constant name drop
 # wrong constant name <Class:ClassMethods>
 # wrong constant name after_teardown
 # wrong constant name before_setup
@@ -3247,7 +3244,6 @@
 # wrong constant name basename$1
 # wrong constant name chmod$1
 # wrong constant name chown$1
-# wrong constant name empty?
 # wrong constant name exists?
 # wrong constant name expand_path$1
 # wrong constant name fnmatch$1
@@ -3256,6 +3252,7 @@
 # wrong constant name lchown$1
 # wrong constant name lutime
 # wrong constant name mkfifo
+# wrong constant name probe_stat_in
 # wrong constant name realdirpath$1
 # wrong constant name realpath$1
 # wrong constant name umask$1
@@ -10460,8 +10457,6 @@
 # uninitialized constant SpellBook::CALLBACKS
 # uninitialized constant SpellBook::CALLBACK_FILTER_TYPES
 # uninitialized constant SpellBook::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
-# wrong constant name <Class:GeneratedAttributeMethods>
 # uninitialized constant SpellBook::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant SpellBook::NAME_COMPILABLE_REGEXP
 # uninitialized constant SpellBook::RESTRICTED_CLASS_METHODS
@@ -10471,11 +10466,6 @@
 # wrong constant name create_wizard
 # wrong constant name create_wizard!
 # wrong constant name reload_wizard
-# wrong constant name wizard
-# wrong constant name wizard=
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name result
 # undefined method `[]$2' for class `String'
 # undefined method `byteslice$2' for class `String'
@@ -11092,8 +11082,6 @@
 # uninitialized constant Wand::CALLBACKS
 # uninitialized constant Wand::CALLBACK_FILTER_TYPES
 # uninitialized constant Wand::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
-# wrong constant name <Class:GeneratedAttributeMethods>
 # uninitialized constant Wand::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant Wand::NAME_COMPILABLE_REGEXP
 # uninitialized constant Wand::RESTRICTED_CLASS_METHODS
@@ -11104,20 +11092,10 @@
 # wrong constant name create_wizard
 # wrong constant name create_wizard!
 # wrong constant name reload_wizard
-# wrong constant name wizard
-# wrong constant name wizard=
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name basilisk_horn
-# wrong constant name core_types
-# wrong constant name dragon_heartstring
 # wrong constant name not_basilisk_horn
 # wrong constant name not_dragon_heartstring
 # wrong constant name not_phoenix_feather
 # wrong constant name not_unicorn_tail_hair
-# wrong constant name phoenix_feather
-# wrong constant name unicorn_tail_hair
 # wrong constant name warn
 # wrong constant name <Class:RefError>
 # wrong constant name initialize
@@ -11128,8 +11106,6 @@
 # uninitialized constant Wizard::CALLBACKS
 # uninitialized constant Wizard::CALLBACK_FILTER_TYPES
 # uninitialized constant Wizard::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
-# wrong constant name <Class:GeneratedAttributeMethods>
 # uninitialized constant Wizard::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant Wizard::NAME_COMPILABLE_REGEXP
 # uninitialized constant Wizard::RESTRICTED_CLASS_METHODS
@@ -11155,17 +11131,6 @@
 # wrong constant name reload_wand
 # wrong constant name spell_book_ids
 # wrong constant name spell_book_ids=
-# wrong constant name spell_books
-# wrong constant name spell_books=
-# wrong constant name wand
-# wrong constant name wand=
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant Wizard::Gryffindor
-# uninitialized constant Wizard::Hufflepuff
-# uninitialized constant Wizard::Ravenclaw
-# uninitialized constant Wizard::Slytherin
 # wrong constant name after_add_for_spell_books
 # wrong constant name after_add_for_spell_books=
 # wrong constant name after_add_for_spell_books?
@@ -11178,7 +11143,6 @@
 # wrong constant name before_remove_for_spell_books
 # wrong constant name before_remove_for_spell_books=
 # wrong constant name before_remove_for_spell_books?
-# wrong constant name houses
 # wrong constant name not_Gryffindor
 # wrong constant name not_Hufflepuff
 # wrong constant name not_Ravenclaw

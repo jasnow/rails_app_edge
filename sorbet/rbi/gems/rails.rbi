@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-bdfd47053108
+# rails-9a2e00e27b87
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -6856,7 +6856,7 @@ module Digest::UUID
 end
 class File < IO
   def self.atomic_write(file_name, temp_dir = nil); end
-  def self.probe_stat_in(dir); end
+  def self.empty?(arg0); end
 end
 module Module::Concerning
   def concern(topic, &module_definition); end
