@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: bdfd47053108f3e7757f35a6d3eee511bf6e0cc5
+  revision: 9a2e00e27b87632be3528b53efb8bba504688711
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -110,8 +110,11 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
+    parlour (0.6.1)
+      rainbow (~> 3.0.0)
+      sorbet-runtime
     puma (4.1.0)
       nio4r (~> 2.0)
     rack (2.0.7)
@@ -122,6 +125,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
+    rainbow (3.0.0)
     rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -130,7 +134,8 @@ GEM
     ruby_dep (1.5.0)
     sorbet (0.4.4602)
       sorbet-static (= 0.4.4602)
-    sorbet-rails (0.4.0)
+    sorbet-rails (0.5.0)
+      parlour (~> 0.6.0)
     sorbet-runtime (0.4.4602)
     sorbet-static (0.4.4602-universal-darwin-14)
     sprockets (3.7.2)
