@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-9a2e00e27b87
+# rails-5e2d3d114230
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -37,8 +37,8 @@ class Hash
   def reverse_merge!(other_hash); end
   def reverse_merge(other_hash); end
   def reverse_update(other_hash); end
+  def self.from_trusted_xml(xml); end
   def self.from_xml(xml, disallowed_types = nil); end
-  def self.try_convert(arg0); end
   def slice!(*keys); end
   def stringify_keys!; end
   def stringify_keys; end
@@ -1303,6 +1303,7 @@ module ActiveSupport::Dependencies::ZeitwerkIntegration::Inflector
 end
 module Rails::Autoloaders
   def self.each; end
+  def self.log!; end
   def self.logger=(logger); end
   def self.main; end
   def self.once; end
@@ -4728,12 +4729,13 @@ class Rails::Engine::Configuration < Rails::Railtie::Configuration
   def eager_load_paths=(arg0); end
   def generators; end
   def initialize(root = nil); end
+  def javascript_path; end
+  def javascript_path=(arg0); end
   def middleware; end
   def middleware=(arg0); end
   def paths; end
   def root; end
   def root=(value); end
-  def webpacker_path; end
 end
 class ActionView::Railtie < Rails::Engine
 end
@@ -6855,8 +6857,8 @@ module Digest::UUID
   def self.uuid_v5(uuid_namespace, name); end
 end
 class File < IO
-  def self.atomic_write(file_name, temp_dir = nil); end
   def self.empty?(arg0); end
+  def self.split(arg0); end
 end
 module Module::Concerning
   def concern(topic, &module_definition); end
@@ -7599,6 +7601,7 @@ class ActionDispatch::Routing::ConsoleFormatter::Sheet < ActionDispatch::Routing
 end
 class ActionDispatch::Routing::ConsoleFormatter::Expanded < ActionDispatch::Routing::ConsoleFormatter::Base
   def draw_expanded_section(routes); end
+  def initialize(width: nil); end
   def route_header(index:); end
   def section(routes); end
   def section_title(title); end
