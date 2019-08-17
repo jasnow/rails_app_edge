@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-5e2d3d114230
+# rails-7dfd9d2387e3
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
