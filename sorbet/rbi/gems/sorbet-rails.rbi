@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/sorbet-rails/all/sorbet-rails.rbi
 #
-# sorbet-rails-0.5.1
+# sorbet-rails-0.5.2
 module SorbetRails
 end
 module SorbetRails::CustomFinderMethods
@@ -20,14 +20,15 @@ end
 class SorbetRails::Railtie < Rails::Railtie
 end
 module SorbetRails::ModelUtils
+  def add_relation_query_method(*args, &blk); end
   def exists_class_method?(*args, &blk); end
   def exists_instance_method?(*args, &blk); end
   def model_assoc_proxy_class_name(*args, &blk); end
+  def model_assoc_relation_class_name(*args, &blk); end
   def model_class(*args, &blk); end
   def model_class_name(*args, &blk); end
   def model_module_name(*args, &blk); end
   def model_relation_class_name(*args, &blk); end
-  def model_relation_shared_module_name(*args, &blk); end
   extend T::Helpers
   extend T::InterfaceWrapper::Helpers
   extend T::Private::Abstract::Hooks

@@ -3269,6 +3269,33 @@ class ActiveRecord::InternalMetadata
   include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
@@ -3276,6 +3303,13 @@ module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
 module ActiveRecord::InternalMetadata::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
@@ -3871,6 +3905,33 @@ class ActiveRecord::SchemaMigration
   def version(); end
 end
 
+class ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+
+class ActiveRecord::SchemaMigration::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+
+class ActiveRecord::SchemaMigration::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::SchemaMigration::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+
+class ActiveRecord::SchemaMigration::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
 end
 
@@ -3878,6 +3939,13 @@ module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
 end
 
 module ActiveRecord::SchemaMigration::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module ActiveRecord::SchemaMigration::GeneratedRelationMethods
+end
+
+module ActiveRecord::SchemaMigration::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
@@ -5231,6 +5299,33 @@ class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
 
+class ApplicationRecord::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ApplicationRecord::GeneratedAssociationMethods
 end
 
@@ -5241,6 +5336,13 @@ module ApplicationRecord::GeneratedAttributeMethods
 end
 
 module ApplicationRecord::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module ApplicationRecord::GeneratedRelationMethods
+end
+
+module ApplicationRecord::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
@@ -11220,10 +11322,6 @@ class Numeric
 
   def infinite?(); end
 
-  def negative?(); end
-
-  def positive?(); end
-
   EXABYTE = ::T.let(nil, ::T.untyped)
   GIGABYTE = ::T.let(nil, ::T.untyped)
   KILOBYTE = ::T.let(nil, ::T.untyped)
@@ -16345,6 +16443,33 @@ class SpellBook
   def autosave_associated_records_for_wizard(*args); end
 end
 
+class SpellBook::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::SpellBook::GeneratedRelationMethods
+end
+
+class SpellBook::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class SpellBook::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::SpellBook::GeneratedRelationMethods
+end
+
+class SpellBook::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class SpellBook::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::SpellBook::GeneratedRelationMethods
+end
+
+class SpellBook::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module SpellBook::GeneratedAssociationMethods
   def build_wizard(*args, &block); end
 
@@ -16356,6 +16481,13 @@ module SpellBook::GeneratedAssociationMethods
 end
 
 module SpellBook::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module SpellBook::GeneratedRelationMethods
+end
+
+module SpellBook::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
@@ -17232,6 +17364,33 @@ class Wand
   def wood_type(); end
 end
 
+class Wand::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wand::GeneratedRelationMethods
+end
+
+class Wand::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wand::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wand::GeneratedRelationMethods
+end
+
+class Wand::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wand::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wand::GeneratedRelationMethods
+end
+
+class Wand::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module Wand::GeneratedAssociationMethods
   def build_wizard(*args, &block); end
 
@@ -17246,14 +17405,26 @@ module Wand::GeneratedAttributeMethods
   extend ::Mutex_m
 end
 
-class Wand
-  def self.not_basilisk_horn(*args); end
+module Wand::GeneratedRelationMethods
+  def basilisk_horn(*args, &block); end
 
-  def self.not_dragon_heartstring(*args); end
+  def dragon_heartstring(*args, &block); end
 
-  def self.not_phoenix_feather(*args); end
+  def not_basilisk_horn(*args, &block); end
 
-  def self.not_unicorn_tail_hair(*args); end
+  def not_dragon_heartstring(*args, &block); end
+
+  def not_phoenix_feather(*args, &block); end
+
+  def not_unicorn_tail_hair(*args, &block); end
+
+  def phoenix_feather(*args, &block); end
+
+  def unicorn_tail_hair(*args, &block); end
+end
+
+module Wand::GeneratedRelationMethods
+  extend ::Mutex_m
 end
 
 module Warning
@@ -17311,6 +17482,33 @@ class Wizard
   def validate_associated_records_for_spell_books(*args); end
 end
 
+class Wizard::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wizard::GeneratedRelationMethods
+end
+
+class Wizard::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wizard::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wizard::GeneratedRelationMethods
+end
+
+class Wizard::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wizard::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wizard::GeneratedRelationMethods
+end
+
+class Wizard::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module Wizard::GeneratedAssociationMethods
   def build_wand(*args, &block); end
 
@@ -17326,6 +17524,28 @@ module Wizard::GeneratedAssociationMethods
 end
 
 module Wizard::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module Wizard::GeneratedRelationMethods
+  def Gryffindor(*args, &block); end
+
+  def Hufflepuff(*args, &block); end
+
+  def Ravenclaw(*args, &block); end
+
+  def Slytherin(*args, &block); end
+
+  def not_Gryffindor(*args, &block); end
+
+  def not_Hufflepuff(*args, &block); end
+
+  def not_Ravenclaw(*args, &block); end
+
+  def not_Slytherin(*args, &block); end
+end
+
+module Wizard::GeneratedRelationMethods
   extend ::Mutex_m
 end
 
@@ -17353,14 +17573,6 @@ class Wizard
   def self.before_remove_for_spell_books=(val); end
 
   def self.before_remove_for_spell_books?(); end
-
-  def self.not_Gryffindor(*args); end
-
-  def self.not_Hufflepuff(*args); end
-
-  def self.not_Ravenclaw(*args); end
-
-  def self.not_Slytherin(*args); end
 end
 
 YAML = Psych
