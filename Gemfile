@@ -31,8 +31,6 @@ gem 'puma'
 gem 'sorbet', :group => :development
 gem 'sorbet-runtime'
 gem 'sorbet-rails'
-gem 'redis' # for sorbet and cache_store
-gem 'dalli' # for sorbet and cache_store
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 892c30d0250319c6218ba54b3b94c65f4247550d
+  revision: 4a2746db1c92d0bf246e938b872b233a64f0a18b
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -86,7 +86,6 @@ GEM
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    dalli (2.7.10)
     erubi (1.8.0)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -130,7 +129,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redis (4.1.2)
     ruby_dep (1.5.0)
     sorbet (0.4.4683)
       sorbet-static (= 0.4.4683)
@@ -160,11 +158,9 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  dalli
   listen
   puma
   rails!
-  redis
   sorbet
   sorbet-rails
   sorbet-runtime
