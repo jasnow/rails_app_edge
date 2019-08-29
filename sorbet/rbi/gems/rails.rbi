@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-382ffaadf298
+# rails-520111096fdf
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -38,7 +38,7 @@ class Hash
   def reverse_merge(other_hash); end
   def reverse_update(other_hash); end
   def self.from_trusted_xml(xml); end
-  def self.from_xml(xml, disallowed_types = nil); end
+  def self.try_convert(arg0); end
   def slice!(*keys); end
   def stringify_keys!; end
   def stringify_keys; end
@@ -6935,6 +6935,8 @@ class ActiveSupport::Cache::Store
   def delete(name, options = nil); end
   def delete_entry(key, options); end
   def delete_matched(matcher, options = nil); end
+  def delete_multi(names, options = nil); end
+  def delete_multi_entries(entries, options); end
   def exist?(name, options = nil); end
   def expanded_key(key); end
   def expanded_version(key); end
@@ -10731,6 +10733,7 @@ class ActionMailer::Base < AbstractController::Base
   def delivery_methods=(val); end
   def delivery_methods?; end
   def each_template(paths, name, &block); end
+  def email_address_with_name(address, name); end
   def enable_fragment_cache_logging; end
   def enable_fragment_cache_logging=(value); end
   def file_settings; end
@@ -10817,6 +10820,7 @@ class ActionMailer::Base < AbstractController::Base
   def self.delivery_methods; end
   def self.delivery_methods=(val); end
   def self.delivery_methods?; end
+  def self.email_address_with_name(address, name); end
   def self.enable_fragment_cache_logging; end
   def self.enable_fragment_cache_logging=(value); end
   def self.file_settings; end
@@ -11177,7 +11181,7 @@ module ActiveRecord::ConnectionHandling
   def clear_query_caches_for_current_thread; end
   def clear_reloadable_connections!(*args, &block); end
   def connected?; end
-  def connected_to(database: nil, role: nil, &blk); end
+  def connected_to(database: nil, role: nil, prevent_writes: nil, &blk); end
   def connected_to?(role:); end
   def connection; end
   def connection_config; end
@@ -11737,6 +11741,7 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool
   def connections; end
   def current_thread; end
   def discard!; end
+  def discarded?; end
   def disconnect!; end
   def disconnect(raise_on_acquisition_timeout = nil); end
   def flush!; end
