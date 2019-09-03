@@ -2538,17 +2538,11 @@
 # wrong constant name report
 # wrong constant name write
 # wrong constant name github_https?
-# wrong constant name <Class:AuthenticationRequiredError>
-# wrong constant name <Class:BadAuthenticationError>
 # wrong constant name <Class:Base>
-# wrong constant name <Class:CertificateFailureError>
 # wrong constant name <Class:CompactIndex>
 # wrong constant name <Class:Dependency>
 # wrong constant name <Class:Downloader>
-# wrong constant name <Class:FallbackError>
 # wrong constant name <Class:Index>
-# wrong constant name <Class:NetworkDownError>
-# wrong constant name <Class:SSLError>
 # wrong constant name fetch_spec
 # wrong constant name fetchers
 # wrong constant name http_proxy
@@ -2559,9 +2553,7 @@
 # wrong constant name use_api
 # wrong constant name user_agent
 # wrong constant name initialize
-# wrong constant name <static-init>
 # wrong constant name initialize
-# wrong constant name <static-init>
 # wrong constant name api_fetcher?
 # wrong constant name available?
 # wrong constant name display_uri
@@ -2572,7 +2564,6 @@
 # wrong constant name remote_uri
 # wrong constant name <static-init>
 # wrong constant name initialize
-# wrong constant name <static-init>
 # wrong constant name <Class:ClientFetcher>
 # wrong constant name available?
 # wrong constant name fetch_spec
@@ -2601,13 +2592,10 @@
 # wrong constant name redirect_limit
 # wrong constant name request
 # wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name fetch_spec
 # wrong constant name specs
 # wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name initialize
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name api_timeout
 # wrong constant name api_timeout=
@@ -2726,34 +2714,9 @@
 # wrong constant name uri
 # wrong constant name uri_hash
 # wrong constant name <static-init>
-# wrong constant name <Class:PluginGemfileError>
-# uninitialized constant Bundler::Plugin::DSL::VALID_KEYS
-# uninitialized constant Bundler::Plugin::DSL::VALID_PLATFORMS
-# wrong constant name _gem
-# wrong constant name inferred_plugins
-# wrong constant name plugin
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name defined_event?
-# wrong constant name <Class:CommandConflict>
-# wrong constant name <Class:SourceConflict>
-# wrong constant name command_plugin
-# wrong constant name commands
-# wrong constant name global_index_file
-# wrong constant name hook_plugins
-# wrong constant name index_file
-# wrong constant name installed?
-# wrong constant name load_paths
-# wrong constant name local_index_file
-# wrong constant name plugin_path
-# wrong constant name register_plugin
-# wrong constant name source?
-# wrong constant name source_plugin
 # wrong constant name initialize
 # wrong constant name <static-init>
 # wrong constant name initialize
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <Class:Git>
 # wrong constant name <Class:Rubygems>
@@ -3351,10 +3314,10 @@
 # undefined singleton method `umask$1' for `File'
 # undefined singleton method `utime$1' for `File'
 # wrong constant name absolute_path$1
-# wrong constant name atomic_write
 # wrong constant name basename$1
 # wrong constant name chmod$1
 # wrong constant name chown$1
+# wrong constant name empty?
 # wrong constant name exists?
 # wrong constant name expand_path$1
 # wrong constant name fnmatch$1
@@ -3363,7 +3326,6 @@
 # wrong constant name lchown$1
 # wrong constant name lutime
 # wrong constant name mkfifo
-# wrong constant name probe_stat_in
 # wrong constant name realdirpath$1
 # wrong constant name realpath$1
 # wrong constant name umask$1
