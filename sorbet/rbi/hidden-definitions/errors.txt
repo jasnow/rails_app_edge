@@ -2194,6 +2194,10 @@
 # wrong constant name <static-init>
 # uninitialized constant ActiveSupport::SafeBuffer::BLANK_RE
 # uninitialized constant ActiveSupport::SafeBuffer::ENCODED_BLANKS
+# wrong constant name <Class:InvalidMatch>
+# wrong constant name secure_compare!
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # wrong constant name finish
 # wrong constant name patterns
 # wrong constant name start
@@ -2528,11 +2532,6 @@
 # wrong constant name new
 # wrong constant name clone
 # wrong constant name irb
-# wrong constant name local_variable_defined?
-# wrong constant name local_variable_get
-# wrong constant name local_variable_set
-# wrong constant name receiver
-# wrong constant name source_location
 # wrong constant name <static-init>
 # wrong constant name environment
 # wrong constant name report
@@ -3448,7 +3447,8 @@
 # wrong constant name transform_values
 # wrong constant name transform_values!
 # wrong constant name update
-# wrong constant name from_xml
+# wrong constant name from_trusted_xml
+# wrong constant name try_convert
 # wrong constant name <Class:Gettext>
 # wrong constant name <Class:Locale>
 # wrong constant name <Class:Middleware>
@@ -6382,9 +6382,7 @@
 # undefined method `step$2' for class `Numeric'
 # undefined method `truncate$1' for class `Numeric'
 # wrong constant name ceil$2
-# wrong constant name finite?
 # wrong constant name floor$2
-# wrong constant name infinite?
 # wrong constant name round$1
 # wrong constant name step$2
 # wrong constant name truncate$1
@@ -9036,67 +9034,6 @@
 # uninitialized constant URI::GID::VERSION
 # uninitialized constant URI::GID::VERSION_CODE
 # uninitialized constant URI::GID::WEB_ENCODINGS_
-# wrong constant name +
-# wrong constant name -
-# wrong constant name ==
-# wrong constant name absolute
-# wrong constant name absolute?
-# wrong constant name coerce
-# wrong constant name component
-# wrong constant name component_ary
-# wrong constant name default_port
-# wrong constant name eql?
-# wrong constant name find_proxy
-# wrong constant name fragment
-# wrong constant name fragment=
-# wrong constant name hierarchical?
-# wrong constant name host
-# wrong constant name host=
-# wrong constant name hostname
-# wrong constant name hostname=
-# wrong constant name initialize
-# wrong constant name merge
-# wrong constant name merge!
-# wrong constant name normalize
-# wrong constant name normalize!
-# wrong constant name opaque
-# wrong constant name opaque=
-# wrong constant name parser
-# wrong constant name password
-# wrong constant name password=
-# wrong constant name path
-# wrong constant name path=
-# wrong constant name port
-# wrong constant name port=
-# wrong constant name query
-# wrong constant name query=
-# wrong constant name registry
-# wrong constant name registry=
-# wrong constant name relative?
-# wrong constant name route_from
-# wrong constant name route_to
-# wrong constant name scheme
-# wrong constant name scheme=
-# wrong constant name select
-# wrong constant name set_host
-# wrong constant name set_opaque
-# wrong constant name set_password
-# wrong constant name set_path
-# wrong constant name set_port
-# wrong constant name set_registry
-# wrong constant name set_scheme
-# wrong constant name set_user
-# wrong constant name set_userinfo
-# wrong constant name user
-# wrong constant name user=
-# wrong constant name userinfo
-# wrong constant name userinfo=
-# wrong constant name build
-# wrong constant name build2
-# wrong constant name component
-# wrong constant name default_port
-# wrong constant name use_proxy?
-# wrong constant name use_registry
 # wrong constant name request_uri
 # wrong constant name attributes
 # wrong constant name attributes=

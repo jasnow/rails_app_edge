@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/actionpack/all/actionpack.rbi
 #
-# typed: ignore
+# typed: false
 
 class ActionController::Base < ActionController::Metal
 end
