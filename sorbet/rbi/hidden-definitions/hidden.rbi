@@ -5332,7 +5332,6 @@ class Array
   def shelljoin(); end
 
   def to_h(); end
-
 end
 
 class Array
@@ -6530,7 +6529,6 @@ class Dir
   def children(); end
 
   def each_child(); end
-
 end
 
 class Dir
@@ -6688,7 +6686,6 @@ class Enumerator
   def +(_); end
 
   def each_with_index(); end
-
 end
 
 class Enumerator::ArithmeticSequence
@@ -7009,7 +7006,6 @@ end
 class Exception
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def full_message(*_); end
-
 end
 
 class Exception
@@ -7092,7 +7088,6 @@ class File
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
-
 end
 
 module FileUtils
@@ -7959,7 +7954,6 @@ class IO
   def self.foreach(*_); end
 
   def self.pipe(*_); end
-
 end
 
 class IPAddr
@@ -10494,6 +10488,8 @@ end
 
 Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
 
+Net::HTTPInformationCode = Net::HTTPInformation
+
 class Net::HTTPInformation
 end
 
@@ -10579,6 +10575,8 @@ Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
 
 Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
 
+Net::HTTPSession = Net::HTTP
+
 class Net::HTTP
 end
 
@@ -10604,7 +10602,6 @@ end
 
 class Net::IMAP
   def open_timeout(); end
-
   RESPONSE_ERRORS = ::T.let(nil, ::T.untyped)
 end
 
@@ -11441,7 +11438,6 @@ class Pathname
   def glob(*_); end
 
   def make_symlink(_); end
-
 end
 
 class Proc
@@ -11469,7 +11465,6 @@ end
 
 module Process::Sys
   def self.getegid(); end
-
 end
 
 class Process::Tms
@@ -11500,7 +11495,6 @@ module Process
   def self.last_status(); end
 
   def self.setpgrp(); end
-
 end
 
 module Psych
@@ -13812,7 +13806,6 @@ end
 
 module Random::Formatter
   def alphanumeric(n=T.unsafe(nil)); end
-
   ALPHANUMERIC = ::T.let(nil, ::T.untyped)
 end
 
@@ -15937,7 +15930,6 @@ class String
   def unicode_normalized?(*_); end
 
   def unpack1(_); end
-
   BLANK_RE = ::T.let(nil, ::T.untyped)
   ENCODED_BLANKS = ::T.let(nil, ::T.untyped)
 end
@@ -15946,7 +15938,6 @@ class StringIO
   def length(); end
 
   def truncate(_); end
-
 end
 
 class StringScanner

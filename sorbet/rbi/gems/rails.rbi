@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-3437691708f6
+# rails-d0ba1aa9866c
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -12523,7 +12523,7 @@ module ActiveRecord::Callbacks
   def create_or_update(**arg0); end
   def destroy; end
   def increment!(attribute, by = nil, touch: nil); end
-  def touch(*arg0); end
+  def touch(*arg0, **arg1); end
   extend ActiveSupport::Concern
 end
 class ActiveRecord::AssociationNotFoundError < ActiveRecord::ConfigurationError
@@ -12688,7 +12688,7 @@ module ActiveRecord::Transactions
   def save!(*arg0, **arg1); end
   def save(*arg0, **arg1); end
   def sync_with_transaction_state; end
-  def touch(*arg0); end
+  def touch(*arg0, **arg1); end
   def transaction(options = nil, &block); end
   def transaction_include_any_action?(actions); end
   def trigger_transactional_callbacks?; end
@@ -12724,7 +12724,7 @@ module ActiveRecord::NoTouching
   def self.applied_to?(klass); end
   def self.apply_to(klass); end
   def self.klasses; end
-  def touch(*arg0); end
+  def touch(*arg0, **arg1); end
   def touch_later(*arg0); end
   extend ActiveSupport::Concern
 end
@@ -12785,8 +12785,8 @@ module ActiveRecord::SecureToken::ClassMethods
   def has_secure_token(attribute = nil); end
 end
 module ActiveRecord::Suppressor
-  def save!(*arg0); end
-  def save(*arg0); end
+  def save!(*arg0, **arg1); end
+  def save(*arg0, **arg1); end
   extend ActiveSupport::Concern
 end
 module ActiveRecord::Suppressor::ClassMethods
