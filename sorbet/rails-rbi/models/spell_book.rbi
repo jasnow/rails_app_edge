@@ -41,10 +41,10 @@ end
 module SpellBook::GeneratedAssociationMethods
   extend T::Sig
 
-  sig { returns(T.nilable(::Wizard)) }
+  sig { returns(::Wizard) }
   def wizard; end
 
-  sig { params(value: T.nilable(::Wizard)).void }
+  sig { params(value: ::Wizard).void }
   def wizard=(value); end
 end
 

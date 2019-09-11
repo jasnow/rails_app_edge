@@ -2,16 +2,24 @@
 #   srb rbi todo
 
 # typed: strong
-module ::Anonymous_Delegator_13; end
-module ::Anonymous_Delegator_14; end
+module ::Anonymous_Delegator_10; end
 module ::Anonymous_Delegator_15; end
 module ::Anonymous_Delegator_16; end
-module ::Anonymous_Delegator_20; end
+module ::Anonymous_Delegator_17; end
+module ::Anonymous_Delegator_21; end
 module ::Anonymous_Delegator_3; end
-module ::Anonymous_Delegator_5; end
+module ::Anonymous_Delegator_7; end
+module ::Anonymous_Delegator_8; end
 module ActiveRecord::CollectionCacheKey; end
-module ActiveStorage::Attachment; end
-module ActiveStorage::Attachment; end
+module ActiveStorage::Blob::Analyzable; end
+module ActiveStorage::Blob::Analyzable; end
+module ActiveStorage::Blob::Analyzable; end
+module ActiveStorage::Blob::Analyzable; end
+module ActiveStorage::Blob::Identifiable; end
+module ActiveStorage::Blob::Identifiable; end
+module ActiveStorage::Blob::Identifiable; end
+module ActiveStorage::Blob::Identifiable; end
+module ActiveStorage::Variant; end
 module T::InterfaceWrapper::Helpers; end
 module T::InterfaceWrapper::Helpers; end
 module T::InterfaceWrapper::Helpers; end
@@ -65,6 +73,12 @@ module T::Private::Methods::MethodHooks; end
 module T::Private::Methods::MethodHooks; end
 module T::Private::Methods::MethodHooks; end
 module T::Private::Methods::MethodHooks; end
+module T::Private::Methods::MethodHooks; end
+module T::Private::Methods::MethodHooks; end
+module T::Private::Methods::MethodHooks; end
+module T::Private::Methods::SingletonMethodHooks; end
+module T::Private::Methods::SingletonMethodHooks; end
+module T::Private::Methods::SingletonMethodHooks; end
 module T::Private::Methods::SingletonMethodHooks; end
 module T::Private::Methods::SingletonMethodHooks; end
 module T::Private::Methods::SingletonMethodHooks; end
