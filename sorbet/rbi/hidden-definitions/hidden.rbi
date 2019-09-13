@@ -3144,8 +3144,6 @@ end
 class ActiveRecord::ConnectionAdapters::SavepointTransaction
 end
 
-ActiveRecord::ConnectionAdapters::SchemaCreation = ActiveRecord::ConnectionAdapters::AbstractAdapter::SchemaCreation
-
 class ActiveRecord::ConnectionAdapters::StatementPool
   DEFAULT_STATEMENT_LIMIT = ::T.let(nil, ::T.untyped)
 end
@@ -7115,6 +7113,7 @@ end
 
 module Exception2MessageMapper
   def bind(cl); end
+
 end
 
 Exception2MessageMapper::E2MM = Exception2MessageMapper
