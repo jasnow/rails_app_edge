@@ -1,4 +1,4 @@
-# typed: ignore
+# typed: strong
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
   end

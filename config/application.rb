@@ -1,4 +1,4 @@
-# typed: ignore
+# typed: strict
 require_relative 'boot'
 
 require "rails"
