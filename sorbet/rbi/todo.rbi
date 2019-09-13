@@ -10,4 +10,3 @@ module ::Anonymous_Delegator_21; end
 module ::Anonymous_Delegator_3; end
 module ::Anonymous_Delegator_7; end
 module ::Anonymous_Delegator_8; end
-module ActiveRecord::CollectionCacheKey; end
