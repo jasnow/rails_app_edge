@@ -1599,7 +1599,6 @@
 # wrong constant name call
 # wrong constant name <static-init>
 # wrong constant name <Class:CommandRecorder>
-# wrong constant name <Class:Compatibility>
 # wrong constant name <Class:StraightReversions>
 # wrong constant name add_belongs_to
 # wrong constant name add_column
@@ -1660,53 +1659,6 @@
 # wrong constant name invert_remove_timestamps
 # wrong constant name <static-init>
 # wrong constant name <static-init>
-# wrong constant name <Class:V4_2>
-# wrong constant name <Class:V5_0>
-# wrong constant name <Class:V5_1>
-# wrong constant name <Class:V5_2>
-# wrong constant name <Class:V6_0>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V4_2::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name index_exists?
-# wrong constant name remove_index
-# wrong constant name belongs_to
-# wrong constant name references
-# wrong constant name timestamps
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_0::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name add_belongs_to
-# wrong constant name add_column
-# wrong constant name add_reference
-# wrong constant name create_join_table
-# wrong constant name belongs_to
-# wrong constant name primary_key
-# wrong constant name references
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_1::MigrationFilenameRegexp
-# wrong constant name change_column
-# wrong constant name create_table
-# wrong constant name <static-init>
-# wrong constant name <Class:CommandRecorder>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_2::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name add_timestamps
-# wrong constant name change_table
-# wrong constant name create_join_table
-# wrong constant name create_table
-# wrong constant name invert_change_column_comment
-# wrong constant name invert_change_table_comment
-# wrong constant name invert_transaction
-# wrong constant name <static-init>
-# wrong constant name timestamps
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V6_0::MigrationFilenameRegexp
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name find
 # wrong constant name any?
 # wrong constant name calculate
 # wrong constant name delete
@@ -2360,26 +2312,6 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name connect_internal
-# wrong constant name <Class:Channel>
-# wrong constant name <Class:Connection>
-# uninitialized constant ApplicationCable::Channel::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ApplicationController::ACTION_OPTIONS
-# uninitialized constant ApplicationController::CALLBACK_FILTER_TYPES
-# uninitialized constant ApplicationController::DEFAULT_PROTECTED_INSTANCE_VARIABLES
-# uninitialized constant ApplicationController::DEFAULT_SEND_FILE_DISPOSITION
-# uninitialized constant ApplicationController::DEFAULT_SEND_FILE_TYPE
-# uninitialized constant ApplicationController::EXCLUDE_PARAMETERS
-# uninitialized constant ApplicationController::MODULES
-# uninitialized constant ApplicationController::REDIRECT_OPTIONS
-# uninitialized constant ApplicationController::RENDERERS
-# uninitialized constant ApplicationController::RENDER_FORMATS_IN_PRIORITY
-# uninitialized constant ApplicationController::URL_OPTIONS
-# wrong constant name <static-init>
-# uninitialized constant ApplicationJob::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # uninitialized constant ApplicationRecord::ACTIONS
 # wrong constant name <Class:ActiveRecord_AssociationRelation>
@@ -7878,11 +7810,6 @@
 # wrong constant name index
 # wrong constant name <static-init>
 # wrong constant name <static-init>
-# wrong constant name <Class:Application>
-# uninitialized constant RailsApp::Application::ABSTRACT_RAILTIES
-# uninitialized constant RailsApp::Application::INITIAL_VARIABLES
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # uninitialized constant Rake::FileUtilsExt::LN_SUPPORTED
 # uninitialized constant Rake::FileUtilsExt::LOW_METHODS
 # uninitialized constant Rake::FileUtilsExt::METHODS
@@ -9051,19 +8978,6 @@
 # wrong constant name call
 # wrong constant name initialize
 # wrong constant name <static-init>
-# uninitialized constant TestController::ACTION_OPTIONS
-# uninitialized constant TestController::CALLBACK_FILTER_TYPES
-# uninitialized constant TestController::DEFAULT_PROTECTED_INSTANCE_VARIABLES
-# uninitialized constant TestController::DEFAULT_SEND_FILE_DISPOSITION
-# uninitialized constant TestController::DEFAULT_SEND_FILE_TYPE
-# uninitialized constant TestController::EXCLUDE_PARAMETERS
-# uninitialized constant TestController::MODULES
-# uninitialized constant TestController::REDIRECT_OPTIONS
-# uninitialized constant TestController::RENDERERS
-# uninitialized constant TestController::RENDER_FORMATS_IN_PRIORITY
-# uninitialized constant TestController::URL_OPTIONS
-# wrong constant name index
-# wrong constant name <static-init>
 # wrong constant name <Class:AtomicReferenceCacheBackend>
 # wrong constant name <Class:SynchronizedCacheBackend>
 # wrong constant name <Class:Util>
@@ -9316,7 +9230,6 @@
 # uninitialized constant Wand::RESTRICTED_CLASS_METHODS
 # uninitialized constant Wand::UNASSIGNABLE_KEYS
 # wrong constant name autosave_associated_records_for_wizard
-# wrong constant name wood_type
 # A copy of Wand::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
 # A copy of Wand::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!
 # A copy of Wand::ActiveRecord_AssociationRelation has been removed from the module tree but is still active!

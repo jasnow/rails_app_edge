@@ -3537,104 +3537,7 @@ end
 class ActiveRecord::Migration::CommandRecorder
 end
 
-module ActiveRecord::Migration::Compatibility
-end
-
-class ActiveRecord::Migration::Compatibility::V4_2
-  def index_exists?(table_name, column_name, options=T.unsafe(nil)); end
-
-  def remove_index(table_name, options=T.unsafe(nil)); end
-end
-
-module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
-  def belongs_to(*_, **options); end
-
-  def references(*_, **options); end
-
-  def timestamps(**options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
-end
-
-class ActiveRecord::Migration::Compatibility::V4_2
-end
-
-class ActiveRecord::Migration::Compatibility::V5_0
-  def add_belongs_to(table_name, ref_name, **options); end
-
-  def add_column(table_name, column_name, type, **options); end
-
-  def add_reference(table_name, ref_name, **options); end
-
-  def create_join_table(table_1, table_2, column_options: T.unsafe(nil), **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
-  def belongs_to(*args, **options); end
-
-  def primary_key(name, type=T.unsafe(nil), **options); end
-
-  def references(*args, **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
-end
-
-class ActiveRecord::Migration::Compatibility::V5_0
-end
-
-class ActiveRecord::Migration::Compatibility::V5_1
-  def change_column(table_name, column_name, type, options=T.unsafe(nil)); end
-
-  def create_table(table_name, options=T.unsafe(nil)); end
-end
-
-class ActiveRecord::Migration::Compatibility::V5_1
-end
-
-class ActiveRecord::Migration::Compatibility::V5_2
-  def add_timestamps(table_name, **options); end
-
-  def change_table(table_name, **options); end
-
-  def create_join_table(table_1, table_2, **options); end
-
-  def create_table(table_name, **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::CommandRecorder
-  def invert_change_column_comment(args); end
-
-  def invert_change_table_comment(args); end
-
-  def invert_transaction(args, &block); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::CommandRecorder
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::TableDefinition
-  def timestamps(**options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::TableDefinition
-end
-
-class ActiveRecord::Migration::Compatibility::V5_2
-end
-
-class ActiveRecord::Migration::Compatibility::V6_0
-end
-
-class ActiveRecord::Migration::Compatibility::V6_0
-end
-
 ActiveRecord::Migration::Compatibility::V6_1 = ActiveRecord::Migration::Current
-
-module ActiveRecord::Migration::Compatibility
-  def self.find(version); end
-end
 
 class ActiveRecord::Migrator
   MIGRATOR_SALT = ::T.let(nil, ::T.untyped)
@@ -5266,36 +5169,6 @@ end
 
 class Addrinfo
   def connect_internal(local_addrinfo, timeout=T.unsafe(nil)); end
-end
-
-module ApplicationCable
-end
-
-class ApplicationCable::Channel
-end
-
-class ApplicationCable::Channel
-end
-
-class ApplicationCable::Connection
-end
-
-class ApplicationCable::Connection
-end
-
-module ApplicationCable
-end
-
-class ApplicationController
-end
-
-class ApplicationController
-end
-
-class ApplicationJob
-end
-
-class ApplicationJob
 end
 
 module ApplicationMailer::HelperMethods
@@ -13889,18 +13762,6 @@ end
 class Rails::WelcomeController
 end
 
-module RailsApp
-end
-
-class RailsApp::Application
-end
-
-class RailsApp::Application
-end
-
-module RailsApp
-end
-
 class Rake::FileList
   ARRAY_METHODS = ::T.let(nil, ::T.untyped)
   DEFAULT_IGNORE_PATTERNS = ::T.let(nil, ::T.untyped)
@@ -16658,13 +16519,6 @@ end
 class Tempfile::Remover
 end
 
-class TestController
-  def index(); end
-end
-
-class TestController
-end
-
 class Thread
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
@@ -17164,8 +17018,6 @@ end
 
 class Wand
   def autosave_associated_records_for_wizard(*args); end
-
-  def wood_type(); end
 end
 
 class Wand::ActiveRecord_AssociationRelation
