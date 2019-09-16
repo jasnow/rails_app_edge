@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-9e4ff29f748b
+# rails-9b6433bb82f1
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -3708,6 +3708,8 @@ class ActionController::Parameters
   def values_at(*keys); end
   def with_defaults!(other_hash); end
   def with_defaults(other_hash); end
+  include SorbetRails::CustomParamsMethods
+  include SorbetRails::CustomParamsMethods
 end
 module ActionController::StrongParameters
   def params; end
@@ -5645,316 +5647,6 @@ class ActiveSupport::StringInquirer < String
   def method_missing(method_name, *arguments); end
   def respond_to_missing?(method_name, include_private = nil); end
 end
-module ActiveModel::Type
-  def self.default_value; end
-  def self.lookup(*args, **kwargs); end
-  def self.register(type_name, klass = nil, **options, &block); end
-  def self.registry; end
-  def self.registry=(arg0); end
-end
-module ActiveModel::Type::Helpers
-end
-class ActiveModel::Type::Helpers::AcceptsMultiparameterTime < Module
-  def initialize(defaults: nil); end
-end
-module ActiveModel::Type::Helpers::Numeric
-  def cast(value); end
-  def changed?(old_value, _new_value, new_value_before_type_cast); end
-  def non_numeric_string?(value); end
-  def number_to_non_number?(old_value, new_value_before_type_cast); end
-  def serialize(value); end
-end
-module ActiveModel::Type::Helpers::Mutable
-  def cast(value); end
-  def changed_in_place?(raw_old_value, new_value); end
-end
-module ActiveModel::Type::Helpers::TimeValue
-  def apply_seconds_precision(value); end
-  def fast_string_to_time(string); end
-  def new_time(year, mon, mday, hour, min, sec, microsec, offset = nil); end
-  def serialize(value); end
-  def type_cast_for_schema(value); end
-  def user_input_in_time_zone(value); end
-end
-module ActiveModel::Type::Helpers::Timezone
-  def default_timezone; end
-  def is_utc?; end
-end
-class ActiveModel::Type::Value
-  def ==(other); end
-  def assert_valid_value(_); end
-  def binary?; end
-  def cast(value); end
-  def cast_value(value); end
-  def changed?(old_value, new_value, _new_value_before_type_cast); end
-  def changed_in_place?(raw_old_value, new_value); end
-  def deserialize(value); end
-  def eql?(other); end
-  def force_equality?(_value); end
-  def hash; end
-  def initialize(precision: nil, limit: nil, scale: nil); end
-  def limit; end
-  def map(value); end
-  def precision; end
-  def scale; end
-  def serialize(value); end
-  def type; end
-  def type_cast_for_schema(value); end
-  def value_constructed_by_mass_assignment?(_value); end
-end
-class ActiveModel::Type::Integer < ActiveModel::Type::Value
-  def _limit; end
-  def cast_value(value); end
-  def deserialize(value); end
-  def ensure_in_range(value); end
-  def initialize(*arg0, **arg1); end
-  def max_value; end
-  def min_value; end
-  def range; end
-  def serialize(value); end
-  def type; end
-  include ActiveModel::Type::Helpers::Numeric
-end
-class ActiveModel::Type::BigInteger < ActiveModel::Type::Integer
-  def max_value; end
-end
-class ActiveModel::Type::Binary < ActiveModel::Type::Value
-  def binary?; end
-  def cast(value); end
-  def changed_in_place?(raw_old_value, value); end
-  def serialize(value); end
-  def type; end
-end
-class ActiveModel::Type::Binary::Data
-  def ==(other); end
-  def hex; end
-  def initialize(value); end
-  def to_s; end
-  def to_str; end
-end
-class ActiveModel::Type::Boolean < ActiveModel::Type::Value
-  def cast_value(value); end
-  def serialize(value); end
-  def type; end
-end
-class ActiveModel::Type::Date < ActiveModel::Type::Value
-  def cast_value(value); end
-  def fallback_string_to_date(string); end
-  def fast_string_to_date(string); end
-  def new_date(year, mon, mday); end
-  def type; end
-  def type_cast_for_schema(value); end
-  def value_from_multiparameter_assignment(*arg0); end
-  include ActiveModel::Type::Helpers::Timezone
-  include Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_4
-end
-module Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_4
-  def assert_valid_value(value); end
-  def cast(value); end
-  def serialize(value); end
-  def value_constructed_by_mass_assignment?(value); end
-  def value_from_multiparameter_assignment(values_hash); end
-end
-class ActiveModel::Type::DateTime < ActiveModel::Type::Value
-  def cast_value(value); end
-  def fallback_string_to_time(string); end
-  def microseconds(time); end
-  def type; end
-  def value_from_multiparameter_assignment(values_hash); end
-  include ActiveModel::Type::Helpers::TimeValue
-  include ActiveModel::Type::Helpers::Timezone
-  include Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_5
-end
-module Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_5
-  def assert_valid_value(value); end
-  def cast(value); end
-  def serialize(value); end
-  def value_constructed_by_mass_assignment?(value); end
-  def value_from_multiparameter_assignment(values_hash); end
-end
-class ActiveModel::Type::Decimal < ActiveModel::Type::Value
-  def apply_scale(value); end
-  def cast_value(value); end
-  def convert_float_to_big_decimal(value); end
-  def float_precision; end
-  def type; end
-  def type_cast_for_schema(value); end
-  include ActiveModel::Type::Helpers::Numeric
-end
-class ActiveModel::Type::Float < ActiveModel::Type::Value
-  def cast_value(value); end
-  def type; end
-  def type_cast_for_schema(value); end
-  include ActiveModel::Type::Helpers::Numeric
-end
-class ActiveModel::Type::ImmutableString < ActiveModel::Type::Value
-  def cast_value(value); end
-  def serialize(value); end
-  def type; end
-end
-class ActiveModel::Type::String < ActiveModel::Type::ImmutableString
-  def cast_value(value); end
-  def changed_in_place?(raw_old_value, new_value); end
-end
-class ActiveModel::Type::Time < ActiveModel::Type::Value
-  def cast_value(value); end
-  def type; end
-  def user_input_in_time_zone(value); end
-  include ActiveModel::Type::Helpers::TimeValue
-  include ActiveModel::Type::Helpers::Timezone
-  include Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_6
-end
-module Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_6
-  def assert_valid_value(value); end
-  def cast(value); end
-  def serialize(value); end
-  def value_constructed_by_mass_assignment?(value); end
-  def value_from_multiparameter_assignment(values_hash); end
-end
-class ActiveModel::Type::Registry
-  def find_registration(symbol, *args, **kwargs); end
-  def initialize; end
-  def lookup(symbol, *args, **kwargs); end
-  def register(type_name, klass = nil, **options, &block); end
-  def registration_klass; end
-  def registrations; end
-end
-class ActiveModel::Type::Registration
-  def block; end
-  def call(_registry, *args, **kwargs); end
-  def initialize(name, block, **arg2); end
-  def matches?(type_name, *args, **kwargs); end
-  def name; end
-end
-module ActiveRecord::Type
-  def self.add_modifier(*args, &block); end
-  def self.current_adapter_name; end
-  def self.default_value; end
-  def self.lookup(*args, adapter: nil, **kwargs); end
-  def self.register(type_name, klass = nil, **options, &block); end
-  def self.registry; end
-  def self.registry=(arg0); end
-end
-module ActiveRecord::Type::Internal
-end
-module ActiveRecord::Type::Internal::Timezone
-  def default_timezone; end
-  def is_utc?; end
-end
-class ActiveRecord::Type::Date < ActiveModel::Type::Date
-  include ActiveRecord::Type::Internal::Timezone
-end
-class ActiveRecord::Type::DateTime < ActiveModel::Type::DateTime
-  include ActiveRecord::Type::Internal::Timezone
-end
-class ActiveRecord::Type::DecimalWithoutScale < ActiveModel::Type::BigInteger
-  def type; end
-  def type_cast_for_schema(value); end
-end
-class ActiveRecord::Type::Json < ActiveModel::Type::Value
-  def accessor; end
-  def changed_in_place?(raw_old_value, new_value); end
-  def deserialize(value); end
-  def serialize(value); end
-  def type; end
-  include ActiveModel::Type::Helpers::Mutable
-end
-class ActiveRecord::Type::Time < ActiveModel::Type::Time
-  def serialize(value); end
-  include ActiveRecord::Type::Internal::Timezone
-end
-class ActiveRecord::Type::Time::Value < Anonymous_Delegator_7
-end
-class ActiveRecord::Type::Text < ActiveModel::Type::String
-  def type; end
-end
-class ActiveRecord::Type::UnsignedInteger < ActiveModel::Type::Integer
-  def max_value; end
-  def min_value; end
-end
-class ActiveRecord::Type::Serialized < Anonymous_Delegator_8
-  def accessor; end
-  def assert_valid_value(value); end
-  def changed_in_place?(raw_old_value, value); end
-  def coder; end
-  def default_value?(value); end
-  def deserialize(value); end
-  def encoded(value); end
-  def force_equality?(value); end
-  def initialize(subtype, coder); end
-  def inspect; end
-  def serialize(value); end
-  def subtype; end
-  include ActiveModel::Type::Helpers::Mutable
-end
-class ActiveRecord::Type::AdapterSpecificRegistry < ActiveModel::Type::Registry
-  def add_modifier(options, klass, **args); end
-  def find_registration(symbol, *args, **kwargs); end
-  def registration_klass; end
-end
-class ActiveRecord::Type::Registration
-  def <=>(other); end
-  def adapter; end
-  def block; end
-  def call(_registry, *args, adapter: nil, **kwargs); end
-  def conflicts_with?(other); end
-  def has_adapter_conflict?(other); end
-  def initialize(name, block, adapter: nil, override: nil); end
-  def matches?(type_name, *args, **kwargs); end
-  def matches_adapter?(adapter: nil, **arg1); end
-  def name; end
-  def override; end
-  def priority; end
-  def priority_except_adapter; end
-  def same_priority_except_adapter?(other); end
-end
-class ActiveRecord::Type::DecorationRegistration < ActiveRecord::Type::Registration
-  def call(registry, *args, **kwargs); end
-  def initialize(options, klass, adapter: nil); end
-  def klass; end
-  def matches?(*args, **kwargs); end
-  def matches_options?(**kwargs); end
-  def options; end
-  def priority; end
-end
-class ActiveRecord::TypeConflictError < StandardError
-end
-class ActiveRecord::Type::TypeMap
-  def alias_type(key, target_key); end
-  def clear; end
-  def fetch(lookup_key, *args, &block); end
-  def initialize; end
-  def lookup(lookup_key, *args); end
-  def perform_fetch(lookup_key, *args); end
-  def register_type(key, value = nil, &block); end
-end
-class ActiveRecord::Type::HashLookupTypeMap < ActiveRecord::Type::TypeMap
-  def alias_type(type, alias_type); end
-  def key?(key); end
-  def keys; end
-  def perform_fetch(type, *args, &block); end
-end
-module ActiveRecord::Enum
-  def _enum_methods_module; end
-  def assert_valid_enum_definition_values(values); end
-  def detect_enum_conflict!(enum_name, method_name, klass_method = nil); end
-  def detect_negative_condition!(method_name); end
-  def enum(*args, **kwargs); end
-  def inherited(base); end
-  def raise_conflict_error(enum_name, method_name, type: nil, source: nil); end
-  def self.extended(base); end
-end
-class ActiveRecord::Enum::EnumType < ActiveModel::Type::Value
-  def assert_valid_value(value); end
-  def cast(value); end
-  def deserialize(value); end
-  def initialize(name, mapping, subtype); end
-  def mapping; end
-  def name; end
-  def serialize(value); end
-  def subtype; end
-  def type(*args, &block); end
-end
 module ActiveSupport::DescendantsTracker
   def descendants; end
   def direct_descendants; end
@@ -6191,7 +5883,7 @@ class Rails::SourceAnnotationExtractor
   def self.enumerate(tag = nil, options = nil); end
   def tag; end
 end
-class Anonymous_Struct_9 < Struct
+class Anonymous_Struct_4 < Struct
   def line; end
   def line=(_); end
   def self.[](*arg0); end
@@ -6203,7 +5895,7 @@ class Anonymous_Struct_9 < Struct
   def text; end
   def text=(_); end
 end
-class Rails::SourceAnnotationExtractor::Annotation < Anonymous_Struct_9
+class Rails::SourceAnnotationExtractor::Annotation < Anonymous_Struct_4
   def self.directories; end
   def self.extensions; end
   def self.notes_task_deprecation_warning; end
@@ -6401,8 +6093,8 @@ module Digest::UUID
   def self.uuid_v5(uuid_namespace, name); end
 end
 class File < IO
-  def self.empty?(arg0); end
-  def self.split(arg0); end
+  def self.atomic_write(file_name, temp_dir = nil); end
+  def self.probe_stat_in(dir); end
 end
 module Module::Concerning
   def concern(topic, &module_definition); end
@@ -8034,7 +7726,7 @@ class ActionView::Template::Handlers::Builder
   def self.default_format=(val); end
   def self.default_format?; end
 end
-class ActionView::Template::LegacyTemplate < Anonymous_Delegator_10
+class ActionView::Template::LegacyTemplate < Anonymous_Delegator_5
   def initialize(template, source); end
   def source; end
 end
@@ -9279,7 +8971,7 @@ module ActionController::ParamsWrapper
   def process_action(*arg0); end
   extend ActiveSupport::Concern
 end
-class Anonymous_Struct_11 < Struct
+class Anonymous_Struct_6 < Struct
   def exclude; end
   def exclude=(_); end
   def format; end
@@ -9297,7 +8989,7 @@ class Anonymous_Struct_11 < Struct
   def self.members; end
   def self.new(*arg0); end
 end
-class ActionController::ParamsWrapper::Options < Anonymous_Struct_11
+class ActionController::ParamsWrapper::Options < Anonymous_Struct_6
   def _default_wrap_model; end
   def include; end
   def initialize(name, format, include, exclude, klass, model); end
@@ -9904,7 +9596,7 @@ class ActionController::Base < ActionController::Metal
   extend ActiveSupport::Callbacks::ClassMethods
   extend ActiveSupport::DescendantsTracker
   extend ActiveSupport::Rescuable::ClassMethods
-  extend Anonymous_Module_12
+  extend Anonymous_Module_7
   include AbstractController::AssetPaths
   include AbstractController::Caching
   include AbstractController::Caching::Fragments
@@ -9977,7 +9669,7 @@ module ActionController::Base::HelperMethods
   def protect_against_forgery?(*args, &blk); end
   def view_cache_dependencies(*args, &blk); end
 end
-module Anonymous_Module_12
+module Anonymous_Module_7
   def inherited(klass); end
 end
 class ActionController::API < ActionController::Metal
@@ -10041,7 +9733,7 @@ class ActionController::API < ActionController::Metal
   extend ActiveSupport::Callbacks::ClassMethods
   extend ActiveSupport::DescendantsTracker
   extend ActiveSupport::Rescuable::ClassMethods
-  extend Anonymous_Module_13
+  extend Anonymous_Module_8
   include AbstractController::Callbacks
   include AbstractController::Callbacks
   include AbstractController::Logger
@@ -10074,7 +9766,7 @@ class ActionController::API < ActionController::Metal
   include ActiveSupport::Callbacks
   include ActiveSupport::Rescuable
 end
-module Anonymous_Module_13
+module Anonymous_Module_8
   def inherited(klass); end
 end
 module ActiveJob::Core
@@ -10132,12 +9824,8 @@ module ActiveJob::QueueName::ClassMethods
   def default_queue_name=(obj); end
   def queue_as(part_name = nil, &block); end
   def queue_name_from_part(part_name); end
-  def queue_name_prefix; end
-  def queue_name_prefix=(obj); end
   def self.default_queue_name; end
   def self.default_queue_name=(obj); end
-  def self.queue_name_prefix; end
-  def self.queue_name_prefix=(obj); end
 end
 module ActiveJob::QueuePriority
   def priority; end
@@ -10216,12 +9904,12 @@ module ActiveJob::Exceptions::ClassMethods
   def discard_on(*exceptions); end
   def retry_on(*exceptions, wait: nil, attempts: nil, queue: nil, priority: nil); end
 end
+class ActiveJob::LogSubscriber < ActiveSupport::LogSubscriber
+end
 module ActiveJob::Logging
   def logger_tagged_by_active_job?; end
   def tag_logger(*tags); end
   extend ActiveSupport::Concern
-end
-class ActiveJob::Logging::LogSubscriber < ActiveSupport::LogSubscriber
 end
 module ActiveJob::Timezones
   extend ActiveSupport::Concern
@@ -10262,6 +9950,9 @@ class ActiveJob::Base
   def _run_perform_callbacks(&block); end
   def logger; end
   def logger=(obj); end
+  def queue_name_prefix; end
+  def queue_name_prefix=(val); end
+  def queue_name_prefix?; end
   def rescue_handlers; end
   def rescue_handlers=(val); end
   def rescue_handlers?; end
@@ -10287,6 +9978,9 @@ class ActiveJob::Base
   def self.queue_name_delimiter; end
   def self.queue_name_delimiter=(val); end
   def self.queue_name_delimiter?; end
+  def self.queue_name_prefix; end
+  def self.queue_name_prefix=(val); end
+  def self.queue_name_prefix?; end
   def self.rescue_handlers; end
   def self.rescue_handlers=(val); end
   def self.rescue_handlers?; end
@@ -10657,7 +10351,7 @@ class ActionMailer::Base < AbstractController::Base
   extend ActiveSupport::Callbacks::ClassMethods
   extend ActiveSupport::DescendantsTracker
   extend ActiveSupport::Rescuable::ClassMethods
-  extend Anonymous_Module_14
+  extend Anonymous_Module_9
   include AbstractController::AssetPaths
   include AbstractController::Caching
   include AbstractController::Caching::Fragments
@@ -10698,7 +10392,7 @@ class ActionMailer::Base::LateAttachmentsProxy < SimpleDelegator
   def _raise_error; end
   def inline; end
 end
-module Anonymous_Module_14
+module Anonymous_Module_9
   def inherited(klass); end
 end
 module ActiveRecord::AttributeDecorators
@@ -10861,6 +10555,9 @@ class ActiveRecord::DatabaseConfigurations
   def walk_configs(env_name, config); end
 end
 class ActiveRecord::DatabaseConfigurations::DatabaseConfig
+  def adapter; end
+  def adapter_method; end
+  def config; end
   def env_name; end
   def for_current_env?; end
   def initialize(env_name, spec_name); end
@@ -10871,20 +10568,30 @@ class ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def url_config?; end
 end
 class ActiveRecord::DatabaseConfigurations::HashConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
-  def config; end
+  def configuration_hash; end
   def initialize(env_name, spec_name, config); end
   def migrations_paths; end
   def replica?; end
+  def resolve_url_key; end
 end
 class ActiveRecord::DatabaseConfigurations::UrlConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def build_config(original_config, url); end
   def build_url_hash(url); end
-  def config; end
+  def configuration_hash; end
   def initialize(env_name, spec_name, url, config = nil); end
   def migrations_paths; end
   def replica?; end
   def url; end
   def url_config?; end
+end
+class ActiveRecord::DatabaseConfigurations::ConnectionUrlResolver
+  def database_from_path; end
+  def initialize(url); end
+  def query_hash; end
+  def raw_config; end
+  def to_hash; end
+  def uri; end
+  def uri_parser; end
 end
 class ActiveRecord::DatabaseConfigurations::InvalidConfigurationError < StandardError
 end
@@ -11087,6 +10794,316 @@ module ActiveRecord::Explain
   def collecting_queries_for_explain; end
   def exec_explain(queries); end
   def render_bind(attr); end
+end
+module ActiveModel::Type
+  def self.default_value; end
+  def self.lookup(*args, **kwargs); end
+  def self.register(type_name, klass = nil, **options, &block); end
+  def self.registry; end
+  def self.registry=(arg0); end
+end
+module ActiveModel::Type::Helpers
+end
+class ActiveModel::Type::Helpers::AcceptsMultiparameterTime < Module
+  def initialize(defaults: nil); end
+end
+module ActiveModel::Type::Helpers::Numeric
+  def cast(value); end
+  def changed?(old_value, _new_value, new_value_before_type_cast); end
+  def non_numeric_string?(value); end
+  def number_to_non_number?(old_value, new_value_before_type_cast); end
+  def serialize(value); end
+end
+module ActiveModel::Type::Helpers::Mutable
+  def cast(value); end
+  def changed_in_place?(raw_old_value, new_value); end
+end
+module ActiveModel::Type::Helpers::TimeValue
+  def apply_seconds_precision(value); end
+  def fast_string_to_time(string); end
+  def new_time(year, mon, mday, hour, min, sec, microsec, offset = nil); end
+  def serialize(value); end
+  def type_cast_for_schema(value); end
+  def user_input_in_time_zone(value); end
+end
+module ActiveModel::Type::Helpers::Timezone
+  def default_timezone; end
+  def is_utc?; end
+end
+class ActiveModel::Type::Value
+  def ==(other); end
+  def assert_valid_value(_); end
+  def binary?; end
+  def cast(value); end
+  def cast_value(value); end
+  def changed?(old_value, new_value, _new_value_before_type_cast); end
+  def changed_in_place?(raw_old_value, new_value); end
+  def deserialize(value); end
+  def eql?(other); end
+  def force_equality?(_value); end
+  def hash; end
+  def initialize(precision: nil, limit: nil, scale: nil); end
+  def limit; end
+  def map(value); end
+  def precision; end
+  def scale; end
+  def serialize(value); end
+  def type; end
+  def type_cast_for_schema(value); end
+  def value_constructed_by_mass_assignment?(_value); end
+end
+class ActiveModel::Type::Integer < ActiveModel::Type::Value
+  def _limit; end
+  def cast_value(value); end
+  def deserialize(value); end
+  def ensure_in_range(value); end
+  def initialize(*arg0, **arg1); end
+  def max_value; end
+  def min_value; end
+  def range; end
+  def serialize(value); end
+  def type; end
+  include ActiveModel::Type::Helpers::Numeric
+end
+class ActiveModel::Type::BigInteger < ActiveModel::Type::Integer
+  def max_value; end
+end
+class ActiveModel::Type::Binary < ActiveModel::Type::Value
+  def binary?; end
+  def cast(value); end
+  def changed_in_place?(raw_old_value, value); end
+  def serialize(value); end
+  def type; end
+end
+class ActiveModel::Type::Binary::Data
+  def ==(other); end
+  def hex; end
+  def initialize(value); end
+  def to_s; end
+  def to_str; end
+end
+class ActiveModel::Type::Boolean < ActiveModel::Type::Value
+  def cast_value(value); end
+  def serialize(value); end
+  def type; end
+end
+class ActiveModel::Type::Date < ActiveModel::Type::Value
+  def cast_value(value); end
+  def fallback_string_to_date(string); end
+  def fast_string_to_date(string); end
+  def new_date(year, mon, mday); end
+  def type; end
+  def type_cast_for_schema(value); end
+  def value_from_multiparameter_assignment(*arg0); end
+  include ActiveModel::Type::Helpers::Timezone
+  include Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_10
+end
+module Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_10
+  def assert_valid_value(value); end
+  def cast(value); end
+  def serialize(value); end
+  def value_constructed_by_mass_assignment?(value); end
+  def value_from_multiparameter_assignment(values_hash); end
+end
+class ActiveModel::Type::DateTime < ActiveModel::Type::Value
+  def cast_value(value); end
+  def fallback_string_to_time(string); end
+  def microseconds(time); end
+  def type; end
+  def value_from_multiparameter_assignment(values_hash); end
+  include ActiveModel::Type::Helpers::TimeValue
+  include ActiveModel::Type::Helpers::Timezone
+  include Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_11
+end
+module Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_11
+  def assert_valid_value(value); end
+  def cast(value); end
+  def serialize(value); end
+  def value_constructed_by_mass_assignment?(value); end
+  def value_from_multiparameter_assignment(values_hash); end
+end
+class ActiveModel::Type::Decimal < ActiveModel::Type::Value
+  def apply_scale(value); end
+  def cast_value(value); end
+  def convert_float_to_big_decimal(value); end
+  def float_precision; end
+  def type; end
+  def type_cast_for_schema(value); end
+  include ActiveModel::Type::Helpers::Numeric
+end
+class ActiveModel::Type::Float < ActiveModel::Type::Value
+  def cast_value(value); end
+  def type; end
+  def type_cast_for_schema(value); end
+  include ActiveModel::Type::Helpers::Numeric
+end
+class ActiveModel::Type::ImmutableString < ActiveModel::Type::Value
+  def cast_value(value); end
+  def serialize(value); end
+  def type; end
+end
+class ActiveModel::Type::String < ActiveModel::Type::ImmutableString
+  def cast_value(value); end
+  def changed_in_place?(raw_old_value, new_value); end
+end
+class ActiveModel::Type::Time < ActiveModel::Type::Value
+  def cast_value(value); end
+  def type; end
+  def user_input_in_time_zone(value); end
+  include ActiveModel::Type::Helpers::TimeValue
+  include ActiveModel::Type::Helpers::Timezone
+  include Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_12
+end
+module Anonymous_ActiveModel_Type_Helpers_AcceptsMultiparameterTime_12
+  def assert_valid_value(value); end
+  def cast(value); end
+  def serialize(value); end
+  def value_constructed_by_mass_assignment?(value); end
+  def value_from_multiparameter_assignment(values_hash); end
+end
+class ActiveModel::Type::Registry
+  def find_registration(symbol, *args, **kwargs); end
+  def initialize; end
+  def lookup(symbol, *args, **kwargs); end
+  def register(type_name, klass = nil, **options, &block); end
+  def registration_klass; end
+  def registrations; end
+end
+class ActiveModel::Type::Registration
+  def block; end
+  def call(_registry, *args, **kwargs); end
+  def initialize(name, block, **arg2); end
+  def matches?(type_name, *args, **kwargs); end
+  def name; end
+end
+module ActiveRecord::Type
+  def self.add_modifier(*args, &block); end
+  def self.current_adapter_name; end
+  def self.default_value; end
+  def self.lookup(*args, adapter: nil, **kwargs); end
+  def self.register(type_name, klass = nil, **options, &block); end
+  def self.registry; end
+  def self.registry=(arg0); end
+end
+module ActiveRecord::Type::Internal
+end
+module ActiveRecord::Type::Internal::Timezone
+  def default_timezone; end
+  def is_utc?; end
+end
+class ActiveRecord::Type::Date < ActiveModel::Type::Date
+  include ActiveRecord::Type::Internal::Timezone
+end
+class ActiveRecord::Type::DateTime < ActiveModel::Type::DateTime
+  include ActiveRecord::Type::Internal::Timezone
+end
+class ActiveRecord::Type::DecimalWithoutScale < ActiveModel::Type::BigInteger
+  def type; end
+  def type_cast_for_schema(value); end
+end
+class ActiveRecord::Type::Json < ActiveModel::Type::Value
+  def accessor; end
+  def changed_in_place?(raw_old_value, new_value); end
+  def deserialize(value); end
+  def serialize(value); end
+  def type; end
+  include ActiveModel::Type::Helpers::Mutable
+end
+class ActiveRecord::Type::Time < ActiveModel::Type::Time
+  def serialize(value); end
+  include ActiveRecord::Type::Internal::Timezone
+end
+class ActiveRecord::Type::Time::Value < Anonymous_Delegator_13
+end
+class ActiveRecord::Type::Text < ActiveModel::Type::String
+  def type; end
+end
+class ActiveRecord::Type::UnsignedInteger < ActiveModel::Type::Integer
+  def max_value; end
+  def min_value; end
+end
+class ActiveRecord::Type::Serialized < Anonymous_Delegator_14
+  def accessor; end
+  def assert_valid_value(value); end
+  def changed_in_place?(raw_old_value, value); end
+  def coder; end
+  def default_value?(value); end
+  def deserialize(value); end
+  def encoded(value); end
+  def force_equality?(value); end
+  def initialize(subtype, coder); end
+  def inspect; end
+  def serialize(value); end
+  def subtype; end
+  include ActiveModel::Type::Helpers::Mutable
+end
+class ActiveRecord::Type::AdapterSpecificRegistry < ActiveModel::Type::Registry
+  def add_modifier(options, klass, **args); end
+  def find_registration(symbol, *args, **kwargs); end
+  def registration_klass; end
+end
+class ActiveRecord::Type::Registration
+  def <=>(other); end
+  def adapter; end
+  def block; end
+  def call(_registry, *args, adapter: nil, **kwargs); end
+  def conflicts_with?(other); end
+  def has_adapter_conflict?(other); end
+  def initialize(name, block, adapter: nil, override: nil); end
+  def matches?(type_name, *args, **kwargs); end
+  def matches_adapter?(adapter: nil, **arg1); end
+  def name; end
+  def override; end
+  def priority; end
+  def priority_except_adapter; end
+  def same_priority_except_adapter?(other); end
+end
+class ActiveRecord::Type::DecorationRegistration < ActiveRecord::Type::Registration
+  def call(registry, *args, **kwargs); end
+  def initialize(options, klass, adapter: nil); end
+  def klass; end
+  def matches?(*args, **kwargs); end
+  def matches_options?(**kwargs); end
+  def options; end
+  def priority; end
+end
+class ActiveRecord::TypeConflictError < StandardError
+end
+class ActiveRecord::Type::TypeMap
+  def alias_type(key, target_key); end
+  def clear; end
+  def fetch(lookup_key, *args, &block); end
+  def initialize; end
+  def lookup(lookup_key, *args); end
+  def perform_fetch(lookup_key, *args); end
+  def register_type(key, value = nil, &block); end
+end
+class ActiveRecord::Type::HashLookupTypeMap < ActiveRecord::Type::TypeMap
+  def alias_type(type, alias_type); end
+  def key?(key); end
+  def keys; end
+  def perform_fetch(type, *args, &block); end
+end
+module ActiveRecord::Enum
+  def _enum_methods_module; end
+  def assert_valid_enum_definition_values(values); end
+  def detect_enum_conflict!(enum_name, method_name, klass_method = nil); end
+  def detect_negative_condition!(method_name); end
+  def enum(*args, **kwargs); end
+  def inherited(base); end
+  def raise_conflict_error(enum_name, method_name, type: nil, source: nil); end
+  def self.extended(base); end
+end
+class ActiveRecord::Enum::EnumType < ActiveModel::Type::Value
+  def assert_valid_value(value); end
+  def cast(value); end
+  def deserialize(value); end
+  def initialize(name, mapping, subtype); end
+  def mapping; end
+  def name; end
+  def serialize(value); end
+  def subtype; end
+  def type(*args, &block); end
 end
 module ActiveRecord::Aggregations
   def clear_aggregation_cache; end
@@ -12270,32 +12287,12 @@ end
 class Rails::BacktraceCleaner < ActiveSupport::BacktraceCleaner
   def initialize; end
 end
-class ActiveRecord::ConnectionAdapters::ConnectionSpecification
-  def adapter_method; end
-  def config; end
-  def initialize(name, config, adapter_method); end
-  def initialize_dup(original); end
-  def name; end
-  def to_hash; end
-end
-class ActiveRecord::ConnectionAdapters::ConnectionSpecification::ConnectionUrlResolver
-  def database_from_path; end
-  def initialize(url); end
-  def query_hash; end
-  def raw_config; end
-  def to_hash; end
-  def uri; end
-  def uri_parser; end
-end
-class ActiveRecord::ConnectionAdapters::ConnectionSpecification::Resolver
+class ActiveRecord::ConnectionAdapters::Resolver
   def build_configuration_sentence; end
   def configurations; end
   def initialize(configurations); end
   def resolve(config_or_env, pool_name = nil); end
-  def resolve_connection(config_or_env, pool_name = nil); end
-  def resolve_hash_connection(spec); end
   def resolve_symbol_connection(env_name, pool_name); end
-  def resolve_url_connection(url); end
   def spec(config); end
 end
 module ActiveRecord::ConnectionAdapters::DetermineIfPreparableVisitor
@@ -12752,6 +12749,7 @@ class ActiveRecord::ConnectionAdapters::AbstractAdapter
   def pool=(arg0); end
   def prefetch_primary_key?(table_name = nil); end
   def prepared_statements; end
+  def prepared_statements_disabled_cache; end
   def preventing_writes?; end
   def raw_connection; end
   def reconnect!; end
@@ -13084,7 +13082,7 @@ class ActiveRecord::ConnectionAdapters::Table
   def references(*args, **options); end
   def remove(*column_names); end
   def remove_belongs_to(*args, **options); end
-  def remove_foreign_key(*args); end
+  def remove_foreign_key(*args, **options); end
   def remove_index(column_name = nil, options = nil); end
   def remove_references(*args, **options); end
   def remove_timestamps(options = nil); end
@@ -13186,6 +13184,11 @@ class ActiveRecord::ConnectionAdapters::SQLite3Adapter::StatementPool < ActiveRe
 end
 class ActiveRecord::ConnectionAdapters::SQLite3Adapter::SQLite3Integer < ActiveModel::Type::Integer
   def _limit; end
+end
+class ActiveRecord::ConnectionAdapters::ConnectionSpecification
+  def db_config; end
+  def initialize(name, db_config); end
+  def name; end
 end
 module ActiveRecord::FinderMethods
   def apply_join_dependency(eager_loading: nil); end
@@ -14213,7 +14216,7 @@ module ActiveRecord::Migration::Compatibility::V5_2::CommandRecorder
 end
 class ActiveRecord::Migration::Compatibility::V5_1 < ActiveRecord::Migration::Compatibility::V5_2
   def change_column(table_name, column_name, type, options = nil); end
-  def create_table(table_name, options = nil); end
+  def create_table(table_name, **options); end
 end
 class ActiveRecord::Migration::Compatibility::V5_0 < ActiveRecord::Migration::Compatibility::V5_1
   def add_belongs_to(table_name, ref_name, **options); end
@@ -14221,7 +14224,7 @@ class ActiveRecord::Migration::Compatibility::V5_0 < ActiveRecord::Migration::Co
   def add_reference(table_name, ref_name, **options); end
   def compatible_table_definition(t); end
   def create_join_table(table_1, table_2, column_options: nil, **options); end
-  def create_table(table_name, options = nil); end
+  def create_table(table_name, **options); end
 end
 module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
   def belongs_to(*args, **options); end

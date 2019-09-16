@@ -958,7 +958,7 @@ module ActionDispatch::Integration::RequestHelpers
 
   def get(path, **args); end
 
-  def head(path, *args); end
+  def head(path, **args); end
 
   def patch(path, **args); end
 
@@ -2331,6 +2331,22 @@ class ActiveJob::ConfiguredJob
 end
 
 class ActiveJob::ConfiguredJob
+end
+
+class ActiveJob::LogSubscriber
+  def discard(event); end
+
+  def enqueue(event); end
+
+  def enqueue_at(event); end
+
+  def enqueue_retry(event); end
+
+  def perform(event); end
+
+  def perform_start(event); end
+
+  def retry_stopped(event); end
 end
 
 class ActiveJob::QueueAdapters::AsyncAdapter::Scheduler
@@ -7052,15 +7068,13 @@ class File::Stat
 end
 
 class File
-  def self.atomic_write(file_name, temp_dir=T.unsafe(nil)); end
+  def self.empty?(_); end
 
   def self.exists?(_); end
 
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
-
-  def self.probe_stat_in(dir); end
 
 end
 
@@ -10419,6 +10433,8 @@ class Net::HTTP
   ENVIRONMENT_VARIABLE_IS_MULTIUSER_SAFE = ::T.let(nil, ::T.untyped)
 end
 
+Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
+
 class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -10535,15 +10551,7 @@ Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
 
 Net::HTTPServerErrorCode = Net::HTTPServerError
 
-class Net::HTTP
-end
-
-Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
-
-Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
-
-class Net::HTTP
-end
+Net::HTTPSession = Net::HTTP
 
 Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 
@@ -16294,14 +16302,6 @@ class String
   def []=(*_); end
 
   def casecmp?(_); end
-
-  def delete_prefix(_); end
-
-  def delete_prefix!(_); end
-
-  def delete_suffix(_); end
-
-  def delete_suffix!(_); end
 
   def each_grapheme_cluster(); end
 
