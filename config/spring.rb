@@ -1,7 +1,7 @@
-# typed: ignore
-%w[
-  .ruby-version
-  .rbenv-vars
-  tmp/restart.txt
-  tmp/caching-dev.txt
-].each { |path| Spring.watch(path) }
+# typed: strong
+#HID: %w[
+#HID:   .ruby-version
+#HID:   .rbenv-vars
+#HID:   tmp/restart.txt
+#HID:   tmp/caching-dev.txt
+#HID: ].each { |path| Spring.watch(path) }
