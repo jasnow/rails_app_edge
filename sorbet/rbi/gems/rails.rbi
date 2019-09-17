@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-9b6433bb82f1
+# rails-9680984cf8ce
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -4851,6 +4851,7 @@ class ActionDispatch::Journey::Path::Pattern
   def eager_load!; end
   def initialize(ast, requirements, separators, anchored); end
   def match(other); end
+  def match?(other); end
   def names; end
   def offsets; end
   def optional_names; end
