@@ -306,6 +306,43 @@
 # uninitialized constant ActionController::Base::RENDERERS
 # uninitialized constant ActionController::Base::RENDER_FORMATS_IN_PRIORITY
 # uninitialized constant ActionController::Base::URL_OPTIONS
+# wrong constant name <Class:Buffer>
+# wrong constant name <Class:ClassMethods>
+# wrong constant name <Class:ClientDisconnected>
+# wrong constant name <Class:Response>
+# wrong constant name <Class:SSE>
+# wrong constant name new_controller_thread
+# wrong constant name process
+# wrong constant name response_body=
+# uninitialized constant ActionController::Live::Buffer::EXCEPTION_IMMEDIATE
+# uninitialized constant ActionController::Live::Buffer::EXCEPTION_NEVER
+# wrong constant name call_on_error
+# wrong constant name connected?
+# wrong constant name ignore_disconnect
+# wrong constant name ignore_disconnect=
+# wrong constant name initialize
+# wrong constant name on_error
+# wrong constant name make_response!
+# uninitialized constant ActionController::Live::Response::CONTENT_TYPE
+# uninitialized constant ActionController::Live::Response::CONTENT_TYPE_PARSER
+# uninitialized constant ActionController::Live::Response::DATE
+# uninitialized constant ActionController::Live::Response::DEFAULT_CACHE_CONTROL
+# uninitialized constant ActionController::Live::Response::EXCEPTION_IMMEDIATE
+# uninitialized constant ActionController::Live::Response::EXCEPTION_NEVER
+# uninitialized constant ActionController::Live::Response::FILTERED
+# uninitialized constant ActionController::Live::Response::LAST_MODIFIED
+# uninitialized constant ActionController::Live::Response::LOCATION
+# uninitialized constant ActionController::Live::Response::MUST_REVALIDATE
+# uninitialized constant ActionController::Live::Response::NO_CACHE
+# uninitialized constant ActionController::Live::Response::NO_CONTENT_CODES
+# uninitialized constant ActionController::Live::Response::NullContentTypeHeader
+# uninitialized constant ActionController::Live::Response::PRIVATE
+# uninitialized constant ActionController::Live::Response::PUBLIC
+# uninitialized constant ActionController::Live::Response::SET_COOKIE
+# uninitialized constant ActionController::Live::Response::SPECIAL_KEYS
+# wrong constant name close
+# wrong constant name initialize
+# wrong constant name write
 # uninitialized constant ActionController::LogSubscriber::BLACK
 # uninitialized constant ActionController::LogSubscriber::BLUE
 # uninitialized constant ActionController::LogSubscriber::BOLD
@@ -1142,6 +1179,7 @@
 # wrong constant name <Class:JoinBase>
 # wrong constant name <Class:JoinPart>
 # wrong constant name apply_column_aliases
+# wrong constant name base_klass
 # wrong constant name initialize
 # wrong constant name instantiate
 # wrong constant name join_constraints

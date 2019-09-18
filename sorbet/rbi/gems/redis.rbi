@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/redis/all/redis.rbi
 #
-# redis-4.1.2
+# redis-4.1.3
 class Redis
   def _bpop(cmd, args, &blk); end
   def _client; end
@@ -334,6 +334,7 @@ class Redis::Connection::Ruby
   def read; end
   def self.connect(config); end
   def set_tcp_keepalive(keepalive); end
+  def set_tcp_nodelay; end
   def timeout=(timeout); end
   def write(command); end
   def write_timeout=(timeout); end

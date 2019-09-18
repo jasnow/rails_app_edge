@@ -226,6 +226,10 @@ module Rack::Request::Helpers
   def values_at(*keys); end
   def xhr?; end
 end
+class Rack::Runtime
+  def call(env); end
+  def initialize(app, name = nil); end
+end
 class Rack::BodyProxy
   def close; end
   def closed?; end
@@ -308,10 +312,6 @@ class Rack::Response::Raw
   def status; end
   def status=(arg0); end
   include Rack::Response::Helpers
-end
-class Rack::Runtime
-  def call(env); end
-  def initialize(app, name = nil); end
 end
 module Rack::Mime
   def match?(value, matcher); end

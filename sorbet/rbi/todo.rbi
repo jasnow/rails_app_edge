@@ -8,5 +8,5 @@ module ::Anonymous_Delegator_15; end
 module ::Anonymous_Delegator_16; end
 module ::Anonymous_Delegator_17; end
 module ::Anonymous_Delegator_21; end
-module ::Anonymous_Delegator_3; end
+module ::Anonymous_Delegator_4; end
 module ::Anonymous_Delegator_5; end

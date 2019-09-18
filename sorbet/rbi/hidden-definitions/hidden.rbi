@@ -374,7 +374,45 @@ module ActionController::HttpAuthentication::Token
   TOKEN_REGEX = ::T.let(nil, ::T.untyped)
 end
 
+module ActionController::Live
+  def new_controller_thread(); end
+
+  def process(name); end
+
+  def response_body=(body); end
+end
+
+class ActionController::Live::Buffer
+  include ::MonitorMixin
+  def call_on_error(); end
+
+  def connected?(); end
+
+  def ignore_disconnect(); end
+
+  def ignore_disconnect=(ignore_disconnect); end
+
+  def initialize(response); end
+
+  def on_error(&block); end
+end
+
+module ActionController::Live::ClassMethods
+  def make_response!(request); end
+end
+
+class ActionController::Live::ClientDisconnected
+end
+
+class ActionController::Live::Response
+end
+
 class ActionController::Live::SSE
+  def close(); end
+
+  def initialize(stream, options=T.unsafe(nil)); end
+
+  def write(object, options=T.unsafe(nil)); end
   PERMITTED_OPTIONS = ::T.let(nil, ::T.untyped)
 end
 
@@ -2317,6 +2355,8 @@ end
 
 class ActiveRecord::Associations::JoinDependency
   def apply_column_aliases(relation); end
+
+  def base_klass(); end
 
   def initialize(base, table, associations, join_type); end
 
@@ -7996,9 +8036,10 @@ class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+class Net::HTTPClientError
+end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
 
 Net::HTTPClientException = Net::HTTPServerException
 
