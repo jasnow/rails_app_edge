@@ -3234,9 +3234,9 @@ end
 module ActiveRecord::Tasks::DatabaseTasks
   def cache_dump_filename(namespace); end
 
-  def charset(*arguments); end
+  def charset(configuration, *arguments); end
 
-  def charset_current(environment=T.unsafe(nil), specification_name=T.unsafe(nil)); end
+  def charset_current(env_name=T.unsafe(nil), spec_name=T.unsafe(nil)); end
 
   def check_protected_environments!(); end
 
@@ -3244,19 +3244,19 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def check_target_version(); end
 
-  def collation(*arguments); end
+  def collation(configuration, *arguments); end
 
-  def collation_current(environment=T.unsafe(nil), specification_name=T.unsafe(nil)); end
+  def collation_current(env_name=T.unsafe(nil), spec_name=T.unsafe(nil)); end
 
-  def create(*arguments); end
+  def create(configuration, *arguments); end
 
   def create_all(); end
 
   def create_current(environment=T.unsafe(nil), spec_name=T.unsafe(nil)); end
 
-  def current_config(options=T.unsafe(nil)); end
+  def current_config(*args, &block); end
 
-  def current_config=(current_config); end
+  def current_config=(*args, &block); end
 
   def database_configuration(); end
 
@@ -3266,7 +3266,7 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def db_dir=(db_dir); end
 
-  def drop(*arguments); end
+  def drop(configuration, *arguments); end
 
   def drop_all(); end
 
@@ -3274,7 +3274,7 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def dump_filename(namespace, format=T.unsafe(nil)); end
 
-  def dump_schema(configuration, format=T.unsafe(nil), spec_name=T.unsafe(nil)); end
+  def dump_schema(db_config, format=T.unsafe(nil)); end
 
   def dump_schema_cache(conn, filename); end
 
@@ -3288,7 +3288,7 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def for_each(databases); end
 
-  def load_schema(configuration, format=T.unsafe(nil), file=T.unsafe(nil), environment=T.unsafe(nil), spec_name=T.unsafe(nil)); end
+  def load_schema(db_config, format=T.unsafe(nil), file=T.unsafe(nil)); end
 
   def load_schema_current(format=T.unsafe(nil), file=T.unsafe(nil), environment=T.unsafe(nil)); end
 
@@ -3310,7 +3310,7 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def raise_for_multi_db(environment=T.unsafe(nil), command:); end
 
-  def reconstruct_from_schema(configuration, format=T.unsafe(nil), file=T.unsafe(nil), environment=T.unsafe(nil), spec_name=T.unsafe(nil)); end
+  def reconstruct_from_schema(db_config, format=T.unsafe(nil), file=T.unsafe(nil)); end
 
   def register_task(pattern, task); end
 
@@ -3332,9 +3332,9 @@ module ActiveRecord::Tasks::DatabaseTasks
 
   def spec(); end
 
-  def structure_dump(*arguments); end
+  def structure_dump(configuration, *arguments); end
 
-  def structure_load(*arguments); end
+  def structure_load(configuration, *arguments); end
 
   def target_version(); end
 
@@ -8036,10 +8036,7 @@ class Net::HTTPAlreadyReported
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
 
-class Net::HTTPClientError
-end
-
-Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPClientException = Net::HTTPServerException
 
@@ -8047,7 +8044,10 @@ class Net::HTTPEarlyHints
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
 
-Net::HTTPFatalErrorCode = Net::HTTPClientError
+class Net::HTTPClientError
+end
+
+Net::HTTPFatalErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
 
 class Net::HTTPGatewayTimeout
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -8115,9 +8115,10 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
+class Net::HTTPServerError
+end
 
-Net::HTTPServerErrorCode = Net::HTTPServerError
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
 
 Net::HTTPSession = Net::HTTP
 

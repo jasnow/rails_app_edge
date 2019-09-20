@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-9a7f15c905c9
+# rails-080265dedbff
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -10517,7 +10517,7 @@ class ActiveRecord::DatabaseConfigurations
   def method_missing(method, *args, &blk); end
   def throw_getter_deprecation(method); end
   def throw_setter_deprecation(method); end
-  def to_h; end
+  def to_h(*args, &block); end
   def walk_configs(env_name, config); end
 end
 class ActiveRecord::DatabaseConfigurations::DatabaseConfig
@@ -10530,7 +10530,6 @@ class ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def migrations_paths; end
   def replica?; end
   def spec_name; end
-  def to_legacy_hash; end
   def url_config?; end
 end
 class ActiveRecord::DatabaseConfigurations::HashConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
