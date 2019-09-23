@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 03acb3fb4f1f4d67a4e1776deb0036aae960ab46
+  revision: 41441cd64f4e4a8d6ecb2e9f18c96a55db652e57
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -108,14 +108,14 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.0)
     nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     parlour (0.8.0)
       rainbow (~> 3.0.0)
       sorbet-runtime
-    puma (4.1.1)
+    puma (4.2.0)
       nio4r (~> 2.0)
     rack (2.0.7)
     rack-test (1.1.0)
