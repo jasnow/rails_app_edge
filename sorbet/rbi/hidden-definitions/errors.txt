@@ -2282,10 +2282,6 @@
 # wrong constant name version
 # wrong constant name version=
 # wrong constant name <Class:ThreadsTable>
-# wrong constant name <Class:HtmlExtension>
-# uninitialized constant CGI::RFC822_DAYS
-# uninitialized constant CGI::RFC822_MONTHS
-# uninitialized constant CGI::TABLE_FOR_ESCAPE_HTML__
 # wrong constant name a
 # wrong constant name base
 # wrong constant name blockquote
@@ -2506,7 +2502,6 @@
 # wrong constant name delegate
 # wrong constant name instance_delegate
 # wrong constant name garbage_collect
-# wrong constant name <=>
 # wrong constant name s3_uri_signer
 # wrong constant name <Class:ConfigurationError>
 # wrong constant name <Class:InstanceProfileError>
@@ -2526,7 +2521,6 @@
 # wrong constant name secret_access_key=
 # wrong constant name security_token
 # wrong constant name security_token=
-# wrong constant name <=>
 # wrong constant name <Class:BaseLocator>
 # wrong constant name <Class:BlockLocator>
 # wrong constant name <Class:UnscopedLocator>
@@ -5289,11 +5283,7 @@
 # uninitialized constant Puma::Binder::CONTENT_LENGTH_S
 # uninitialized constant Puma::Binder::CONTINUE
 # uninitialized constant Puma::Binder::EARLY_HINTS
-# uninitialized constant Puma::Binder::ERROR_400_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_404_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_408_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_500_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_503_RESPONSE
+# uninitialized constant Puma::Binder::ERROR_RESPONSE
 # uninitialized constant Puma::Binder::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Binder::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Binder::GATEWAY_INTERFACE
@@ -5369,11 +5359,7 @@
 # uninitialized constant Puma::Client::CONTENT_LENGTH_S
 # uninitialized constant Puma::Client::CONTINUE
 # uninitialized constant Puma::Client::EARLY_HINTS
-# uninitialized constant Puma::Client::ERROR_400_RESPONSE
-# uninitialized constant Puma::Client::ERROR_404_RESPONSE
-# uninitialized constant Puma::Client::ERROR_408_RESPONSE
-# uninitialized constant Puma::Client::ERROR_500_RESPONSE
-# uninitialized constant Puma::Client::ERROR_503_RESPONSE
+# uninitialized constant Puma::Client::ERROR_RESPONSE
 # uninitialized constant Puma::Client::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Client::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Client::GATEWAY_INTERFACE
@@ -5449,11 +5435,7 @@
 # uninitialized constant Puma::Events::CONTENT_LENGTH_S
 # uninitialized constant Puma::Events::CONTINUE
 # uninitialized constant Puma::Events::EARLY_HINTS
-# uninitialized constant Puma::Events::ERROR_400_RESPONSE
-# uninitialized constant Puma::Events::ERROR_404_RESPONSE
-# uninitialized constant Puma::Events::ERROR_408_RESPONSE
-# uninitialized constant Puma::Events::ERROR_500_RESPONSE
-# uninitialized constant Puma::Events::ERROR_503_RESPONSE
+# uninitialized constant Puma::Events::ERROR_RESPONSE
 # uninitialized constant Puma::Events::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Events::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Events::GATEWAY_INTERFACE
@@ -5530,11 +5512,7 @@
 # uninitialized constant Puma::Server::CONTENT_LENGTH_S
 # uninitialized constant Puma::Server::CONTINUE
 # uninitialized constant Puma::Server::EARLY_HINTS
-# uninitialized constant Puma::Server::ERROR_400_RESPONSE
-# uninitialized constant Puma::Server::ERROR_404_RESPONSE
-# uninitialized constant Puma::Server::ERROR_408_RESPONSE
-# uninitialized constant Puma::Server::ERROR_500_RESPONSE
-# uninitialized constant Puma::Server::ERROR_503_RESPONSE
+# uninitialized constant Puma::Server::ERROR_RESPONSE
 # uninitialized constant Puma::Server::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Server::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Server::GATEWAY_INTERFACE
@@ -6063,7 +6041,6 @@
 # uninitialized constant Rake::FileUtilsExt::OPT_TABLE
 # uninitialized constant Rake::FileUtilsExt::RUBY
 # uninitialized constant Rake::FileUtilsExt::VERSION
-# uninitialized constant Random::ALPHANUMERIC
 # wrong constant name alphanumeric
 # wrong constant name %
 # uninitialized constant Range::RANGE_FORMATS
@@ -6449,8 +6426,6 @@
 # wrong constant name initialize
 # wrong constant name line_no
 # wrong constant name seek
-# wrong constant name <Class:AbstractSyntaxTree>
-# wrong constant name <Class:MJIT>
 # wrong constant name <Class:Node>
 # wrong constant name children
 # wrong constant name first_column

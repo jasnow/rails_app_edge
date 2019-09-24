@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-03acb3fb4f1f
+# rails-29be48f5a54b
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -1716,7 +1716,7 @@ end
 class ActiveSupport::Messages::RotationConfiguration
   def encrypted; end
   def initialize; end
-  def rotate(kind, *args); end
+  def rotate(kind, *args, **options); end
   def signed; end
 end
 class ActionDispatch::Railtie < Rails::Railtie
@@ -9862,7 +9862,6 @@ end
 module ActiveJob::Exceptions
   def determine_delay(seconds_or_duration_or_algorithm:, executions:); end
   def executions_for(exceptions); end
-  def instrument(name, error: nil, wait: nil, &block); end
   def retry_job(options = nil); end
   extend ActiveSupport::Concern
 end
@@ -9875,6 +9874,10 @@ end
 module ActiveJob::Logging
   def logger_tagged_by_active_job?; end
   def tag_logger(*tags); end
+  extend ActiveSupport::Concern
+end
+module ActiveJob::Instrumentation
+  def instrument(operation, payload = nil, &block); end
   extend ActiveSupport::Concern
 end
 module ActiveJob::Timezones
@@ -9916,6 +9919,7 @@ class ActiveJob::Base
   def _run_perform_callbacks(&block); end
   def logger; end
   def logger=(obj); end
+  def queue_adapter(*args, &block); end
   def queue_name_prefix; end
   def queue_name_prefix=(val); end
   def queue_name_prefix?; end
@@ -9968,6 +9972,7 @@ class ActiveJob::Base
   include ActiveJob::Enqueuing
   include ActiveJob::Exceptions
   include ActiveJob::Execution
+  include ActiveJob::Instrumentation
   include ActiveJob::Logging
   include ActiveJob::QueueAdapter
   include ActiveJob::QueueName
@@ -10523,31 +10528,36 @@ end
 class ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def adapter; end
   def adapter_method; end
+  def checkout_timeout; end
   def config; end
+  def database; end
   def env_name; end
   def for_current_env?; end
+  def idle_timeout; end
   def initialize(env_name, spec_name); end
   def migrations_paths; end
+  def pool; end
+  def reaping_frequency; end
   def replica?; end
   def spec_name; end
-  def url_config?; end
 end
 class ActiveRecord::DatabaseConfigurations::HashConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
+  def adapter; end
+  def checkout_timeout; end
+  def config; end
   def configuration_hash; end
+  def database; end
+  def idle_timeout; end
   def initialize(env_name, spec_name, config); end
   def migrations_paths; end
+  def pool; end
+  def reaping_frequency; end
   def replica?; end
-  def resolve_url_key; end
 end
-class ActiveRecord::DatabaseConfigurations::UrlConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
-  def build_config(original_config, url); end
-  def build_url_hash(url); end
-  def configuration_hash; end
+class ActiveRecord::DatabaseConfigurations::UrlConfig < ActiveRecord::DatabaseConfigurations::HashConfig
+  def build_url_hash; end
   def initialize(env_name, spec_name, url, config = nil); end
-  def migrations_paths; end
-  def replica?; end
   def url; end
-  def url_config?; end
 end
 class ActiveRecord::DatabaseConfigurations::ConnectionUrlResolver
   def database_from_path; end
@@ -11192,13 +11202,14 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool
   def connection_cache_key(thread); end
   def connections; end
   def current_thread; end
+  def db_config; end
   def discard!; end
   def discarded?; end
   def disconnect!; end
   def disconnect(raise_on_acquisition_timeout = nil); end
   def flush!; end
   def flush(minimum_idle = nil); end
-  def initialize(spec); end
+  def initialize(db_config); end
   def lock_thread=(lock_thread); end
   def new_connection; end
   def num_waiting_in_queue; end
@@ -11211,7 +11222,6 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool
   def schema_cache; end
   def schema_cache=(arg0); end
   def size; end
-  def spec; end
   def stat; end
   def try_to_checkout_new_connection; end
   def with_connection; end
@@ -11266,6 +11276,7 @@ class ActiveRecord::ConnectionAdapters::ConnectionHandler
   def clear_reloadable_connections!; end
   def connected?(spec_name); end
   def connection_pool_list; end
+  def connection_pool_names; end
   def connection_pools; end
   def establish_connection(config); end
   def flush_idle_connections!; end
@@ -12257,6 +12268,7 @@ class ActiveRecord::ConnectionAdapters::Resolver
   def configurations; end
   def initialize(configurations); end
   def resolve(config_or_env, pool_name = nil); end
+  def resolve_hash_configuration(env, config); end
   def resolve_symbol_connection(env_name, pool_name); end
   def spec(config); end
 end
@@ -12552,7 +12564,7 @@ module ActiveRecord::ConnectionAdapters::SchemaStatements
   def add_belongs_to(table_name, ref_name, **options); end
   def add_column(table_name, column_name, type, **options); end
   def add_column_for_alter(table_name, column_name, type, options = nil); end
-  def add_foreign_key(from_table, to_table, options = nil); end
+  def add_foreign_key(from_table, to_table, **options); end
   def add_index(table_name, column_name, options = nil); end
   def add_index_options(table_name, column_name, comment: nil, **options); end
   def add_index_sort_order(quoted_columns, **options); end
@@ -12985,7 +12997,7 @@ class ActiveRecord::ConnectionAdapters::TableDefinition
   def datetime(*names, **options); end
   def decimal(*names, **options); end
   def float(*names, **options); end
-  def foreign_key(table_name, options = nil); end
+  def foreign_key(table_name, **options); end
   def foreign_keys; end
   def if_not_exists; end
   def index(column_name, options = nil); end
@@ -13035,7 +13047,7 @@ class ActiveRecord::ConnectionAdapters::Table
   def datetime(*names, **options); end
   def decimal(*names, **options); end
   def float(*names, **options); end
-  def foreign_key(*args); end
+  def foreign_key(*args, **options); end
   def foreign_key_exists?(*args); end
   def index(column_name, options = nil); end
   def index_exists?(column_name, options = nil); end
