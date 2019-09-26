@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-29be48f5a54b
+# rails-192df82f0d96
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -429,6 +429,7 @@ module ActiveSupport::LoggerThreadSafeLevel
   def local_level; end
   def local_level=(level); end
   def local_log_id; end
+  def log_at(level); end
   def unknown?; end
   def warn?; end
   extend ActiveSupport::Concern
@@ -437,7 +438,7 @@ module LoggerSilence
   extend ActiveSupport::Concern
 end
 module ActiveSupport::LoggerSilence
-  def silence(temporary_level = nil); end
+  def silence(severity = nil); end
   extend ActiveSupport::Concern
 end
 class ActiveSupport::Logger < Logger
@@ -8904,6 +8905,12 @@ end
 module ActionController::DefaultHeaders::ClassMethods
   def make_response!(request); end
 end
+module ActionController::Logging
+  extend ActiveSupport::Concern
+end
+module ActionController::Logging::ClassMethods
+  def log_at(level, **options); end
+end
 module ActionController::Rescue
   def process_action(*arg0); end
   def show_detailed_exceptions?; end
@@ -9549,6 +9556,7 @@ class ActionController::Base < ActionController::Metal
   extend ActionController::Helpers::ClassMethods
   extend ActionController::HttpAuthentication::Basic::ControllerMethods::ClassMethods
   extend ActionController::Instrumentation::ClassMethods
+  extend ActionController::Logging::ClassMethods
   extend ActionController::ParameterEncoding::ClassMethods
   extend ActionController::ParamsWrapper::ClassMethods
   extend ActionController::Railties::Helpers
@@ -9598,6 +9606,7 @@ class ActionController::Base < ActionController::Metal
   include ActionController::HttpAuthentication::Token::ControllerMethods
   include ActionController::ImplicitRender
   include ActionController::Instrumentation
+  include ActionController::Logging
   include ActionController::MimeResponds
   include ActionController::ParameterEncoding
   include ActionController::ParamsWrapper
@@ -9690,6 +9699,7 @@ class ActionController::API < ActionController::Metal
   extend ActionController::DefaultHeaders::ClassMethods
   extend ActionController::ForceSSL::ClassMethods
   extend ActionController::Instrumentation::ClassMethods
+  extend ActionController::Logging::ClassMethods
   extend ActionController::ParamsWrapper::ClassMethods
   extend ActionController::Railties::Helpers
   extend ActionController::Renderers::ClassMethods
@@ -9713,6 +9723,7 @@ class ActionController::API < ActionController::Metal
   include ActionController::DefaultHeaders
   include ActionController::ForceSSL
   include ActionController::Instrumentation
+  include ActionController::Logging
   include ActionController::ParamsWrapper
   include ActionController::Redirecting
   include ActionController::Renderers

@@ -1455,9 +1455,6 @@ class ActionView::AbstractRenderer::RenderedTemplate
   EMPTY_SPACER = ::T.let(nil, ::T.untyped)
 end
 
-class ActionView::ActionViewError
-end
-
 class ActionView::Base
   include ::ActionView::Context
   include ::ERB::Util
@@ -1497,9 +1494,6 @@ class ActionView::Digestor::NullLogger
 end
 
 class ActionView::Digestor::Partial
-end
-
-class ActionView::EncodingError
 end
 
 module ActionView::Helpers::AssetUrlHelper
@@ -1549,8 +1543,6 @@ end
 
 class ActionView::MissingTemplate
   def initialize(paths, path, prefixes, partial, details, *_); end
-
-  def path(); end
 end
 
 class ActionView::OutputBuffer
@@ -1753,8 +1745,6 @@ end
 class ActionView::Template::Types::Type
   SET = ::T.let(nil, ::T.untyped)
 end
-
-ActionView::TemplateError = ActionView::Template::Error
 
 class ActionView::TemplateRenderer
   def render(context, options); end
@@ -3355,7 +3345,7 @@ class ActiveRecord::Tasks::MySQLDatabaseTasks
 
   def establish_connection(*args, &block); end
 
-  def initialize(configuration); end
+  def initialize(db_config); end
 
   def purge(); end
 
@@ -3380,7 +3370,7 @@ class ActiveRecord::Tasks::PostgreSQLDatabaseTasks
 
   def establish_connection(*args, &block); end
 
-  def initialize(configuration); end
+  def initialize(db_config); end
 
   def purge(); end
 
@@ -3403,7 +3393,7 @@ class ActiveRecord::Tasks::SQLiteDatabaseTasks
 
   def establish_connection(*args, &block); end
 
-  def initialize(configuration, root=T.unsafe(nil)); end
+  def initialize(db_config, root=T.unsafe(nil)); end
 
   def purge(); end
 
@@ -7964,7 +7954,10 @@ class Net::HTTPRangeNotSatisfiable
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+class Net::HTTPRedirection
+end
+
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
 
 class Net::HTTPRequestTimeout
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -7974,10 +7967,7 @@ Net::HTTPRequestURITooLarge = Net::HTTPURITooLong
 
 Net::HTTPResponceReceiver = Net::HTTPResponse
 
-class Net::HTTPRedirection
-end
-
-Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+Net::HTTPRetriableCode = Net::HTTPRedirection
 
 class Net::HTTPServerError
 end

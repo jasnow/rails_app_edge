@@ -798,21 +798,16 @@
 # wrong constant name assert_enqueued_emails
 # wrong constant name assert_no_emails
 # wrong constant name assert_no_enqueued_emails
-# wrong constant name <Class:ActionViewError>
 # wrong constant name <Class:Digestor>
-# wrong constant name <Class:EncodingError>
-# wrong constant name <Class:MissingTemplate>
 # wrong constant name <Class:OutputBuffer>
 # wrong constant name <Class:OutputFlow>
 # wrong constant name <Class:Renderer>
 # wrong constant name <Class:StreamingBuffer>
 # wrong constant name <Class:StreamingFlow>
 # wrong constant name <Class:StreamingTemplateRenderer>
-# wrong constant name <Class:SyntaxErrorInTemplate>
 # wrong constant name <Class:TemplateRenderer>
 # wrong constant name <Class:TestCase>
 # wrong constant name <Class:UnboundTemplate>
-# wrong constant name <Class:WrongEncodingError>
 # uninitialized constant ActionView::Base::ASSET_EXTENSIONS
 # uninitialized constant ActionView::Base::ASSET_PUBLIC_DIRECTORIES
 # uninitialized constant ActionView::Base::BOOLEAN_ATTRIBUTES
@@ -861,7 +856,6 @@
 # wrong constant name render_partial
 # wrong constant name render_template
 # wrong constant name initialize
-# wrong constant name path
 # uninitialized constant ActionView::OutputBuffer::BLANK_RE
 # uninitialized constant ActionView::OutputBuffer::ENCODED_BLANKS
 # uninitialized constant ActionView::OutputBuffer::UNSAFE_STRING_METHODS
