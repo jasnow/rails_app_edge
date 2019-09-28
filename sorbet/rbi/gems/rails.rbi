@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-192df82f0d96
+# rails-ade48853d96c
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -5911,7 +5911,7 @@ module Digest::UUID
 end
 class File < IO
   def self.atomic_write(file_name, temp_dir = nil); end
-  def self.probe_stat_in(dir); end
+  def self.empty?(arg0); end
 end
 module Module::Concerning
   def concern(topic, &module_definition); end
@@ -12599,7 +12599,7 @@ module ActiveRecord::ConnectionAdapters::SchemaStatements
   def create_join_table(table_1, table_2, column_options: nil, **options); end
   def create_schema_dumper(options); end
   def create_table(table_name, id: nil, primary_key: nil, force: nil, **options); end
-  def create_table_definition(*args); end
+  def create_table_definition(*args, **options); end
   def data_source_exists?(name); end
   def data_source_sql(name = nil, type: nil); end
   def data_sources; end
