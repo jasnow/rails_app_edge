@@ -3918,6 +3918,10 @@ class ActiveRecord::Scoping::ScopeRegistry
   def self.value_for(*args, &block); end
 end
 
+module ActiveRecord::SecureToken
+  MINIMUM_TOKEN_LENGTH = ::T.let(nil, ::T.untyped)
+end
+
 class ActiveRecord::StatementCache
   def execute(params, connection, &block); end
 
@@ -4670,6 +4674,33 @@ end
 
 class ActiveSupport::ExecutionWrapper
   Null = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveSupport::ForkTracker
+end
+
+module ActiveSupport::ForkTracker::CoreExt
+  def fork(*_); end
+end
+
+module ActiveSupport::ForkTracker::CoreExt
+end
+
+module ActiveSupport::ForkTracker::CoreExtPrivate
+  include ::ActiveSupport::ForkTracker::CoreExt
+end
+
+module ActiveSupport::ForkTracker::CoreExtPrivate
+end
+
+module ActiveSupport::ForkTracker
+  def self.after_fork(&block); end
+
+  def self.check!(); end
+
+  def self.hook!(); end
+
+  def self.unregister(callback); end
 end
 
 module ActiveSupport::Gzip
@@ -7316,7 +7347,7 @@ class Hash
 end
 
 class Hash
-  def self.try_convert(_); end
+  def self.from_trusted_xml(xml); end
 end
 
 HashWithIndifferentAccess = ActiveSupport::HashWithIndifferentAccess
@@ -8653,6 +8684,8 @@ JSON::UnparserError = JSON::GeneratorError
 JSONTree = Psych::Visitors::JSONTree
 
 module Kernel
+  include ::ActiveSupport::ForkTracker::CoreExtPrivate
+  include ::ActiveSupport::ForkTracker::CoreExt
   def gem(dep, *reqs); end
 
   def itself(); end
@@ -8670,6 +8703,8 @@ end
 
 module Kernel
   def self.at_exit(); end
+
+  def self.fork(); end
 
   def self.load(*_); end
 
@@ -8781,13 +8816,7 @@ module Loofah::Elements
   STRICT_BLOCK_LEVEL_HTML5 = ::T.let(nil, ::T.untyped)
 end
 
-module Loofah::HTML5::Scrub
-  CONTROL_CHARACTERS = ::T.let(nil, ::T.untyped)
-  CRASS_SEMICOLON = ::T.let(nil, ::T.untyped)
-  CSS_KEYWORDISH = ::T.let(nil, ::T.untyped)
-end
-
-module Loofah::HTML5::WhiteList
+module Loofah::HTML5::SafeList
   ACCEPTABLE_ATTRIBUTES = ::T.let(nil, ::T.untyped)
   ACCEPTABLE_CSS_FUNCTIONS = ::T.let(nil, ::T.untyped)
   ACCEPTABLE_CSS_KEYWORDS = ::T.let(nil, ::T.untyped)
@@ -8817,6 +8846,14 @@ module Loofah::HTML5::WhiteList
   TAGS_SAFE_WITH_LIBXML2 = ::T.let(nil, ::T.untyped)
   VOID_ELEMENTS = ::T.let(nil, ::T.untyped)
 end
+
+module Loofah::HTML5::Scrub
+  CONTROL_CHARACTERS = ::T.let(nil, ::T.untyped)
+  CRASS_SEMICOLON = ::T.let(nil, ::T.untyped)
+  CSS_KEYWORDISH = ::T.let(nil, ::T.untyped)
+end
+
+Loofah::HTML5::WhiteList = Loofah::HTML5::SafeList
 
 module Loofah::LibxmlWorkarounds
   BROKEN_ESCAPING_ATTRIBUTES = ::T.let(nil, ::T.untyped)
@@ -10369,13 +10406,9 @@ end
 class Net::HTTPGatewayTimeout
 end
 
-class Net::HTTPInformation
-end
+Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
-Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
-
-class Net::HTTPInformation
-end
+Net::HTTPInformationCode = Net::HTTPInformation
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -10978,6 +11011,8 @@ class Object
   include ::JSON::Ext::Generator::GeneratorMethods::Object
   include ::PP::ObjectMixin
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+  include ::ActiveSupport::ForkTracker::CoreExtPrivate
+  include ::ActiveSupport::ForkTracker::CoreExt
   def to_yaml(options=T.unsafe(nil)); end
   ARGF = ::T.let(nil, ::T.untyped)
   ARGV = ::T.let(nil, ::T.untyped)
@@ -11223,6 +11258,8 @@ class Process::Tms
 end
 
 module Process
+  def self.fork(); end
+
   def self.last_status(); end
 
   def self.setpgrp(); end
@@ -15932,6 +15969,16 @@ class Sorbet::Private::TodoRBI
   def self.main(); end
 
   def self.output_file(); end
+end
+
+module SorbetRails::CustomParamsMethods
+  include ::ActiveSupport::ForkTracker::CoreExtPrivate
+  include ::ActiveSupport::ForkTracker::CoreExt
+end
+
+module SorbetRails::ModelPlugins
+  include ::ActiveSupport::ForkTracker::CoreExtPrivate
+  include ::ActiveSupport::ForkTracker::CoreExt
 end
 
 SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter

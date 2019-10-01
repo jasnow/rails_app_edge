@@ -238,6 +238,58 @@ class Rack::BodyProxy
   def method_missing(method_name, *args, &block); end
   def respond_to?(method_name, include_all = nil); end
 end
+module Rack::Mime
+  def match?(value, matcher); end
+  def mime_type(ext, fallback = nil); end
+  def self.match?(value, matcher); end
+  def self.mime_type(ext, fallback = nil); end
+end
+class Rack::Head
+  def call(env); end
+  def initialize(app); end
+end
+class Rack::File
+  def call(env); end
+  def fail(status, body, headers = nil); end
+  def filesize(path); end
+  def get(env); end
+  def initialize(root, headers = nil, default_mime = nil); end
+  def make_body(request, path, range); end
+  def mime_type(path, default_mime); end
+  def response_body; end
+  def root; end
+  def serving(request, path); end
+end
+class Rack::File::Iterator
+  def close; end
+  def each; end
+  def initialize(path, range); end
+  def path; end
+  def range; end
+  def to_path; end
+end
+class Rack::Sendfile
+  def call(env); end
+  def initialize(app, variation = nil, mappings = nil); end
+  def map_accel_path(env, path); end
+  def variation(env); end
+end
+class Rack::ConditionalGet
+  def call(env); end
+  def etag_matches?(none_match, headers); end
+  def fresh?(env, headers); end
+  def initialize(app); end
+  def modified_since?(modified_since, headers); end
+  def to_rfc2822(since); end
+end
+class Rack::ETag
+  def call(env); end
+  def digest_body(body); end
+  def etag_body?(body); end
+  def etag_status?(status); end
+  def initialize(app, no_cache_control = nil, cache_control = nil); end
+  def skip_caching?(headers); end
+end
 class Rack::Response
   def [](key); end
   def []=(key, v); end
@@ -312,58 +364,6 @@ class Rack::Response::Raw
   def status; end
   def status=(arg0); end
   include Rack::Response::Helpers
-end
-module Rack::Mime
-  def match?(value, matcher); end
-  def mime_type(ext, fallback = nil); end
-  def self.match?(value, matcher); end
-  def self.mime_type(ext, fallback = nil); end
-end
-class Rack::Head
-  def call(env); end
-  def initialize(app); end
-end
-class Rack::File
-  def call(env); end
-  def fail(status, body, headers = nil); end
-  def filesize(path); end
-  def get(env); end
-  def initialize(root, headers = nil, default_mime = nil); end
-  def make_body(request, path, range); end
-  def mime_type(path, default_mime); end
-  def response_body; end
-  def root; end
-  def serving(request, path); end
-end
-class Rack::File::Iterator
-  def close; end
-  def each; end
-  def initialize(path, range); end
-  def path; end
-  def range; end
-  def to_path; end
-end
-class Rack::Sendfile
-  def call(env); end
-  def initialize(app, variation = nil, mappings = nil); end
-  def map_accel_path(env, path); end
-  def variation(env); end
-end
-class Rack::ConditionalGet
-  def call(env); end
-  def etag_matches?(none_match, headers); end
-  def fresh?(env, headers); end
-  def initialize(app); end
-  def modified_since?(modified_since, headers); end
-  def to_rfc2822(since); end
-end
-class Rack::ETag
-  def call(env); end
-  def digest_body(body); end
-  def etag_body?(body); end
-  def etag_status?(status); end
-  def initialize(app, no_cache_control = nil, cache_control = nil); end
-  def skip_caching?(headers); end
 end
 module Rack::Session::Abstract
 end

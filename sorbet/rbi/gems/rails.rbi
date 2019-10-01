@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-ade48853d96c
+# rails-4c785f736048
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -37,8 +37,8 @@ class Hash
   def reverse_merge!(other_hash); end
   def reverse_merge(other_hash); end
   def reverse_update(other_hash); end
-  def self.from_trusted_xml(xml); end
   def self.from_xml(xml, disallowed_types = nil); end
+  def self.try_convert(arg0); end
   def slice!(*keys); end
   def stringify_keys!; end
   def stringify_keys; end
@@ -6109,129 +6109,6 @@ end
 class ActionDispatch::Request::Utils::NoNilParamEncoder < ActionDispatch::Request::Utils::ParamEncoder
   def self.handle_array(params); end
 end
-module ActionDispatch::Http::FilterRedirect
-  def filtered_location; end
-  def location_filter_match?; end
-  def location_filters; end
-end
-class ActionDispatch::Response
-  def [](*args, &block); end
-  def []=(*args, &block); end
-  def _cache_control; end
-  def _cache_control=(v); end
-  def abort; end
-  def assign_default_content_type_and_charset!; end
-  def await_commit; end
-  def await_sent; end
-  def before_committed; end
-  def before_sending; end
-  def body; end
-  def body=(body); end
-  def body_parts; end
-  def build_buffer(response, body); end
-  def charset; end
-  def charset=(charset); end
-  def close; end
-  def code; end
-  def commit!; end
-  def committed?; end
-  def content_type; end
-  def content_type=(content_type); end
-  def cookies; end
-  def default_charset; end
-  def default_charset=(obj); end
-  def default_headers; end
-  def default_headers=(obj); end
-  def delete_header(key); end
-  def each(&block); end
-  def get_header(key); end
-  def handle_no_content!; end
-  def has_header?(key); end
-  def header; end
-  def headers; end
-  def initialize(status = nil, header = nil, body = nil); end
-  def media_type; end
-  def message; end
-  def munge_body_object(body); end
-  def parse_content_type(content_type); end
-  def parsed_content_type_header; end
-  def prepare!; end
-  def rack_response(status, header); end
-  def redirect_url; end
-  def request; end
-  def request=(arg0); end
-  def reset_body!; end
-  def response_code; end
-  def return_only_media_type_on_content_type; end
-  def return_only_media_type_on_content_type=(obj); end
-  def self.create(status = nil, header = nil, body = nil, default_headers: nil); end
-  def self.default_charset; end
-  def self.default_charset=(obj); end
-  def self.default_headers; end
-  def self.default_headers=(obj); end
-  def self.merge_default_headers(original, default); end
-  def self.return_only_media_type_on_content_type; end
-  def self.return_only_media_type_on_content_type=(obj); end
-  def send_file(path); end
-  def sending!; end
-  def sending?; end
-  def sending_file=(v); end
-  def sent!; end
-  def sent?; end
-  def set_content_type(content_type, charset); end
-  def set_header(key, v); end
-  def status; end
-  def status=(status); end
-  def status_message; end
-  def stream; end
-  def to_a; end
-  def write(string); end
-  include ActionDispatch::Http::Cache::Response
-  include ActionDispatch::Http::FilterRedirect
-  include MonitorMixin
-  include Rack::Response::Helpers
-end
-class ActionDispatch::Response::Header < Anonymous_Delegator_4
-  def []=(k, v); end
-  def initialize(response, header); end
-  def merge(other); end
-  def to_hash; end
-end
-class ActionDispatch::Response::Buffer
-  def abort; end
-  def body; end
-  def close; end
-  def closed?; end
-  def each(&block); end
-  def each_chunk(&block); end
-  def initialize(response, buf); end
-  def write(string); end
-end
-class ActionDispatch::Response::FileBody
-  def body; end
-  def each; end
-  def initialize(path); end
-  def to_path; end
-end
-class ActionDispatch::Response::ContentTypeHeader < Struct
-  def charset; end
-  def charset=(_); end
-  def mime_type; end
-  def mime_type=(_); end
-  def self.[](*arg0); end
-  def self.inspect; end
-  def self.members; end
-  def self.new(*arg0); end
-end
-class ActionDispatch::Response::RackBody
-  def body; end
-  def close; end
-  def each(*args, &block); end
-  def initialize(response); end
-  def respond_to?(method, include_private = nil); end
-  def to_ary; end
-  def to_path; end
-end
 class ActionDispatch::ExceptionWrapper
   def application_trace; end
   def backtrace; end
@@ -7693,7 +7570,7 @@ class ActionView::Template::Handlers::Builder
   def self.default_format=(val); end
   def self.default_format?; end
 end
-class ActionView::Template::LegacyTemplate < Anonymous_Delegator_5
+class ActionView::Template::LegacyTemplate < Anonymous_Delegator_4
   def initialize(template, source); end
   def source; end
 end
@@ -8604,6 +8481,129 @@ class ActionCable::Connection::Base
   include ActionCable::Connection::InternalChannel
 end
 class ActionController::LogSubscriber < ActiveSupport::LogSubscriber
+end
+module ActionDispatch::Http::FilterRedirect
+  def filtered_location; end
+  def location_filter_match?; end
+  def location_filters; end
+end
+class ActionDispatch::Response
+  def [](*args, &block); end
+  def []=(*args, &block); end
+  def _cache_control; end
+  def _cache_control=(v); end
+  def abort; end
+  def assign_default_content_type_and_charset!; end
+  def await_commit; end
+  def await_sent; end
+  def before_committed; end
+  def before_sending; end
+  def body; end
+  def body=(body); end
+  def body_parts; end
+  def build_buffer(response, body); end
+  def charset; end
+  def charset=(charset); end
+  def close; end
+  def code; end
+  def commit!; end
+  def committed?; end
+  def content_type; end
+  def content_type=(content_type); end
+  def cookies; end
+  def default_charset; end
+  def default_charset=(obj); end
+  def default_headers; end
+  def default_headers=(obj); end
+  def delete_header(key); end
+  def each(&block); end
+  def get_header(key); end
+  def handle_no_content!; end
+  def has_header?(key); end
+  def header; end
+  def headers; end
+  def initialize(status = nil, header = nil, body = nil); end
+  def media_type; end
+  def message; end
+  def munge_body_object(body); end
+  def parse_content_type(content_type); end
+  def parsed_content_type_header; end
+  def prepare!; end
+  def rack_response(status, header); end
+  def redirect_url; end
+  def request; end
+  def request=(arg0); end
+  def reset_body!; end
+  def response_code; end
+  def return_only_media_type_on_content_type; end
+  def return_only_media_type_on_content_type=(obj); end
+  def self.create(status = nil, header = nil, body = nil, default_headers: nil); end
+  def self.default_charset; end
+  def self.default_charset=(obj); end
+  def self.default_headers; end
+  def self.default_headers=(obj); end
+  def self.merge_default_headers(original, default); end
+  def self.return_only_media_type_on_content_type; end
+  def self.return_only_media_type_on_content_type=(obj); end
+  def send_file(path); end
+  def sending!; end
+  def sending?; end
+  def sending_file=(v); end
+  def sent!; end
+  def sent?; end
+  def set_content_type(content_type, charset); end
+  def set_header(key, v); end
+  def status; end
+  def status=(status); end
+  def status_message; end
+  def stream; end
+  def to_a; end
+  def write(string); end
+  include ActionDispatch::Http::Cache::Response
+  include ActionDispatch::Http::FilterRedirect
+  include MonitorMixin
+  include Rack::Response::Helpers
+end
+class ActionDispatch::Response::Header < Anonymous_Delegator_5
+  def []=(k, v); end
+  def initialize(response, header); end
+  def merge(other); end
+  def to_hash; end
+end
+class ActionDispatch::Response::Buffer
+  def abort; end
+  def body; end
+  def close; end
+  def closed?; end
+  def each(&block); end
+  def each_chunk(&block); end
+  def initialize(response, buf); end
+  def write(string); end
+end
+class ActionDispatch::Response::FileBody
+  def body; end
+  def each; end
+  def initialize(path); end
+  def to_path; end
+end
+class ActionDispatch::Response::ContentTypeHeader < Struct
+  def charset; end
+  def charset=(_); end
+  def mime_type; end
+  def mime_type=(_); end
+  def self.[](*arg0); end
+  def self.inspect; end
+  def self.members; end
+  def self.new(*arg0); end
+end
+class ActionDispatch::Response::RackBody
+  def body; end
+  def close; end
+  def each(*args, &block); end
+  def initialize(response); end
+  def respond_to?(method, include_private = nil); end
+  def to_ary; end
+  def to_path; end
 end
 class AbstractController::Error < StandardError
 end
@@ -12254,9 +12254,11 @@ end
 module ActiveRecord::SecureToken
   extend ActiveSupport::Concern
 end
+class ActiveRecord::SecureToken::MinimumLengthError < StandardError
+end
 module ActiveRecord::SecureToken::ClassMethods
-  def generate_unique_secure_token; end
-  def has_secure_token(attribute = nil); end
+  def generate_unique_secure_token(length: nil); end
+  def has_secure_token(attribute = nil, length: nil); end
 end
 module ActiveRecord::Suppressor
   def save!(*arg0, **arg1); end
@@ -13385,6 +13387,7 @@ class ActiveRecord::Relation::WhereClause
   def ==(other); end
   def any?(*args, &block); end
   def ast; end
+  def contradiction?; end
   def empty?(*args, &block); end
   def equalities(predicates); end
   def equality_node?(node); end
