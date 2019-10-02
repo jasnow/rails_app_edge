@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-4c785f736048
+# rails-2ef9ecaf454f
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -5911,7 +5911,7 @@ module Digest::UUID
 end
 class File < IO
   def self.atomic_write(file_name, temp_dir = nil); end
-  def self.empty?(arg0); end
+  def self.probe_stat_in(dir); end
 end
 module Module::Concerning
   def concern(topic, &module_definition); end
@@ -6695,8 +6695,9 @@ module ActiveStorage::Attached::Model
   extend ActiveSupport::Concern
 end
 module ActiveStorage::Attached::Model::ClassMethods
-  def has_many_attached(name, dependent: nil); end
-  def has_one_attached(name, dependent: nil); end
+  def has_many_attached(name, dependent: nil, service: nil); end
+  def has_one_attached(name, dependent: nil, service: nil); end
+  def validate_service_configuration(association_name, service); end
 end
 class ActiveStorage::Attached::One < ActiveStorage::Attached
   def attach(attachable); end

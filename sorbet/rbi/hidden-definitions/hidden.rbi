@@ -4421,6 +4421,13 @@ class ActiveStorage::Service
   def self.configure(service_name, configurations); end
 end
 
+class ActiveStorage::ServiceRegistry
+end
+
+class ActiveStorage::ServiceRegistry
+  def self.fetch(service_name, &block); end
+end
+
 class ActiveStorage::Transformers::Transformer
   def initialize(transformations); end
 
@@ -7073,13 +7080,13 @@ class File::Stat
 end
 
 class File
+  def self.empty?(_); end
+
   def self.exists?(_); end
 
   def self.lutime(*_); end
 
   def self.mkfifo(*_); end
-
-  def self.probe_stat_in(dir); end
 end
 
 module FileUtils
@@ -10406,9 +10413,13 @@ end
 class Net::HTTPGatewayTimeout
 end
 
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTPInformation
+end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -14113,28 +14124,6 @@ end
 
 class Regexp
   def self.union(*_); end
-end
-
-module RubyDep
-  PROJECT_URL = ::T.let(nil, ::T.untyped)
-end
-
-class RubyDep::NullLogger
-  LOG_LEVELS = ::T.let(nil, ::T.untyped)
-end
-
-class RubyDep::RubyVersion
-  VERSION_INFO = ::T.let(nil, ::T.untyped)
-end
-
-class RubyDep::Warning
-  DISABLING_ENVIRONMENT_VAR = ::T.let(nil, ::T.untyped)
-  NOTICE_BUGGY_ALTERNATIVE = ::T.let(nil, ::T.untyped)
-  NOTICE_HOW_TO_DISABLE = ::T.let(nil, ::T.untyped)
-  NOTICE_OPEN_ISSUE = ::T.let(nil, ::T.untyped)
-  NOTICE_RECOMMENDATION = ::T.let(nil, ::T.untyped)
-  PREFIX = ::T.let(nil, ::T.untyped)
-  WARNING = ::T.let(nil, ::T.untyped)
 end
 
 class RubyLex

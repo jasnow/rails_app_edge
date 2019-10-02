@@ -2079,6 +2079,8 @@
 # wrong constant name <static-init>
 # wrong constant name build
 # wrong constant name configure
+# wrong constant name <static-init>
+# wrong constant name fetch
 # wrong constant name initialize
 # wrong constant name transform
 # wrong constant name transformations
@@ -3071,10 +3073,10 @@
 # wrong constant name current
 # wrong constant name yield
 # wrong constant name size?
+# wrong constant name empty?
 # wrong constant name exists?
 # wrong constant name lutime
 # wrong constant name mkfifo
-# wrong constant name probe_stat_in
 # uninitialized constant FileUtils::DryRun::LN_SUPPORTED
 # uninitialized constant FileUtils::DryRun::RUBY
 # uninitialized constant FileUtils::DryRun::VERSION
