@@ -1350,6 +1350,7 @@
 # wrong constant name reader
 # wrong constant name replace
 # wrong constant name size
+# wrong constant name target=
 # wrong constant name transaction
 # wrong constant name writer
 # wrong constant name <static-init>
@@ -2066,6 +2067,8 @@
 # wrong constant name download_chunk
 # wrong constant name exist?
 # wrong constant name headers_for_direct_upload
+# wrong constant name name
+# wrong constant name name=
 # wrong constant name open
 # wrong constant name update_metadata
 # wrong constant name upload
@@ -2158,16 +2161,6 @@
 # wrong constant name serialize
 # wrong constant name <static-init>
 # uninitialized constant ActiveSupport::ExecutionWrapper::CALLBACK_FILTER_TYPES
-# wrong constant name <Class:CoreExt>
-# wrong constant name <Class:CoreExtPrivate>
-# wrong constant name fork
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name after_fork
-# wrong constant name check!
-# wrong constant name hook!
-# wrong constant name unregister
 # wrong constant name <Class:Stream>
 # uninitialized constant ActiveSupport::Gzip::Stream::Elem
 # wrong constant name <static-init>

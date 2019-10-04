@@ -2803,6 +2803,8 @@ class ActiveRecord::Associations::CollectionAssociation
 
   def size(); end
 
+  def target=(record); end
+
   def transaction(*args); end
 
   def writer(records); end
@@ -4391,6 +4393,10 @@ class ActiveStorage::Service
 
   def headers_for_direct_upload(key, filename:, content_type:, content_length:, checksum:); end
 
+  def name(); end
+
+  def name=(name); end
+
   def open(*args, **options, &block); end
 
   def update_metadata(key, **metadata); end
@@ -4416,7 +4422,7 @@ end
 
 class ActiveStorage::Service
   extend ::ActiveSupport::Autoload
-  def self.build(configurator:, service: T.unsafe(nil), **service_config); end
+  def self.build(configurator:, name:, service: T.unsafe(nil), **service_config); end
 
   def self.configure(service_name, configurations); end
 end
@@ -4681,33 +4687,6 @@ end
 
 class ActiveSupport::ExecutionWrapper
   Null = ::T.let(nil, ::T.untyped)
-end
-
-module ActiveSupport::ForkTracker
-end
-
-module ActiveSupport::ForkTracker::CoreExt
-  def fork(*_); end
-end
-
-module ActiveSupport::ForkTracker::CoreExt
-end
-
-module ActiveSupport::ForkTracker::CoreExtPrivate
-  include ::ActiveSupport::ForkTracker::CoreExt
-end
-
-module ActiveSupport::ForkTracker::CoreExtPrivate
-end
-
-module ActiveSupport::ForkTracker
-  def self.after_fork(&block); end
-
-  def self.check!(); end
-
-  def self.hook!(); end
-
-  def self.unregister(callback); end
 end
 
 module ActiveSupport::Gzip
@@ -13396,10 +13375,7 @@ end
 
 class Rails::BacktraceCleaner
   APP_DIRS_PATTERN = ::T.let(nil, ::T.untyped)
-  DOT_SLASH = ::T.let(nil, ::T.untyped)
-  EMPTY_STRING = ::T.let(nil, ::T.untyped)
   RENDER_TEMPLATE_PATTERN = ::T.let(nil, ::T.untyped)
-  SLASH = ::T.let(nil, ::T.untyped)
 end
 
 module Rails::Dom

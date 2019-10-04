@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-2ef9ecaf454f
+# rails-f2dc9788a8cf
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -10511,6 +10511,19 @@ class ActiveRecord::TypeCaster::Connection
   def type_cast_for_database(attr_name, value); end
   def type_for_attribute(attr_name); end
 end
+module ActiveSupport::ForkTracker
+  def self.after_fork(&block); end
+  def self.check!; end
+  def self.hook!; end
+  def self.unregister(callback); end
+end
+module ActiveSupport::ForkTracker::CoreExt
+  def fork(*arg0); end
+end
+module ActiveSupport::ForkTracker::CoreExtPrivate
+  def fork(*arg0); end
+  include ActiveSupport::ForkTracker::CoreExt
+end
 class ActiveRecord::DatabaseConfigurations
   def [](env = nil); end
   def any?(*args, &block); end
@@ -10542,16 +10555,28 @@ class ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def adapter_method; end
   def checkout_timeout; end
   def config; end
+  def connection_pool; end
   def database; end
+  def discard_pool!; end
+  def disconnect!; end
   def env_name; end
   def for_current_env?; end
   def idle_timeout; end
   def initialize(env_name, spec_name); end
+  def lock; end
+  def locked?; end
   def migrations_paths; end
   def pool; end
   def reaping_frequency; end
   def replica?; end
+  def schema_cache; end
+  def schema_cache=(arg0); end
+  def self.discard_pools!; end
   def spec_name; end
+  def synchronize(&block); end
+  def try_lock; end
+  def unlock; end
+  include Mutex_m
 end
 class ActiveRecord::DatabaseConfigurations::HashConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def adapter; end
@@ -11189,7 +11214,8 @@ module ActiveRecord::ConnectionAdapters::AbstractPool
   def set_schema_cache(cache); end
 end
 class ActiveRecord::ConnectionAdapters::NullPool
-  def initialize; end
+  def schema_cache; end
+  def schema_cache=(arg0); end
   include ActiveRecord::ConnectionAdapters::AbstractPool
 end
 class ActiveRecord::ConnectionAdapters::ConnectionPool
@@ -11231,8 +11257,8 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool
   def release_connection(owner_thread = nil); end
   def remove(conn); end
   def remove_connection_from_thread_cache(conn, owner_thread = nil); end
-  def schema_cache; end
-  def schema_cache=(arg0); end
+  def schema_cache(*args, &block); end
+  def schema_cache=(arg); end
   def size; end
   def stat; end
   def try_to_checkout_new_connection; end
@@ -11293,16 +11319,12 @@ class ActiveRecord::ConnectionAdapters::ConnectionHandler
   def establish_connection(config); end
   def flush_idle_connections!; end
   def initialize; end
-  def owner_to_pool; end
-  def pool_from_any_process_for(spec_name); end
+  def owner_to_config; end
   def prevent_writes; end
   def prevent_writes=(prevent_writes); end
   def remove_connection(spec_name); end
   def retrieve_connection(spec_name); end
   def retrieve_connection_pool(spec_name); end
-  def self.create_owner_to_pool; end
-  def self.discard_unowned_pools(pid_map); end
-  def self.unowned_pool_finalizer(pid_map); end
   def while_preventing_writes(enabled = nil); end
 end
 class ActiveRecord::InsertAll
