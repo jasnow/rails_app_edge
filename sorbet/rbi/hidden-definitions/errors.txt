@@ -565,6 +565,7 @@
 # wrong constant name follow_redirect!
 # wrong constant name get
 # wrong constant name head
+# wrong constant name options
 # wrong constant name patch
 # wrong constant name post
 # wrong constant name put
@@ -8205,8 +8206,6 @@
 # wrong constant name reload_wizard
 # wrong constant name <static-init>
 # wrong constant name result
-# wrong constant name +@
-# wrong constant name -@
 # wrong constant name []=
 # wrong constant name casecmp?
 # wrong constant name each_grapheme_cluster

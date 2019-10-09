@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-f2dc9788a8cf
+# rails-a3d54d2afe55
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -818,8 +818,10 @@ end
 class ActiveSupport::Deprecation::DeprecatedConstantProxy < Module
   def class; end
   def const_missing(name); end
+  def hash(*args, &block); end
   def initialize(old_const, new_const, deprecator = nil, message: nil); end
   def inspect; end
+  def instance_methods(*args, &block); end
   def method_missing(called, *args, &block); end
   def self.new(*args, **options, &block); end
   def target; end
@@ -6421,9 +6423,10 @@ end
 class ActiveRecord::Migration::Current < ActiveRecord::Migration
 end
 class ActiveRecord::Migration::CheckPending
+  def build_watcher(&block); end
   def call(env); end
   def connection; end
-  def initialize(app); end
+  def initialize(app, file_watcher: nil); end
 end
 class ActiveRecord::Migration::ReversibleBlockHelper < Struct
   def down; end
@@ -6445,7 +6448,6 @@ class ActiveRecord::MigrationProxy < Struct
   def load_migration; end
   def migrate(*args, &block); end
   def migration; end
-  def mtime; end
   def name; end
   def name=(_); end
   def scope; end
@@ -6458,10 +6460,6 @@ class ActiveRecord::MigrationProxy < Struct
   def version=(_); end
   def write(*args, &block); end
 end
-class ActiveRecord::NullMigration < ActiveRecord::MigrationProxy
-  def initialize; end
-  def mtime; end
-end
 class ActiveRecord::MigrationContext
   def any_migrations?; end
   def current_environment; end
@@ -6470,7 +6468,6 @@ class ActiveRecord::MigrationContext
   def forward(steps = nil); end
   def get_all_versions; end
   def initialize(migrations_paths, schema_migration); end
-  def last_migration; end
   def last_stored_environment; end
   def migrate(target_version = nil, &block); end
   def migration_files; end
@@ -8046,6 +8043,7 @@ module ActionDispatch::Routing::Mapper::HttpHelpers
   def delete(*args, &block); end
   def get(*args, &block); end
   def map_method(method, args, &block); end
+  def options(*args, &block); end
   def patch(*args, &block); end
   def post(*args, &block); end
   def put(*args, &block); end
@@ -12105,6 +12103,7 @@ module ActiveRecord::AutosaveAssociation
   def association_valid?(reflection, record, index = nil); end
   def before_save_collection_association; end
   def changed_for_autosave?; end
+  def custom_validation_context?; end
   def destroyed_by_association; end
   def destroyed_by_association=(reflection); end
   def mark_for_destruction; end
@@ -13356,6 +13355,7 @@ class ActiveRecord::Relation
   include ActiveRecord::FinderMethods
   include Enumerable
   include SorbetRails::CustomFinderMethods
+  include SorbetRails::PluckToTStruct
 end
 class ActiveRecord::Relation::HashMerger
   def hash; end
@@ -13937,6 +13937,7 @@ class ActiveRecord::Base
   extend ActiveSupport::DescendantsTracker
   extend ActiveSupport::DescendantsTracker
   extend SorbetRails::CustomFinderMethods
+  extend SorbetRails::PluckToTStruct
   include ActiveModel::AttributeMethods
   include ActiveModel::AttributeMethods
   include ActiveModel::Conversion

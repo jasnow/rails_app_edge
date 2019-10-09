@@ -424,9 +424,9 @@ end
 module ActionCable::TestHelper
   def after_teardown(); end
 
-  def assert_broadcast_on(stream, data); end
+  def assert_broadcast_on(stream, data, &block); end
 
-  def assert_broadcasts(stream, number); end
+  def assert_broadcasts(stream, number, &block); end
 
   def assert_no_broadcasts(stream, &block); end
 
@@ -1016,6 +1016,8 @@ module ActionDispatch::Integration::RequestHelpers
   def get(path, **args); end
 
   def head(path, **args); end
+
+  def options(path, **args); end
 
   def patch(path, **args); end
 
@@ -2442,9 +2444,9 @@ end
 module ActiveJob::TestHelper
   def after_teardown(); end
 
-  def assert_enqueued_jobs(number, only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil)); end
+  def assert_enqueued_jobs(number, only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), &block); end
 
-  def assert_enqueued_with(job: T.unsafe(nil), args: T.unsafe(nil), at: T.unsafe(nil), queue: T.unsafe(nil)); end
+  def assert_enqueued_with(job: T.unsafe(nil), args: T.unsafe(nil), at: T.unsafe(nil), queue: T.unsafe(nil), &block); end
 
   def assert_no_enqueued_jobs(only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), &block); end
 
@@ -2460,7 +2462,7 @@ module ActiveJob::TestHelper
 
   def enqueued_jobs=(arg); end
 
-  def perform_enqueued_jobs(only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), at: T.unsafe(nil)); end
+  def perform_enqueued_jobs(only: T.unsafe(nil), except: T.unsafe(nil), queue: T.unsafe(nil), at: T.unsafe(nil), &block); end
 
   def performed_jobs(*args, &block); end
 
@@ -16018,10 +16020,6 @@ end
 
 class String
   include ::JSON::Ext::Generator::GeneratorMethods::String
-  def +@(); end
-
-  def -@(); end
-
   def []=(*_); end
 
   def casecmp?(_); end
