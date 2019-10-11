@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-a3d54d2afe55
+# rails-9d9c749a7257
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -1303,6 +1303,7 @@ module ActiveSupport::Dependencies::ZeitwerkIntegration::RequireDependency
 end
 module ActiveSupport::Dependencies::ZeitwerkIntegration::Inflector
   def self.camelize(basename, _abspath); end
+  def self.inflect(overrides); end
 end
 module Rails::Autoloaders
   def self.each; end
@@ -13553,6 +13554,7 @@ module ActiveRecord::QueryMethods
   def reverse_sql_order(order_query); end
   def rewhere(conditions); end
   def select(*fields); end
+  def select_association_list(associations); end
   def select_values; end
   def select_values=(value); end
   def skip_preloading!; end

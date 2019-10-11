@@ -8209,7 +8209,6 @@
 # wrong constant name []=
 # wrong constant name casecmp?
 # wrong constant name each_grapheme_cluster
-# wrong constant name encode
 # wrong constant name encode!
 # wrong constant name grapheme_clusters
 # wrong constant name reverse!
