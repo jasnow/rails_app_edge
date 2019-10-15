@@ -31,6 +31,13 @@ module GeneratedUrlHelpers
   sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
   def rails_blob_representation_url(*args, **kwargs); end
 
+  # Sigs for route /rails/active_storage/disk/public/:key/*filename(.:format)
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def rails_disk_service_public_path(*args, **kwargs); end
+
+  sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
+  def rails_disk_service_public_url(*args, **kwargs); end
+
   # Sigs for route /rails/active_storage/disk/:encoded_key/*filename(.:format)
   sig { params(args: T.untyped, kwargs: T.untyped).returns(String) }
   def rails_disk_service_path(*args, **kwargs); end

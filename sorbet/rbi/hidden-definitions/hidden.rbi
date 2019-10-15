@@ -4401,11 +4401,13 @@ class ActiveStorage::Service
 
   def open(*args, **options, &block); end
 
+  def public?(); end
+
   def update_metadata(key, **metadata); end
 
   def upload(key, io, checksum: T.unsafe(nil), **options); end
 
-  def url(key, expires_in:, disposition:, filename:, content_type:); end
+  def url(key, **options); end
 
   def url_for_direct_upload(key, expires_in:, content_type:, content_length:, checksum:); end
 end
@@ -6946,46 +6948,6 @@ class Etc::Passwd
   def self.each(&blk); end
 
   def self.members(); end
-end
-
-module Etc
-  def self.confstr(_); end
-
-  def self.endgrent(); end
-
-  def self.endpwent(); end
-
-  def self.getgrent(); end
-
-  def self.getgrgid(*_); end
-
-  def self.getgrnam(_); end
-
-  def self.getlogin(); end
-
-  def self.getpwent(); end
-
-  def self.getpwnam(_); end
-
-  def self.getpwuid(*_); end
-
-  def self.group(); end
-
-  def self.nprocessors(); end
-
-  def self.passwd(); end
-
-  def self.setgrent(); end
-
-  def self.setpwent(); end
-
-  def self.sysconf(_); end
-
-  def self.sysconfdir(); end
-
-  def self.systmpdir(); end
-
-  def self.uname(); end
 end
 
 class Exception
@@ -10394,13 +10356,9 @@ end
 class Net::HTTPGatewayTimeout
 end
 
-class Net::HTTPInformation
-end
+Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
-Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
-
-class Net::HTTPInformation
-end
+Net::HTTPInformationCode = Net::HTTPInformation
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
