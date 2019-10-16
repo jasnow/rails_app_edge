@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-be3d9daaa39a
+# rails-59a37d5f3323
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -13795,6 +13795,8 @@ class ActiveRecord::Base
   def self.dump_schemas=(obj); end
   def self.error_on_ignored_order; end
   def self.error_on_ignored_order=(obj); end
+  def self.has_many_inversing; end
+  def self.has_many_inversing=(obj); end
   def self.implicit_order_column; end
   def self.implicit_order_column=(val); end
   def self.implicit_order_column?; end
