@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-59a37d5f3323
+# rails-7fd5ca79a5b3
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -10554,28 +10554,18 @@ class ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def adapter_method; end
   def checkout_timeout; end
   def config; end
-  def connection_pool; end
   def database; end
-  def discard_pool!; end
-  def disconnect!; end
   def env_name; end
   def for_current_env?; end
   def idle_timeout; end
   def initialize(env_name, spec_name); end
-  def lock; end
-  def locked?; end
   def migrations_paths; end
   def pool; end
   def reaping_frequency; end
   def replica?; end
   def schema_cache; end
   def schema_cache=(arg0); end
-  def self.discard_pools!; end
   def spec_name; end
-  def synchronize(&block); end
-  def try_lock; end
-  def unlock; end
-  include Mutex_m
 end
 class ActiveRecord::DatabaseConfigurations::HashConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def adapter; end
@@ -11306,6 +11296,20 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper
   def self.register_pool(pool, frequency); end
   def self.spawn_thread(frequency); end
 end
+class ActiveRecord::ConnectionAdapters::Role
+  def db_config; end
+  def discard_pool!; end
+  def disconnect!; end
+  def initialize(db_config); end
+  def lock; end
+  def locked?; end
+  def pool; end
+  def self.discard_pools!; end
+  def synchronize(&block); end
+  def try_lock; end
+  def unlock; end
+  include Mutex_m
+end
 class ActiveRecord::ConnectionAdapters::ConnectionHandler
   def active_connections?; end
   def clear_active_connections!; end
@@ -11318,7 +11322,7 @@ class ActiveRecord::ConnectionAdapters::ConnectionHandler
   def establish_connection(config); end
   def flush_idle_connections!; end
   def initialize; end
-  def owner_to_config; end
+  def owner_to_role; end
   def prevent_writes; end
   def prevent_writes=(prevent_writes); end
   def remove_connection(spec_name); end
