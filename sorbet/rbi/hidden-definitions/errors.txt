@@ -36,9 +36,6 @@
 # wrong constant name <RESERVED_121>
 # wrong constant name <RESERVED_122>
 # wrong constant name <RESERVED_123>
-# wrong constant name <RESERVED_124>
-# wrong constant name <RESERVED_125>
-# wrong constant name <RESERVED_126>
 # wrong constant name <RESERVED_12>
 # wrong constant name <RESERVED_13>
 # wrong constant name <RESERVED_14>

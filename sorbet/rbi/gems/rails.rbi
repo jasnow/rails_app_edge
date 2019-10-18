@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-7fd5ca79a5b3
+# rails-b305f0e206b0
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -11503,7 +11503,9 @@ module ActiveRecord::Inheritance::ClassMethods
   def finder_needs_type_condition?; end
   def inherited(subclass); end
   def new(attributes = nil, &block); end
+  def polymorphic_class_for(name); end
   def polymorphic_name; end
+  def sti_class_for(type_name); end
   def sti_name; end
   def subclass_from_attributes(attrs); end
   def type_condition(table = nil); end

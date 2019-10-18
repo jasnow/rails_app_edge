@@ -10344,13 +10344,7 @@ end
 class Net::HTTPAlreadyReported
 end
 
-class Net::HTTPClientError
-end
-
-Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
-
-class Net::HTTPClientError
-end
+Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPClientException = Net::HTTPServerException
 
@@ -10361,7 +10355,13 @@ end
 class Net::HTTPEarlyHints
 end
 
-Net::HTTPFatalErrorCode = Net::HTTPClientError
+class Net::HTTPClientError
+end
+
+Net::HTTPFatalErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 class Net::HTTPGatewayTimeout
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -10424,13 +10424,7 @@ end
 class Net::HTTPRangeNotSatisfiable
 end
 
-class Net::HTTPRedirection
-end
-
-Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
-
-class Net::HTTPRedirection
-end
+Net::HTTPRedirectionCode = Net::HTTPRedirection
 
 class Net::HTTPRequestTimeout
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -10443,7 +10437,13 @@ Net::HTTPRequestURITooLarge = Net::HTTPURITooLong
 
 Net::HTTPResponceReceiver = Net::HTTPResponse
 
-Net::HTTPRetriableCode = Net::HTTPRedirection
+class Net::HTTPRedirection
+end
+
+Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 Net::HTTPServerErrorCode = Net::HTTPServerError
 
