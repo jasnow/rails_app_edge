@@ -2640,6 +2640,8 @@ class ActiveRecord::Associations::Association
 
   def create!(attributes=T.unsafe(nil), &block); end
 
+  def enable_scoping(); end
+
   def extensions(); end
 
   def initialize(owner, reflection); end
@@ -10348,6 +10350,8 @@ end
 class Net::HTTPAlreadyReported
 end
 
+Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+
 Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPClientException = Net::HTTPServerException
@@ -10359,13 +10363,7 @@ end
 class Net::HTTPEarlyHints
 end
 
-class Net::HTTPClientError
-end
-
-Net::HTTPFatalErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
-
-class Net::HTTPClientError
-end
+Net::HTTPFatalErrorCode = Net::HTTPClientError
 
 class Net::HTTPGatewayTimeout
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -10428,6 +10426,8 @@ end
 class Net::HTTPRangeNotSatisfiable
 end
 
+Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
+
 Net::HTTPRedirectionCode = Net::HTTPRedirection
 
 class Net::HTTPRequestTimeout
@@ -10441,13 +10441,7 @@ Net::HTTPRequestURITooLarge = Net::HTTPURITooLong
 
 Net::HTTPResponceReceiver = Net::HTTPResponse
 
-class Net::HTTPRedirection
-end
-
-Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
-
-class Net::HTTPRedirection
-end
+Net::HTTPRetriableCode = Net::HTTPRedirection
 
 Net::HTTPServerErrorCode = Net::HTTPServerError
 

@@ -1292,6 +1292,7 @@
 # wrong constant name initial_count_for
 # wrong constant name create
 # wrong constant name create!
+# wrong constant name enable_scoping
 # wrong constant name extensions
 # wrong constant name initialize
 # wrong constant name initialize_attributes

@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-23d89fce6f05
+# rails-01336b71af6a
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -14170,12 +14170,12 @@ class ActiveRecord::Associations::CollectionProxy < ActiveRecord::Relation
 end
 class ActiveRecord::AssociationRelation < ActiveRecord::Relation
   def ==(other); end
-  def build(*args, &block); end
-  def create!(*args, &block); end
-  def create(*args, &block); end
+  def build(attributes = nil, &block); end
+  def create!(attributes = nil, &block); end
+  def create(attributes = nil, &block); end
   def exec_queries; end
   def initialize(klass, association, **arg2); end
-  def new(*args, &block); end
+  def new(attributes = nil, &block); end
   def proxy_association; end
 end
 class ActiveRecord::Associations::Builder::SingularAssociation < ActiveRecord::Associations::Builder::Association
