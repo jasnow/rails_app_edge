@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-01336b71af6a
+# rails-1811e8411661
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -10510,19 +10510,6 @@ class ActiveRecord::TypeCaster::Connection
   def type_cast_for_database(attr_name, value); end
   def type_for_attribute(attr_name); end
 end
-module ActiveSupport::ForkTracker
-  def self.after_fork(&block); end
-  def self.check!; end
-  def self.hook!; end
-  def self.unregister(callback); end
-end
-module ActiveSupport::ForkTracker::CoreExt
-  def fork(*arg0); end
-end
-module ActiveSupport::ForkTracker::CoreExtPrivate
-  def fork(*arg0); end
-  include ActiveSupport::ForkTracker::CoreExt
-end
 class ActiveRecord::DatabaseConfigurations
   def [](env = nil); end
   def any?(*args, &block); end
@@ -10563,8 +10550,6 @@ class ActiveRecord::DatabaseConfigurations::DatabaseConfig
   def pool; end
   def reaping_frequency; end
   def replica?; end
-  def schema_cache; end
-  def schema_cache=(arg0); end
   def spec_name; end
 end
 class ActiveRecord::DatabaseConfigurations::HashConfig < ActiveRecord::DatabaseConfigurations::DatabaseConfig
@@ -11236,7 +11221,7 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool
   def disconnect(raise_on_acquisition_timeout = nil); end
   def flush!; end
   def flush(minimum_idle = nil); end
-  def initialize(db_config); end
+  def initialize(role); end
   def lock_thread=(lock_thread); end
   def new_connection; end
   def num_waiting_in_queue; end
@@ -11246,6 +11231,7 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool
   def release_connection(owner_thread = nil); end
   def remove(conn); end
   def remove_connection_from_thread_cache(conn, owner_thread = nil); end
+  def role; end
   def schema_cache(*args, &block); end
   def schema_cache=(arg); end
   def size; end
@@ -11295,20 +11281,6 @@ class ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper
   def run; end
   def self.register_pool(pool, frequency); end
   def self.spawn_thread(frequency); end
-end
-class ActiveRecord::ConnectionAdapters::Role
-  def db_config; end
-  def discard_pool!; end
-  def disconnect!; end
-  def initialize(db_config); end
-  def lock; end
-  def locked?; end
-  def pool; end
-  def self.discard_pools!; end
-  def synchronize(&block); end
-  def try_lock; end
-  def unlock; end
-  include Mutex_m
 end
 class ActiveRecord::ConnectionAdapters::ConnectionHandler
   def active_connections?; end
@@ -11653,12 +11625,10 @@ class ActiveModel::Validations::AcceptanceValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value); end
 end
 class ActiveModel::Validations::AcceptanceValidator::LazilyDefineAttributes < Module
-  def initialize(attribute_definition); end
-end
-class ActiveModel::Validations::AcceptanceValidator::AttributeDefinition
+  def ==(other); end
   def attributes; end
-  def convert_to_reader_name(method_name); end
   def define_on(klass); end
+  def included(klass); end
   def initialize(attributes); end
   def matches?(method_name); end
 end
@@ -12311,8 +12281,8 @@ class ActiveRecord::ConnectionAdapters::Resolver
   def initialize(configurations); end
   def resolve(config_or_env, pool_name = nil); end
   def resolve_hash_configuration(env, config); end
+  def resolve_role(config); end
   def resolve_symbol_connection(env_name, pool_name); end
-  def spec(config); end
 end
 module ActiveRecord::ConnectionAdapters::DetermineIfPreparableVisitor
   def accept(object, collector); end
@@ -13204,10 +13174,35 @@ end
 class ActiveRecord::ConnectionAdapters::SQLite3Adapter::SQLite3Integer < ActiveModel::Type::Integer
   def _limit; end
 end
-class ActiveRecord::ConnectionAdapters::ConnectionSpecification
+module ActiveSupport::ForkTracker
+  def self.after_fork(&block); end
+  def self.check!; end
+  def self.hook!; end
+  def self.unregister(callback); end
+end
+module ActiveSupport::ForkTracker::CoreExt
+  def fork(*arg0); end
+end
+module ActiveSupport::ForkTracker::CoreExtPrivate
+  def fork(*arg0); end
+  include ActiveSupport::ForkTracker::CoreExt
+end
+class ActiveRecord::ConnectionAdapters::Role
+  def connection_specification_name; end
   def db_config; end
-  def initialize(name, db_config); end
-  def name; end
+  def discard_pool!; end
+  def disconnect!; end
+  def initialize(connection_specification_name, db_config); end
+  def lock; end
+  def locked?; end
+  def pool; end
+  def schema_cache; end
+  def schema_cache=(arg0); end
+  def self.discard_pools!; end
+  def synchronize(&block); end
+  def try_lock; end
+  def unlock; end
+  include Mutex_m
 end
 module ActiveRecord::FinderMethods
   def apply_join_dependency(eager_loading: nil); end

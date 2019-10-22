@@ -1292,7 +1292,6 @@
 # wrong constant name initial_count_for
 # wrong constant name create
 # wrong constant name create!
-# wrong constant name enable_scoping
 # wrong constant name extensions
 # wrong constant name initialize
 # wrong constant name initialize_attributes
@@ -1313,6 +1312,7 @@
 # wrong constant name reset_negative_cache
 # wrong constant name reset_scope
 # wrong constant name scope
+# wrong constant name scoping
 # wrong constant name set_inverse_instance
 # wrong constant name set_inverse_instance_from_queries
 # wrong constant name stale_target?

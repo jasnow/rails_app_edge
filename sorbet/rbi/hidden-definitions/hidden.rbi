@@ -2640,8 +2640,6 @@ class ActiveRecord::Associations::Association
 
   def create!(attributes=T.unsafe(nil), &block); end
 
-  def enable_scoping(); end
-
   def extensions(); end
 
   def initialize(owner, reflection); end
@@ -2681,6 +2679,8 @@ class ActiveRecord::Associations::Association
   def reset_scope(); end
 
   def scope(); end
+
+  def scoping(relation, &block); end
 
   def set_inverse_instance(record); end
 
@@ -10350,9 +10350,13 @@ end
 class Net::HTTPAlreadyReported
 end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+class Net::HTTPClientError
+end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 Net::HTTPClientException = Net::HTTPServerException
 
@@ -10426,9 +10430,13 @@ end
 class Net::HTTPRangeNotSatisfiable
 end
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
+class Net::HTTPRedirection
+end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 class Net::HTTPRequestTimeout
   HAS_BODY = ::T.let(nil, ::T.untyped)
