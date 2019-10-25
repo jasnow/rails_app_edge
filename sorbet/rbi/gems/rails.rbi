@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/rails/all/rails.rbi
 #
-# rails-1811e8411661
+# rails-6a27a88b9cd0
 class Hash
   def _deep_transform_keys_in_object!(object, &block); end
   def _deep_transform_keys_in_object(object, &block); end
@@ -12773,6 +12773,7 @@ class ActiveRecord::ConnectionAdapters::AbstractAdapter
   def supports_bulk_alter?; end
   def supports_comments?; end
   def supports_comments_in_create?; end
+  def supports_common_table_expressions?; end
   def supports_datetime_with_precision?; end
   def supports_ddl_transactions?; end
   def supports_explain?; end
@@ -13146,6 +13147,7 @@ class ActiveRecord::ConnectionAdapters::SQLite3Adapter < ActiveRecord::Connectio
   def requires_reloading?; end
   def self.database_exists?(config); end
   def self.represent_boolean_as_integer=(value); end
+  def supports_common_table_expressions?; end
   def supports_datetime_with_precision?; end
   def supports_ddl_transactions?; end
   def supports_explain?; end
