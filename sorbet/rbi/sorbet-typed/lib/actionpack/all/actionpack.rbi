@@ -5,7 +5,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/edit/master/lib/actionpack/all/actionpack.rbi
 #
-# typed: strong
+# typed: false
 
 class ActionController::Base < ActionController::Metal
 end
@@ -104,8 +104,8 @@ class ActionController::Parameters
   sig { params(key: T.any(String, Symbol)).returns(T::Boolean) }
   def key?(key); end
 
-  sig { params(key: T.any(String, Symbol)).returns(T.untyped) }
-  def keys(key); end
+  sig { returns(T::Array[T.untyped]) }
+  def keys; end
 
   sig { params(other_hash: T.untyped).returns(ActionController::Parameters) }
   def merge!(other_hash); end

@@ -351,3 +351,5 @@ class SQLite3::Database::FunctionProxy
 end
 module SQLite3::VersionProxy
 end
+module ApplicationCable
+end

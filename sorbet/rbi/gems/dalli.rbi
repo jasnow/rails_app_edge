@@ -196,8 +196,6 @@ module Dalli::Threadsafe
   def self.extended(obj); end
   def unlock!; end
 end
-class Dalli::Railtie < Rails::Railtie
-end
 class Dalli::DalliError < RuntimeError
 end
 class Dalli::NetworkError < Dalli::DalliError
