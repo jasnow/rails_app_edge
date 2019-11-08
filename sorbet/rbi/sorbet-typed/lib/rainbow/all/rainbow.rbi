@@ -57,7 +57,7 @@ module Rainbow
       sig { params(value: Numeric).returns(Integer) }
       def to_ansi_domain(value); end
 
-      sig { params(ground: Symbol, values: Integer).returns(RGB) } 
+      sig { params(ground: Symbol, values: Integer).returns(RGB) }
       def initialize(ground, *values); end
 
       sig { returns(T::Array[Integer]) }
@@ -240,7 +240,7 @@ module Rainbow
 
     sig { params(enabled: T::Boolean).returns(Wrapper) }
     def initialize(enabled = true); end
-  
+
     sig { params(string: String).returns(T.any(Rainbow::Presenter, Rainbow::NullPresenter)) }
     def wrap(string); end
   end
