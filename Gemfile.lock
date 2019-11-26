@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 04fb1a651d13930877c5b9175d3fed61db34976d
+  revision: 3d0a7822a5dc8828a32c9bf032daa950223364a2
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -85,7 +85,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    brakeman (4.7.1)
+    brakeman (4.7.2)
     builder (3.2.3)
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
@@ -100,7 +100,7 @@ GEM
     listen (3.2.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.3.1)
+    loofah (2.4.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -134,12 +134,12 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     redis (4.1.3)
-    sorbet (0.4.5059)
-      sorbet-static (= 0.4.5059)
+    sorbet (0.4.5065)
+      sorbet-static (= 0.4.5065)
     sorbet-rails (0.5.8.1)
       parlour (~> 0.8.0)
-    sorbet-runtime (0.4.5059)
-    sorbet-static (0.4.5059-universal-darwin-14)
+    sorbet-runtime (0.4.5065)
+    sorbet-static (0.4.5065-universal-darwin-14)
     sprockets (4.0.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
