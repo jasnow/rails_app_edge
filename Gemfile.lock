@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 32b363b2460de99eb76b8e44643f9113ecd5775b
+  revision: ab6f7f756f0b381fa999b0e4c89e376ccd23ec93
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -86,7 +86,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     brakeman (4.7.2)
-    builder (3.2.3)
+    builder (3.2.4)
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
