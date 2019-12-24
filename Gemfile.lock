@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 0b3c710d35199d187dbfddaefbb9ab2752ea6498
+  revision: 1421ad5c81910026ae54477fe244a40ed666122d
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -126,7 +126,7 @@ GEM
       loofah (~> 2.3)
     rake (13.0.1)
     rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
+    rb-inotify (0.10.1)
       ffi (~> 1.0)
     sprockets (4.0.0)
       concurrent-ruby (~> 1.0)
