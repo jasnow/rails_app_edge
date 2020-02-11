@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: c77a949299fcddd0f6f35d9bc21888b862ff665c
+  revision: 39d3c9bcacb43b0a45bcf06aa5b98f6e54deeb24
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -88,7 +88,7 @@ GEM
     brakeman (4.7.2)
     builder (3.2.4)
     byebug (11.1.1)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
     ffi (1.12.2)
@@ -112,11 +112,11 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     nio4r (2.5.2)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.2.1)
+    rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
