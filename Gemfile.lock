@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 2c03e17df972af36729102b5910a99fac1e0d90f
+  revision: 61d615c00d2d0a74f005a6eb8e5891a92621ea0f
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -24,7 +24,7 @@ GIT
     actionpack (6.1.0.alpha)
       actionview (= 6.1.0.alpha)
       activesupport (= 6.1.0.alpha)
-      rack (~> 2.0, >= 2.0.8)
+      rack (~> 2.0, >= 2.0.9)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.2.0)
