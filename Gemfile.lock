@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 348e142b26b4471ddaa9c47b7389fc455b06eca9
+  revision: cf713096849d263b9ae9c7ac3a77d5fd84fa2db0
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -59,7 +59,7 @@ GIT
       i18n (>= 1.6, < 2)
       minitest (~> 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.2, >= 2.2.2)
+      zeitwerk (~> 2.3)
     rails (6.1.0.alpha)
       actioncable (= 6.1.0.alpha)
       actionmailbox (= 6.1.0.alpha)
