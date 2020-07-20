@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: c418fb9fe9ad1b4fd239ffc4db62dd548f8a5a88
+  revision: dcf545d20ca6110a360780bda1ba058d7083167a
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -94,7 +94,7 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.3)
+    i18n (1.8.4)
       concurrent-ruby (~> 1.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
