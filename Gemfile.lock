@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 9f980664fc1bc1fb9845e17d2c5a9ab710156303
+  revision: 396b22d3b6e602061f07a96539148bfb38cead9d
   branch: main
   specs:
     actioncable (7.0.0.alpha2)
@@ -95,7 +95,7 @@ GEM
     ffi (1.15.4)
     globalid (0.5.2)
       activesupport (>= 5.0)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -149,7 +149,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.0.2p107
 
 BUNDLED WITH
    2.2.30
