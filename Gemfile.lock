@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: ee95658b258005047c89cc64b1ee56823becfda1
+  revision: 55765121ad75a02035347e55b8c4bb0136bf88f5
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -138,7 +138,7 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     sqlite3 (1.4.2)
-    thor (1.1.0)
+    thor (1.2.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     websocket-driver (0.7.5)
