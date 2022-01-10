@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: df24d689bcb11953aa4e1ab5316873d2479255a3
+  revision: 707f6e4f0385cf73aae24e7f4a8dc54062f9c7b1
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -102,7 +102,7 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
-    ffi (1.15.4)
+    ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
