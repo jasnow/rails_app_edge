@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 7b1f65e8f56738aaa8dd15f19d3ac5f4385ff229
+  revision: e4140140af5832e045bf8196d1bcbe9e5276a8fb
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -139,9 +139,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.1-x86_64-darwin)
+    nokogiri (1.13.3-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.1-x86_64-linux)
+    nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     puma (5.6.2)
       nio4r (~> 2.0)
