@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: bd4d97ce112c2255d53287c42cb4681c06c04429
+  revision: 3ec6b6e80bfc0d5ad729e0a14ca98f62775e099d
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -8,6 +8,7 @@ GIT
       activesupport (= 7.1.0.alpha)
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
+      zeitwerk (~> 2.5)
     actionmailbox (7.1.0.alpha)
       actionpack (= 7.1.0.alpha)
       activejob (= 7.1.0.alpha)
