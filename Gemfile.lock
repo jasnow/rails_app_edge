@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: b764fc24c88fbd7caf580d8ac3e94e3aaccd2726
+  revision: 61d6eb119fc53678d8f5028bd73ae77e69b91fb6
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -96,7 +96,7 @@ GEM
   specs:
     brakeman (5.2.1)
     builder (3.2.4)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.4.0)
       irb (>= 1.3.6)
