@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: ee907fc38e7615b9fda23b288828de7af119ea40
+  revision: 926b803297c4bc529ee46296a7cd5cc02bb21100
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -114,7 +114,7 @@ GEM
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.15.0)
+    loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
