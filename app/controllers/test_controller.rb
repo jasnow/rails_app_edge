@@ -1,4 +1,5 @@
 # typed: false
+
 class TestController < ApplicationController
   def index
     render json: {}
