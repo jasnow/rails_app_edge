@@ -32,6 +32,7 @@ group :development, :test do
   gem "debug", platforms: [:mri, :mingw, :x64_mingw]
   gem "brakeman"
   gem "standard"
+  gem "ruby_audit"
 end
 
 group :development do

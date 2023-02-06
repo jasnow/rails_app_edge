@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 08f0b74da4fc7eaa7b06fac0bf181e8922f51b0a
+  revision: c703db086a467ffe5f479a03232327406fd42f03
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -100,6 +100,9 @@ GEM
     ast (2.4.2)
     brakeman (5.4.0)
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     concurrent-ruby (1.2.0)
     connection_pool (2.3.0)
     crass (1.0.6)
@@ -183,6 +186,8 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
+    ruby_audit (2.2.0)
+      bundler-audit (~> 0.9.0)
     sqlite3 (1.6.0-x86_64-darwin)
     sqlite3 (1.6.0-x86_64-linux)
     standard (1.22.1)
@@ -210,6 +215,7 @@ DEPENDENCIES
   listen
   puma
   rails!
+  ruby_audit
   sqlite3
   standard
   tzinfo-data
