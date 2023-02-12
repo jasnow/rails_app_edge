@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: c88ca3b72083449fd242ed5aaf1b557f88a9e7b2
+  revision: 672df5b92358dd8b2862ffb22f45213183fb6071
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -153,7 +153,7 @@ GEM
       ast (~> 2.4.1)
     pastel (0.8.0)
       tty-color (~> 0.5)
-    puma (6.0.2)
+    puma (6.1.0)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (3.0.4.1)
@@ -186,8 +186,8 @@ GEM
       rubocop-ast (>= 1.24.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.24.1)
-      parser (>= 3.1.1.0)
+    rubocop-ast (1.26.0)
+      parser (>= 3.2.1.0)
     rubocop-performance (1.15.2)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -214,7 +214,7 @@ GEM
       zeitwerk (>= 2.6)
     sqlite3 (1.6.0-x86_64-darwin)
     sqlite3 (1.6.0-x86_64-linux)
-    standard (1.24.2)
+    standard (1.24.3)
       language_server-protocol (~> 3.17.0.2)
       rubocop (= 1.44.1)
       rubocop-performance (= 1.15.2)
