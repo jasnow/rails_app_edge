@@ -107,7 +107,6 @@ GEM
     connection_pool (2.3.0)
     crass (1.0.6)
     date (3.3.3)
-    debug (1.7.1)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.1.0)
@@ -253,7 +252,6 @@ PLATFORMS
 
 DEPENDENCIES
   brakeman
-  debug
   listen
   puma
   rails!
