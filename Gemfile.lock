@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 136066fe80a32ff633ee62398484013f358b4dfd
+  revision: 5594c6ca7871cd34af6cd64959ac325271138108
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -98,7 +98,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    brakeman (5.4.0)
+    brakeman (5.4.1)
     builder (3.2.4)
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
