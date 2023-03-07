@@ -51,3 +51,5 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'sorbet-rails'
 # gem 'dalli' # Needed by sorbet.
 # gem 'redis' # Needed by sorbet.
+
+gem 'simplecov', require: false, group: :test

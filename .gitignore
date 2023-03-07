@@ -6,7 +6,6 @@ capybara-*.html
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
-/coverage/
 /spec/tmp
 *.orig
 rerun.txt
@@ -46,4 +45,4 @@ bower.json
 
 # Ignore node_modules
 node_modules/
-
+coverage
