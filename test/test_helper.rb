@@ -7,14 +7,13 @@ if ENV["COVERAGE"]
   end
 end
 
-# typed: strong
-# HID: ENV['RAILS_ENV'] ||= 'test'
-# HID: require_relative '../config/environment'
-# HID: require 'rails/test_help'
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
 
-# HID: class ActiveSupport::TestCase
-# Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-# HID:   fixtures :all
+class ActiveSupport::TestCase
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+  fixtures :all
 
-# Add more helper methods to be used by all tests here...
-# HID: end
+  # Add more helper methods to be used by all tests here...
+end
