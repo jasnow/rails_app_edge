@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: f2327e8df142563241c96387e03a0e97b7535e7d
+  revision: ea7ac1594b4e10b0d8814338209e5358fbd6a668
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -123,6 +123,7 @@ GEM
       reline (>= 0.3.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
+    lint_roller (1.0.0)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -225,9 +226,16 @@ GEM
       zeitwerk (>= 2.6)
     sqlite3 (1.6.2-x86_64-darwin)
     sqlite3 (1.6.2-x86_64-linux)
-    standard (1.27.0)
+    standard (1.28.0)
       language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.0)
       rubocop (~> 1.50.2)
+      standard-custom (~> 1.0.0)
+      standard-performance (~> 1.0.1)
+    standard-custom (1.0.0)
+      lint_roller (~> 1.0)
+    standard-performance (1.0.1)
+      lint_roller (~> 1.0)
       rubocop-performance (~> 1.16.0)
     strings (0.2.1)
       strings-ansi (~> 0.2)
