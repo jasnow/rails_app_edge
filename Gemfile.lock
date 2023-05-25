@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 0f5c8c5bc61b7e382e64cad4846406021bc8cd35
+  revision: 2dbc7dbac88666a4503550923beeb89da434b336
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -98,7 +98,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    brakeman (5.4.1)
+    brakeman (6.0.0)
     builder (3.2.4)
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
@@ -149,7 +149,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.1)
+    nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.23.0)
@@ -226,7 +226,7 @@ GEM
       zeitwerk (>= 2.6)
     sqlite3 (1.6.3)
       mini_portile2 (~> 2.8.0)
-    standard (1.28.2)
+    standard (1.28.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
       rubocop (~> 1.50.2)
