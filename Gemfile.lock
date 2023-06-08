@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 0c09ae546fae39333068177b28767abbc6c8726e
+  revision: 6be41aded8c067b2b4af3b05193e551f126fb0e3
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -159,7 +159,7 @@ GEM
       tty-color (~> 0.5)
     puma (6.3.0)
       nio4r (~> 2.0)
-    racc (1.6.2)
+    racc (1.7.0)
     rack (3.0.7)
     rack-session (2.0.0)
       rack (>= 3.0.0)
