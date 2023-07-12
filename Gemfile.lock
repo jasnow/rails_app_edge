@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 66676ce499a32e4c62220bd05f8ee2cdf0e15f0c
+  revision: 50e3ae083683a8a5e38fee4d7952e1576e3ffc31
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -120,8 +120,8 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
-    irb (1.7.1)
-      reline (>= 0.3.0)
+    irb (1.7.2)
+      reline (>= 0.3.6)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
@@ -204,7 +204,7 @@ GEM
     ruby-progressbar (1.13.0)
     ruby_audit (2.2.0)
       bundler-audit (~> 0.9.0)
-    ruby_parser (3.20.2)
+    ruby_parser (3.20.3)
       sexp_processor (~> 4.16)
     sexp_processor (4.17.0)
     simplecov (0.22.0)
@@ -271,6 +271,7 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  ruby
   x86_64-darwin-16
   x86_64-linux
 
