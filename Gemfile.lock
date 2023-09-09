@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 099f979dc72a0c284d27e581a4e8ec5c9fe1cfb2
+  revision: 131d3be2c4cde6028d35e84c292b2ab1d2f3f041
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -247,10 +247,10 @@ GEM
       zeitwerk (>= 2.6)
     sqlite3 (1.6.4)
       mini_portile2 (~> 2.8.0)
-    standard (1.31.0)
+    standard (1.31.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
-      rubocop (~> 1.56.0)
+      rubocop (~> 1.56.2)
       standard-custom (~> 1.0.0)
       standard-performance (~> 1.2)
     standard-custom (1.0.2)
