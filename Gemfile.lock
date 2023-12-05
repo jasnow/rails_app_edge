@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 06d9c3cbe6c92ea2ca8dd6d601a0997821748b5e
+  revision: 1c8be9c67a56edb9e0c4939156831ec0e66e7934
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -105,7 +105,7 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.4)
-    brakeman (6.0.1)
+    brakeman (6.1.0)
     builder (3.2.4)
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
@@ -131,7 +131,7 @@ GEM
     irb (1.10.0)
       rdoc
       reline (>= 0.3.8)
-    json (2.7.0)
+    json (2.7.1)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
     listen (3.8.0)
@@ -193,9 +193,9 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rdoc (6.6.0)
+    rdoc (6.6.1)
       psych (>= 4.0.0)
-    regexp_parser (2.8.2)
+    regexp_parser (2.8.3)
     reline (0.4.1)
       io-console (~> 0.5)
     rexml (3.2.6)
