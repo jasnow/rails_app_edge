@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: fc75fed35a90ee7edc7a9aed0cec663928467e4d
+  revision: eac48e95db9e30579d1c86308bdce7a5dd49c50e
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -15,19 +15,13 @@ GIT
       activerecord (= 7.2.0.alpha)
       activestorage (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
-      mail (>= 2.7.1)
-      net-imap
-      net-pop
-      net-smtp
+      mail (>= 2.8.0)
     actionmailer (7.2.0.alpha)
       actionpack (= 7.2.0.alpha)
       actionview (= 7.2.0.alpha)
       activejob (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
-      mail (~> 2.5, >= 2.5.4)
-      net-imap
-      net-pop
-      net-smtp
+      mail (>= 2.8.0)
       rails-dom-testing (~> 2.2)
     actionpack (7.2.0.alpha)
       actionview (= 7.2.0.alpha)
@@ -130,9 +124,9 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.1)
-    irb (1.11.0)
+    irb (1.11.1)
       rdoc
-      reline (>= 0.3.8)
+      reline (>= 0.4.2)
     json (2.7.1)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
