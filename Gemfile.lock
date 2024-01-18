@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 25b7f640749e0dbbf731a7f5696e5c785195f922
+  revision: 8f386d73215867d5f55058a252f066b1040a7f2b
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -99,7 +99,7 @@ GEM
   specs:
     ast (2.4.2)
     base64 (0.2.0)
-    bigdecimal (3.1.5)
+    bigdecimal (3.1.6)
     brakeman (6.1.1)
       racc
     builder (3.2.4)
@@ -123,7 +123,7 @@ GEM
       tilt
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    io-console (0.7.1)
+    io-console (0.7.2)
     irb (1.11.1)
       rdoc
       reline (>= 0.4.2)
@@ -144,7 +144,7 @@ GEM
     marcel (1.0.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.5)
-    minitest (5.21.1)
+    minitest (5.21.2)
     mutex_m (0.2.0)
     net-imap (0.4.9.1)
       date
