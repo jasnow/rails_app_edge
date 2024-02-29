@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 649e99bf9267b0cbc55decf2603519cfc9f9d4fa
+  revision: 1f6cef4ca546b3a9f7aa12c0f10c7d1d1cfbab5a
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -141,7 +141,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.2)
+    marcel (1.0.3)
     mini_mime (1.1.5)
     mini_portile2 (2.8.5)
     minitest (5.21.2)
@@ -177,6 +177,7 @@ GEM
       racc
     pastel (0.8.0)
       tty-color (~> 0.5)
+    prism (0.24.0)
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -208,7 +209,7 @@ GEM
     reline (0.4.3)
       io-console (~> 0.5)
     rexml (3.2.6)
-    rubocop (1.60.2)
+    rubocop (1.61.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -219,8 +220,9 @@ GEM
       rubocop-ast (>= 1.30.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.30.0)
-      parser (>= 3.2.1.0)
+    rubocop-ast (1.31.0)
+      parser (>= 3.3.0.4)
+      prism (>= 0.24.0)
     rubocop-performance (1.20.2)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.30.0, < 2.0)
