@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 1f6cef4ca546b3a9f7aa12c0f10c7d1d1cfbab5a
+  revision: 75e34079171217fa8b148ccdbf9d47026af08e8a
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -111,8 +111,7 @@ GEM
     crass (1.0.6)
     date (3.3.4)
     docile (1.4.0)
-    drb (2.2.0)
-      ruby2_keywords
+    drb (2.2.1)
     erubi (1.12.0)
     ffi (1.16.3)
     globalid (1.2.1)
@@ -177,7 +176,6 @@ GEM
       racc
     pastel (0.8.0)
       tty-color (~> 0.5)
-    prism (0.24.0)
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -220,14 +218,12 @@ GEM
       rubocop-ast (>= 1.30.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.31.0)
+    rubocop-ast (1.31.1)
       parser (>= 3.3.0.4)
-      prism (>= 0.24.0)
     rubocop-performance (1.20.2)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.30.0, < 2.0)
     ruby-progressbar (1.13.0)
-    ruby2_keywords (0.0.5)
     ruby_audit (2.3.0)
       bundler-audit (~> 0.9.0)
     ruby_parser (3.21.0)
