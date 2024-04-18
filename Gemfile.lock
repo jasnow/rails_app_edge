@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 57cbc2e6ccd0a1095a6bbab38bcc3270555339a7
+  revision: adf0c733399d5d410c61cc423941c99846604676
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -251,14 +251,18 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (1.7.3)
+    sqlite3 (2.0.0)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (1.7.3-aarch64-linux)
-    sqlite3 (1.7.3-arm-linux)
-    sqlite3 (1.7.3-arm64-darwin)
-    sqlite3 (1.7.3-x86-linux)
-    sqlite3 (1.7.3-x86_64-darwin)
-    sqlite3 (1.7.3-x86_64-linux)
+    sqlite3 (2.0.0-aarch64-linux-gnu)
+    sqlite3 (2.0.0-aarch64-linux-musl)
+    sqlite3 (2.0.0-arm-linux-gnu)
+    sqlite3 (2.0.0-arm-linux-musl)
+    sqlite3 (2.0.0-arm64-darwin)
+    sqlite3 (2.0.0-x86-linux-gnu)
+    sqlite3 (2.0.0-x86-linux-musl)
+    sqlite3 (2.0.0-x86_64-darwin)
+    sqlite3 (2.0.0-x86_64-linux-gnu)
+    sqlite3 (2.0.0-x86_64-linux-musl)
     standard (1.35.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -304,13 +308,21 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
   arm-linux
+  arm-linux-gnu
+  arm-linux-musl
   arm64-darwin
   ruby
   x86-linux
+  x86-linux-gnu
+  x86-linux-musl
   x86_64-darwin
   x86_64-darwin-16
   x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   brakeman
