@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: d97fb459bd9fa0d67b4909b8a3b87df8b27405fa
+  revision: 8336aa7f0bfb9f87aa510e4e7aeae08a2089d206
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -113,7 +113,17 @@ GEM
     docile (1.4.0)
     drb (2.2.1)
     erubi (1.12.0)
-    ffi (1.16.3)
+    ffi (1.17.0)
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-aarch64-linux-musl)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm-linux-musl)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86-linux-musl)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux-musl)
     globalid (1.2.1)
       activesupport (>= 6.1)
     haml (6.3.0)
@@ -142,10 +152,10 @@ GEM
       net-smtp
     marcel (1.0.4)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.6)
+    mini_portile2 (2.8.7)
     minitest (5.23.1)
     mutex_m (0.2.0)
-    net-imap (0.4.11)
+    net-imap (0.4.12)
       date
       net-protocol
     net-pop (0.1.2)
@@ -306,13 +316,21 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
   arm-linux
+  arm-linux-gnu
+  arm-linux-musl
   arm64-darwin
   ruby
   x86-linux
+  x86-linux-gnu
+  x86-linux-musl
   x86_64-darwin
   x86_64-darwin-16
   x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   brakeman
@@ -328,7 +346,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.3.1p55
+   ruby 3.3.2p78
 
 BUNDLED WITH
    2.5.11
