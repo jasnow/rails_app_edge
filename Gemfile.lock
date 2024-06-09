@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 8d416d09fc7fc226c6e54dd772e1b8f1969c5d61
+  revision: e3ea4c74124f1de38897732f1ddb1f9a1d57e80d
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -182,7 +182,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.5-x86_64-linux)
       racc (~> 1.4)
-    parallel (1.24.0)
+    parallel (1.25.1)
     parser (3.3.2.0)
       ast (~> 2.4.1)
       racc
@@ -218,8 +218,8 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.8)
       io-console (~> 0.5)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
+    rexml (3.2.9)
+      strscan
     rubocop (1.63.5)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
