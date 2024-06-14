@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 4a4b3998300fbebf537b770d842066b13dee5072
+  revision: a14eb2dc847515cd6fee2779ca0bb13f106d98e4
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -113,7 +113,7 @@ GEM
     date (3.3.4)
     docile (1.4.0)
     drb (2.2.1)
-    erubi (1.12.0)
+    erubi (1.13.0)
     ffi (1.17.0)
     ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-aarch64-linux-musl)
@@ -167,20 +167,20 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.5)
+    nokogiri (1.16.6)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.16.5-aarch64-linux)
+    nokogiri (1.16.6-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.16.5-arm-linux)
+    nokogiri (1.16.6-arm-linux)
       racc (~> 1.4)
-    nokogiri (1.16.5-arm64-darwin)
+    nokogiri (1.16.6-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.5-x86-linux)
+    nokogiri (1.16.6-x86-linux)
       racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-darwin)
+    nokogiri (1.16.6-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-linux)
+    nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
     parallel (1.25.1)
     parser (3.3.3.0)
@@ -328,7 +328,6 @@ PLATFORMS
   x86-linux
   x86-linux-gnu
   x86-linux-musl
-  x86_64-darwin
   x86_64-darwin-16
   x86_64-linux
   x86_64-linux-gnu
@@ -351,4 +350,4 @@ RUBY VERSION
    ruby 3.3.2p78
 
 BUNDLED WITH
-   2.5.11
+   2.5.12
