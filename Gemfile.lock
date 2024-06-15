@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: a14eb2dc847515cd6fee2779ca0bb13f106d98e4
+  revision: 23729cec4eb591995f6ac6e88e49fd444e011f3c
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -314,7 +314,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.6.15)
+    zeitwerk (2.6.16)
 
 PLATFORMS
   aarch64-linux
@@ -350,4 +350,4 @@ RUBY VERSION
    ruby 3.3.2p78
 
 BUNDLED WITH
-   2.5.12
+   2.5.13
