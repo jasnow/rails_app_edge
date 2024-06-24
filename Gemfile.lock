@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 5bec50bc70380bb1e70e8fb0a1654130042b1f16
+  revision: de4d8744744acab2dd9db0683ccf784ea45810b2
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -272,7 +272,7 @@ GEM
     sqlite3 (1.7.3-x86-linux)
     sqlite3 (1.7.3-x86_64-darwin)
     sqlite3 (1.7.3-x86_64-linux)
-    standard (1.37.0)
+    standard (1.39.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
       rubocop (~> 1.64.0)
