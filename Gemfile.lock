@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: d2b739c3c89034cd48c5b4eaf60cc4b37a89f887
+  revision: 88924dd9d4e40d7548596d16265346a65552a142
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -95,6 +95,13 @@ GIT
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
 
+GIT
+  remote: https://github.com/ruby/net-pop.git
+  revision: e8d0afe2773b9eb6a23c39e9e437f6fc0fc7c733
+  specs:
+    net-pop (0.1.2)
+      net-protocol
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -159,8 +166,6 @@ GEM
     mutex_m (0.2.0)
     net-imap (0.4.14)
       date
-      net-protocol
-    net-pop (0.1.2)
       net-protocol
     net-protocol (0.2.2)
       timeout
@@ -337,6 +342,7 @@ DEPENDENCIES
   brakeman
   listen
   mutex_m
+  net-pop!
   puma
   rails!
   ruby_audit
@@ -347,7 +353,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.3.2p78
+   ruby 3.3.3p89
 
 BUNDLED WITH
    2.5.14
