@@ -95,13 +95,6 @@ GIT
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
 
-GIT
-  remote: https://github.com/ruby/net-pop.git
-  revision: e8d0afe2773b9eb6a23c39e9e437f6fc0fc7c733
-  specs:
-    net-pop (0.1.2)
-      net-protocol
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -166,6 +159,8 @@ GEM
     mutex_m (0.2.0)
     net-imap (0.4.14)
       date
+      net-protocol
+    net-pop (0.1.2)
       net-protocol
     net-protocol (0.2.2)
       timeout
@@ -244,10 +239,10 @@ GEM
     ruby-progressbar (1.13.0)
     ruby_audit (2.3.1)
       bundler-audit (~> 0.9.0)
-    ruby_parser (3.21.0)
+    ruby_parser (3.21.1)
       racc (~> 1.5)
       sexp_processor (~> 4.16)
-    sexp_processor (4.17.1)
+    sexp_processor (4.17.2)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -342,7 +337,6 @@ DEPENDENCIES
   brakeman
   listen
   mutex_m
-  net-pop!
   puma
   rails!
   ruby_audit
@@ -353,7 +347,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.3.3p89
+   ruby 3.3.4p94
 
 BUNDLED WITH
-   2.5.14
+   2.5.15
