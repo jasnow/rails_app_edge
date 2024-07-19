@@ -328,8 +328,8 @@ PLATFORMS
   x86-linux
   x86-linux-gnu
   x86-linux-musl
+  x86_64-darwin
   x86_64-darwin-16
-  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -350,4 +350,4 @@ RUBY VERSION
    ruby 3.3.4p94
 
 BUNDLED WITH
-   2.5.15
+   2.5.16
