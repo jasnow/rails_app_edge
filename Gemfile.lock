@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: b2754cc3e850268d55f93a6e0697b1f93b1c44d0
+  revision: def0397e595c503099e3c10bd811d5d9e3613b38
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -111,7 +111,7 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
-    docile (1.4.0)
+    docile (1.4.1)
     drb (2.2.1)
     erubi (1.13.0)
     ffi (1.17.0)
