@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 310aa1aeae599c7a0d9814a93f6130ab51488371
+  revision: 4a45f3144c680f86655a24d21a9e014f694cca74
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -71,6 +71,7 @@ GIT
       i18n (>= 1.6, < 2)
       logger (>= 1.4.2)
       minitest (>= 5.1)
+      securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
     rails (8.0.0.alpha)
       actioncable (= 8.0.0.alpha)
@@ -218,7 +219,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.9)
       io-console (~> 0.5)
-    rexml (3.3.2)
+    rexml (3.3.4)
       strscan
     rubocop (1.64.1)
       json (~> 2.3)
@@ -242,6 +243,7 @@ GEM
     ruby_parser (3.21.1)
       racc (~> 1.5)
       sexp_processor (~> 4.16)
+    securerandom (0.3.1)
     sexp_processor (4.17.2)
     simplecov (0.22.0)
       docile (~> 1.1)
