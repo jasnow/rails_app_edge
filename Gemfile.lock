@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 9f80efc79119037fc4421d06e94a0d7e076876a4
+  revision: a27076d350639fbee447c197981a2679c41765f0
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -108,7 +108,7 @@ GEM
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
       thor (~> 1.0)
-    concurrent-ruby (1.3.3)
+    concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
