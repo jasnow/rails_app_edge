@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 41921f9ec267fb036800568b61a6a99a37d3e31b
+  revision: cffb642a0c32949da6454c5fb1f7283846d9ed98
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -27,7 +27,6 @@ GIT
       actionview (= 8.0.0.alpha)
       activesupport (= 8.0.0.alpha)
       nokogiri (>= 1.8.5)
-      racc
       rack (>= 2.2.4)
       rack-session (>= 1.0.1)
       rack-test (>= 0.6.3)
@@ -156,7 +155,7 @@ GEM
     marcel (1.0.4)
     mini_mime (1.1.5)
     mini_portile2 (2.8.7)
-    minitest (5.25.0)
+    minitest (5.25.1)
     mutex_m (0.2.0)
     net-imap (0.4.14)
       date
@@ -183,7 +182,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
-    parallel (1.26.2)
+    parallel (1.26.3)
     parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
@@ -266,14 +265,18 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (1.7.3)
+    sqlite3 (2.0.4)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (1.7.3-aarch64-linux)
-    sqlite3 (1.7.3-arm-linux)
-    sqlite3 (1.7.3-arm64-darwin)
-    sqlite3 (1.7.3-x86-linux)
-    sqlite3 (1.7.3-x86_64-darwin)
-    sqlite3 (1.7.3-x86_64-linux)
+    sqlite3 (2.0.4-aarch64-linux-gnu)
+    sqlite3 (2.0.4-aarch64-linux-musl)
+    sqlite3 (2.0.4-arm-linux-gnu)
+    sqlite3 (2.0.4-arm-linux-musl)
+    sqlite3 (2.0.4-arm64-darwin)
+    sqlite3 (2.0.4-x86-linux-gnu)
+    sqlite3 (2.0.4-x86-linux-musl)
+    sqlite3 (2.0.4-x86_64-darwin)
+    sqlite3 (2.0.4-x86_64-linux-gnu)
+    sqlite3 (2.0.4-x86_64-linux-musl)
     standard (1.40.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -344,7 +347,7 @@ DEPENDENCIES
   ruby_audit
   simplecov
   spektr
-  sqlite3 (~> 1.4)
+  sqlite3
   standard
   tzinfo-data
 
