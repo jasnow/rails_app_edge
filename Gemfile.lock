@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 9c8390032c85df23d973432b67d025df05c838f7
+  revision: 0794abb6bb95f0904cb0a6a605ddb24863aa809e
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -101,10 +101,10 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.8)
-    brakeman (6.1.2)
+    brakeman (6.2.1)
       racc
     builder (3.3.0)
-    bundler-audit (0.9.1)
+    bundler-audit (0.9.2)
       bundler (>= 1.2.0, < 3)
       thor (~> 1.0)
     concurrent-ruby (1.3.4)
