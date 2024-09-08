@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 8b0c8079c6ee8460354f8b3cbe2296d3f3f3b21e
+  revision: e1d58cfd05ae1cc0bfc1006b7ce973a7730831df
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -248,7 +248,7 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
+    simplecov-html (0.13.0)
     simplecov_json_formatter (0.1.4)
     slim (5.2.1)
       temple (~> 0.10.0)
