@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 8c80b02a66fb6f2cf6940027d756bf7d94d6cf53
+  revision: 20aa34e57f97b9e766bcb86e5f009f11d1f3478d
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -130,7 +130,7 @@ GEM
     irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.7.4)
+    json (2.7.5)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
     listen (3.9.0)
@@ -209,7 +209,7 @@ GEM
       rubocop-ast (>= 1.32.2, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.32.3)
+    rubocop-ast (1.33.0)
       parser (>= 3.3.1.0)
     rubocop-performance (1.22.1)
       rubocop (>= 1.48.1, < 2.0)
