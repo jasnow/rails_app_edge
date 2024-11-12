@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 1dd82aba340e8a86799bd97fe5ff2644c6972f9f
+  revision: f511cd3adc055fad53c9b4728c83430431f22998
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -208,7 +208,7 @@ GEM
       rubocop-ast (>= 1.32.2, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.34.1)
+    rubocop-ast (1.35.0)
       parser (>= 3.3.1.0)
     rubocop-performance (1.22.1)
       rubocop (>= 1.48.1, < 2.0)
@@ -220,7 +220,7 @@ GEM
       racc (~> 1.5)
       sexp_processor (~> 4.16)
     securerandom (0.3.2)
-    sexp_processor (4.17.2)
+    sexp_processor (4.17.3)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
