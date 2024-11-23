@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: b7165a33649d9e4132730feb6fbd39d4ed49dc0d
+  revision: 04a63ad9b6575de8434be6dc39d62eb8cca1ee4c
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -171,7 +171,7 @@ GEM
       tty-color (~> 0.5)
     psych (5.2.0)
       stringio
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
