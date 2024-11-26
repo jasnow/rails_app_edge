@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 783108d313e2a4f43609400c638c2e3d2bd48cee
+  revision: d3b2fcb4ffee825f8e9ad8f4bacc859978aebaed
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -242,7 +242,7 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (2.3.0)
+    sqlite3 (2.3.1)
       mini_portile2 (~> 2.8.0)
     standard (1.42.1)
       language_server-protocol (~> 3.17.0.2)
