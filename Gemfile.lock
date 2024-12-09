@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 410ad1c8a18ebf7f544d77d2cb82de2a0e87d23a
+  revision: 7e06191d33ace40063543f8d3732db87fbf247f5
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -160,7 +160,7 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.16.8)
+    nokogiri (1.17.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.26.3)
@@ -243,7 +243,7 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (2.4.0)
+    sqlite3 (2.4.1)
       mini_portile2 (~> 2.8.0)
     standard (1.42.1)
       language_server-protocol (~> 3.17.0.2)
