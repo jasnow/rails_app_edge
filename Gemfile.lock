@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: cfc6c5656f10452f354cd5bd28dd4ae020834a40
+  revision: c67d91b04d16072f902e86bd969946120449b1c5
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -116,7 +116,7 @@ GEM
     date (3.4.1)
     docile (1.4.1)
     drb (2.2.1)
-    erubi (1.13.0)
+    erubi (1.13.1)
     ffi (1.17.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
