@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 424b9b5f7a29165e2b8cf41487294176696f1aab
+  revision: 986d7dfe372430dabd95f71db2e1573b22e2b069
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -139,7 +139,7 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.10.0)
+    json (2.10.1)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
     listen (3.9.0)
