@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: ffc8c47bee784ed635899765cdb8a52ff961b6f2
+  revision: ccf59d6d3a1d106e6ac44342fe2e8f89b61bc992
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -272,16 +272,16 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (2.5.0)
+    sqlite3 (2.6.0)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (2.5.0-aarch64-linux-gnu)
-    sqlite3 (2.5.0-aarch64-linux-musl)
-    sqlite3 (2.5.0-arm-linux-gnu)
-    sqlite3 (2.5.0-arm-linux-musl)
-    sqlite3 (2.5.0-arm64-darwin)
-    sqlite3 (2.5.0-x86_64-darwin)
-    sqlite3 (2.5.0-x86_64-linux-gnu)
-    sqlite3 (2.5.0-x86_64-linux-musl)
+    sqlite3 (2.6.0-aarch64-linux-gnu)
+    sqlite3 (2.6.0-aarch64-linux-musl)
+    sqlite3 (2.6.0-arm-linux-gnu)
+    sqlite3 (2.6.0-arm-linux-musl)
+    sqlite3 (2.6.0-arm64-darwin)
+    sqlite3 (2.6.0-x86_64-darwin)
+    sqlite3 (2.6.0-x86_64-linux-gnu)
+    sqlite3 (2.6.0-x86_64-linux-musl)
     standard (1.45.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -294,7 +294,7 @@ GEM
     standard-performance (1.6.0)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.23.0)
-    stringio (3.1.4)
+    stringio (3.1.5)
     strings (0.2.1)
       strings-ansi (~> 0.2)
       unicode-display_width (>= 1.5, < 3.0)
@@ -355,4 +355,4 @@ RUBY VERSION
    ruby 3.4.2p28
 
 BUNDLED WITH
-   2.6.4
+   2.6.5
