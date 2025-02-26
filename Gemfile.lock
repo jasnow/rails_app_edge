@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: a7ea61fb9dc80efc23ec28b947c9b0d51125fd18
+  revision: a72205eaf8cff4b36838c49b00ae10f9e72dbb95
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -238,7 +238,7 @@ GEM
       rubocop-ast (>= 1.38.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.38.0)
+    rubocop-ast (1.38.1)
       parser (>= 3.3.1.0)
     rubocop-performance (1.23.1)
       rubocop (>= 1.48.1, < 2.0)
@@ -318,7 +318,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
     unicode_utils (1.4.0)
-    uri (1.0.2)
+    uri (1.0.3)
     useragent (0.16.11)
     websocket-driver (0.7.7)
       base64
