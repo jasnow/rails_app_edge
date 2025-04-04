@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 2808a5a0ea22d009253b9db1d6d12a03bbfeffbf
+  revision: 65014e2379546e25407e87e5b3a056e0460361c7
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -104,7 +104,7 @@ GEM
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
-    brakeman (7.0.0)
+    brakeman (7.0.2)
       racc
     builder (3.3.0)
     bundler-audit (0.9.2)
@@ -227,7 +227,7 @@ GEM
     rdoc (6.13.1)
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
-    reline (0.6.0)
+    reline (0.6.1)
       io-console (~> 0.5)
     rubocop (1.73.2)
       json (~> 2.3)
@@ -359,4 +359,4 @@ RUBY VERSION
    ruby 3.4.2p28
 
 BUNDLED WITH
-   2.6.6
+   2.6.7
