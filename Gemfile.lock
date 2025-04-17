@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 73761aae49cbefd4d825a7071f0a2fd215ad9740
+  revision: 76744c572aaedfb363fd37c829ca9106e69699cf
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -111,7 +111,7 @@ GEM
       bundler (>= 1.2.0, < 3)
       thor (~> 1.0)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.0)
+    connection_pool (2.5.1)
     crass (1.0.6)
     date (3.4.1)
     docile (1.4.1)
@@ -356,7 +356,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.4.2p28
+   ruby 3.4.3p32
 
 BUNDLED WITH
    2.6.8
