@@ -106,7 +106,7 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     benchmark (0.4.1)
-    bigdecimal (3.2.0)
+    bigdecimal (3.2.1)
     brakeman (7.0.2)
       racc
     builder (3.3.0)
