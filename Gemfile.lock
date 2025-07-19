@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 3642c825099f7d5e8acfcc788d75eda7438845a2
+  revision: 2a4cf3a29d65e111d277788ab28f19543022bf19
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -108,7 +108,7 @@ GEM
     base64 (0.3.0)
     benchmark (0.4.1)
     bigdecimal (3.2.2)
-    brakeman (7.0.2)
+    brakeman (7.1.0)
       racc
     builder (3.3.0)
     bundler-audit (0.9.2)
@@ -282,16 +282,16 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (2.7.2)
+    sqlite3 (2.7.3)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (2.7.2-aarch64-linux-gnu)
-    sqlite3 (2.7.2-aarch64-linux-musl)
-    sqlite3 (2.7.2-arm-linux-gnu)
-    sqlite3 (2.7.2-arm-linux-musl)
-    sqlite3 (2.7.2-arm64-darwin)
-    sqlite3 (2.7.2-x86_64-darwin)
-    sqlite3 (2.7.2-x86_64-linux-gnu)
-    sqlite3 (2.7.2-x86_64-linux-musl)
+    sqlite3 (2.7.3-aarch64-linux-gnu)
+    sqlite3 (2.7.3-aarch64-linux-musl)
+    sqlite3 (2.7.3-arm-linux-gnu)
+    sqlite3 (2.7.3-arm-linux-musl)
+    sqlite3 (2.7.3-arm64-darwin)
+    sqlite3 (2.7.3-x86_64-darwin)
+    sqlite3 (2.7.3-x86_64-linux-gnu)
+    sqlite3 (2.7.3-x86_64-linux-musl)
     standard (1.50.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -311,7 +311,7 @@ GEM
       unicode_utils (~> 1.4)
     strings-ansi (0.2.0)
     temple (0.10.3)
-    thor (1.3.2)
+    thor (1.4.0)
     tilt (2.6.1)
     timeout (0.4.3)
     tsort (0.2.0)
