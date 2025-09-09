@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 83aec03da6e5dcb0d64ac40c0a51ec3b9f06de29
+  revision: 604e8e057020d3ae522f674e3fdcaf4dea160d31
   branch: main
   specs:
     actioncable (8.1.0.beta1)
@@ -206,7 +206,7 @@ GEM
     psych (5.2.6)
       date
       stringio
-    puma (7.0.1)
+    puma (7.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.1)
@@ -367,4 +367,4 @@ RUBY VERSION
    ruby 3.4.5p51
 
 BUNDLED WITH
-   2.7.1
+   2.7.2
