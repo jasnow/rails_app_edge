@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 4b494a53e1e10f0c523266c38d4f7f22b40fa021
+  revision: 1e468c3efc1d9f04e18b9b71c69cffde757d432a
   branch: main
   specs:
     actioncable (8.1.0.beta1)
@@ -202,7 +202,7 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.4.0)
+    prism (1.5.0)
     psych (5.2.6)
       date
       stringio
@@ -292,7 +292,7 @@ GEM
     sqlite3 (2.7.3-x86_64-darwin)
     sqlite3 (2.7.3-x86_64-linux-gnu)
     sqlite3 (2.7.3-x86_64-linux-musl)
-    standard (1.51.0)
+    standard (1.51.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
       rubocop (~> 1.80.2)
