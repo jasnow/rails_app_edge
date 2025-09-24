@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 095a54d84efe9a32fb3ba68344ec34c14fe99b90
+  revision: 8174a486bc3d2a720aaa4adb95028f5d03857d1e
   branch: main
   specs:
     actioncable (8.1.0.beta1)
@@ -131,7 +131,7 @@ GEM
     ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    globalid (1.2.1)
+    globalid (1.3.0)
       activesupport (>= 6.1)
     haml (6.3.0)
       temple (>= 0.8.2)
@@ -206,7 +206,7 @@ GEM
     psych (5.2.6)
       date
       stringio
-    puma (7.0.3)
+    puma (7.0.4)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.1)
