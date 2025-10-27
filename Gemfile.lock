@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: a445c5bf71264033c1727d1a111c622919129b79
+  revision: dcb29df5b25006dd92f4fc10295f0177a33db93c
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -194,7 +194,7 @@ GEM
     nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     parallel (1.27.0)
-    parser (3.3.9.0)
+    parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
     pastel (0.8.0)
