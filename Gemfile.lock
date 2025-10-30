@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: def13087d55a6dbbfa80d114c847555927ce2ed7
+  revision: 996b40aece0f0c12062b4d07cf3deb808e25db05
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -132,7 +132,7 @@ GEM
     ffi (1.17.2-x86_64-linux-musl)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    haml (7.0.0)
+    haml (7.0.1)
       temple (>= 0.8.2)
       thor
       tilt
