@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 996b40aece0f0c12062b4d07cf3deb808e25db05
+  revision: d7ab0e7cd433c23b4855c72c96e07b5b547d61db
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -173,7 +173,7 @@ GEM
       timeout
     net-smtp (0.5.1)
       net-protocol
-    nio4r (2.7.4)
+    nio4r (2.7.5)
     nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -330,7 +330,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
     unicode_utils (1.4.0)
-    uri (1.0.4)
+    uri (1.1.0)
     useragent (0.16.11)
     websocket-driver (0.8.0)
       base64
