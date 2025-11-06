@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: bc41ad696a76a151db56259938dccf64ef87b501
+  revision: 9f466dd9d4672d7dc6c49a7861d9e30eff69c163
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -283,16 +283,16 @@ GEM
       tty-spinner
       tty-table
       zeitwerk (>= 2.6)
-    sqlite3 (2.7.4)
+    sqlite3 (2.8.0)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (2.7.4-aarch64-linux-gnu)
-    sqlite3 (2.7.4-aarch64-linux-musl)
-    sqlite3 (2.7.4-arm-linux-gnu)
-    sqlite3 (2.7.4-arm-linux-musl)
-    sqlite3 (2.7.4-arm64-darwin)
-    sqlite3 (2.7.4-x86_64-darwin)
-    sqlite3 (2.7.4-x86_64-linux-gnu)
-    sqlite3 (2.7.4-x86_64-linux-musl)
+    sqlite3 (2.8.0-aarch64-linux-gnu)
+    sqlite3 (2.8.0-aarch64-linux-musl)
+    sqlite3 (2.8.0-arm-linux-gnu)
+    sqlite3 (2.8.0-arm-linux-musl)
+    sqlite3 (2.8.0-arm64-darwin)
+    sqlite3 (2.8.0-x86_64-darwin)
+    sqlite3 (2.8.0-x86_64-linux-gnu)
+    sqlite3 (2.8.0-x86_64-linux-musl)
     standard (1.51.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
