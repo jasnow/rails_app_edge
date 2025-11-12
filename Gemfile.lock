@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: a9b4f5f638fbfc908dc4e657915278cc2451810c
+  revision: c7f8c73f9bd49c12d76dab8571fdcf5647bcc6bd
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -305,7 +305,7 @@ GEM
     standard-performance (1.8.0)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.25.0)
-    stringio (3.1.7)
+    stringio (3.1.8)
     strings (0.2.1)
       strings-ansi (~> 0.2)
       unicode-display_width (>= 1.5, < 3.0)
