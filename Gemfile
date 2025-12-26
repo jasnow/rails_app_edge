@@ -33,7 +33,8 @@ gem "puma"
 group :development, :test do
   gem "brakeman"
   gem "standard"
-#NEED-UPGRAD:  gem "ruby_audit"
+  gem "ruby_audit", git: "https://github.com/jasnow/ruby_audit.git",
+    branch: "main"
   gem "spektr"
 end
 
