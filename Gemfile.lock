@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 63cb9037938274358037e6bca13d22c0ccbf9fb8
+  revision: 805429182cbaeff8664c5a311dfb53552b53c93b
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -280,7 +280,7 @@ GEM
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
-    spektr (0.5.3)
+    spektr (0.5.5)
       erubi
       haml
       herb
@@ -483,7 +483,7 @@ CHECKSUMS
   simplecov-html (0.13.2) sha256=bd0b8e54e7c2d7685927e8d6286466359b6f16b18cb0df47b508e8d73c777246
   simplecov_json_formatter (0.1.4) sha256=529418fbe8de1713ac2b2d612aa3daa56d316975d307244399fa4838c601b428
   slim (5.2.1) sha256=72351dff7e2ff20e2d5c393cfc385bb9142cef5db059141628fd7163ac3c13e7
-  spektr (0.5.3) sha256=0790fcc0449e592a7561bdee159754f4d912f78fcd18f8fc8bfec92c678ec5ae
+  spektr (0.5.5) sha256=0c8383e972325d669e3e3c30a2936d05c5bf4c3142b5151ef90ca365cdf42104
   sqlite3 (2.9.0) sha256=ece9c00b32ec5f550d3a4a35c41ea8d738563589f090b9dfd0d510b7ae5f296c
   sqlite3 (2.9.0-aarch64-linux-gnu) sha256=cfe1e0216f46d7483839719bf827129151e6c680317b99d7b8fc1597a3e13473
   sqlite3 (2.9.0-aarch64-linux-musl) sha256=56a35cb2d70779afc2ac191baf2c2148242285ecfed72f9b021218c5c4917913
