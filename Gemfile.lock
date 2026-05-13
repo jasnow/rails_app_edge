@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: c69ec7ad963315b25f35c7156ecc4d0a68590189
+  revision: afa4b7c534fb440dc94f7a0962c90fb725d3e43c
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -357,6 +357,7 @@ DEPENDENCIES
   mutex_m
   puma
   rails!
+  rdoc
   simplecov
   spektr
   sqlite3
@@ -501,7 +502,7 @@ CHECKSUMS
   zeitwerk (2.7.5) sha256=d8da92128c09ea6ec62c949011b00ed4a20242b255293dd66bf41545398f73dd
 
 RUBY VERSION
-  ruby 4.0.3
+  ruby 4.0.4
 
 BUNDLED WITH
   4.0.11

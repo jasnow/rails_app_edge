@@ -6,6 +6,7 @@ ruby File.read(".ruby-version")
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", git: "https://github.com/rails/rails", branch: "main"
 gem "mutex_m"
+gem "rdoc"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3"
