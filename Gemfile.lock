@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 11417bac09d616fdbc1fdbfe8bedf7faf8db5fc3
+  revision: a78f8bcaac1d6f10a515aeccfb6553b895f126c3
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -336,7 +336,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.7.5)
+    zeitwerk (2.8.0)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -499,7 +499,7 @@ CHECKSUMS
   useragent (0.16.11) sha256=700e6413ad4bb954bb63547fa098dddf7b0ebe75b40cc6f93b8d54255b173844
   websocket-driver (0.8.0) sha256=ed0dba4b943c22f17f9a734817e808bc84cdce6a7e22045f5315aa57676d4962
   websocket-extensions (0.1.5) sha256=1c6ba63092cda343eb53fc657110c71c754c56484aad42578495227d717a8241
-  zeitwerk (2.7.5) sha256=d8da92128c09ea6ec62c949011b00ed4a20242b255293dd66bf41545398f73dd
+  zeitwerk (2.8.0) sha256=474d0a1d2429f635af7c4574f5ddbce0d0cfc286067c7515858b93a26b4f3e3d
 
 RUBY VERSION
   ruby 4.0.4
