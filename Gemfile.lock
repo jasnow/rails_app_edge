@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: c3c65d10b0bb4acb300ff3863ddc3d200e93db45
+  revision: 96d5274ea533c86ad959d113ee6be280c06399a0
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -502,7 +502,7 @@ CHECKSUMS
   zeitwerk (2.8.1) sha256=1c85e0f28954d68cd16e575da37f26846f609b68d80b5942ccfd31030c2449d5
 
 RUBY VERSION
-  ruby 4.0.4
+  ruby 4.0.5
 
 BUNDLED WITH
   4.0.12
