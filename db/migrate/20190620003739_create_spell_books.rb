@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # typed: false
 
 class CreateSpellBooks < ActiveRecord::Migration[5.2]

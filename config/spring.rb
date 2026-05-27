@@ -1,4 +1,6 @@
+# frozen_string_literal: true
 # typed: strong
+
 # HID: %w[
 # HID:   .ruby-version
 # HID:   .rbenv-vars

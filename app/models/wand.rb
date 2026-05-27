@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # typed: false
 
 class Wand < ApplicationRecord
@@ -11,6 +12,6 @@ class Wand < ApplicationRecord
   belongs_to :wizard
 
   def wood_type
-    "Type " + super
+    "Type #{super}"
   end
 end

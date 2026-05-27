@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 # typed: false
 
 class Wizard < ApplicationRecord
-  validates :name, length: {minimum: 5}, presence: true
+  validates :name, length: { minimum: 5 }, presence: true
 
   enum house: {
     Gryffindor: 0,
