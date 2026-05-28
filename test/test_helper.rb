@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'simplecov'
-if ENV['COVERAGE']
+if ENV["COVERAGE"]
   SimpleCov.start 'rails' do
-    puts 'Adding simplecov'
+    puts "Adding simplecov"
     enable_coverage :branch
     primary_coverage :branch
   end
