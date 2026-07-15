@@ -8,7 +8,7 @@ ruby File.read('.ruby-version')
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'mutex_m'
 gem 'rails', git: 'https://github.com/rails/rails', branch: 'main'
-gem 'rdoc', "~> 8.0"
+gem 'rdoc'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

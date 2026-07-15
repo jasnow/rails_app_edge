@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: f956777962d286cc5c9aa8a3ae25ee7eaadaf43a
+  revision: bee8deefc726adb80d8ff69d602b2e35c230e1b2
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -268,7 +268,7 @@ GEM
       sexp_processor (~> 4.16)
     securerandom (0.4.1)
     sexp_processor (4.17.5)
-    simplecov (1.0.0)
+    simplecov (1.0.1)
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
@@ -358,7 +358,7 @@ DEPENDENCIES
   mutex_m
   puma
   rails!
-  rdoc (~> 8.0)
+  rdoc
   simplecov
   spektr
   sqlite3
@@ -464,7 +464,7 @@ CHECKSUMS
   ruby_parser (3.22.0) sha256=1eb4937cd9eb220aa2d194e352a24dba90aef00751e24c8dfffdb14000f15d23
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   sexp_processor (4.17.5) sha256=ae2b48ba98353d5d465ce8759836b7a05f2e12c5879fcd14d7815b026de32f0e
-  simplecov (1.0.0) sha256=bdc50b41fa4a8b3c860da4bf5d61ba4704479c51d08a8f53cbd56ae50778dca8
+  simplecov (1.0.1) sha256=419d93c40484159d20b40e26e9a83cdd4c3afa2f3fd443bb8946c301cd658d75
   slim (5.2.1) sha256=72351dff7e2ff20e2d5c393cfc385bb9142cef5db059141628fd7163ac3c13e7
   spektr (0.5.6) sha256=d0daa1f41f2e3e02661fb8c17ad81af553a60ddbff21d7cf579b7f5b99b17657
   sqlite3 (2.9.5) sha256=04572973a3f943ad50a8adfffc8dd752a5f06e4c3db2026f71838fed8a982606
