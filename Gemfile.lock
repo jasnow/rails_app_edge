@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails
-  revision: 8217632cf87ad03a0f36212b7ea3e0ad933224bc
+  revision: ed17c90871d2c65acc201c082c1f6f924d6d55f9
   branch: main
   specs:
     actioncable (8.2.0.alpha)
@@ -19,7 +19,6 @@ GIT
     actionmailer (8.2.0.alpha)
       actionpack (= 8.2.0.alpha)
       actionview (= 8.2.0.alpha)
-      activejob (= 8.2.0.alpha)
       activesupport (= 8.2.0.alpha)
       mail (>= 2.8.0)
       rails-dom-testing (~> 2.2)
@@ -126,6 +125,8 @@ GEM
     ffi (1.17.4-arm-linux-gnu)
     ffi (1.17.4-arm-linux-musl)
     ffi (1.17.4-arm64-darwin)
+    ffi (1.17.4-x86-linux-gnu)
+    ffi (1.17.4-x86-linux-musl)
     ffi (1.17.4-x86_64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
     ffi (1.17.4-x86_64-linux-musl)
@@ -142,6 +143,8 @@ GEM
     herb (0.11.2-arm-linux-gnu)
     herb (0.11.2-arm-linux-musl)
     herb (0.11.2-arm64-darwin)
+    herb (0.11.2-x86-linux-gnu)
+    herb (0.11.2-x86-linux-musl)
     herb (0.11.2-x86_64-darwin)
     herb (0.11.2-x86_64-linux-gnu)
     herb (0.11.2-x86_64-linux-musl)
@@ -310,6 +313,8 @@ GEM
     sqlite3 (2.10.2-arm-linux-gnu)
     sqlite3 (2.10.2-arm-linux-musl)
     sqlite3 (2.10.2-arm64-darwin)
+    sqlite3 (2.10.2-x86-linux-gnu)
+    sqlite3 (2.10.2-x86-linux-musl)
     sqlite3 (2.10.2-x86_64-darwin)
     sqlite3 (2.10.2-x86_64-linux-gnu)
     sqlite3 (2.10.2-x86_64-linux-musl)
@@ -366,6 +371,8 @@ PLATFORMS
   arm64-darwin
   ruby
   universal-darwin
+  x86-linux-gnu
+  x86-linux-musl
   x86_64-darwin
   x86_64-linux
   x86_64-linux-gnu
@@ -416,6 +423,8 @@ CHECKSUMS
   ffi (1.17.4-arm-linux-gnu) sha256=d6dbddf7cb77bf955411af5f187a65b8cd378cb003c15c05697f5feee1cb1564
   ffi (1.17.4-arm-linux-musl) sha256=9d4838ded0465bef6e2426935f6bcc93134b6616785a84ffd2a3d82bc3cf6f95
   ffi (1.17.4-arm64-darwin) sha256=19071aaf1419251b0a46852abf960e77330a3b334d13a4ab51d58b31a937001b
+  ffi (1.17.4-x86-linux-gnu) sha256=38e150df5f4ca555e25beca4090823ae09657bceded154e3c52f8631c1ed72cf
+  ffi (1.17.4-x86-linux-musl) sha256=fbeec0fc7c795bcf86f623bb18d31ea1820f7bd580e1703a3d3740d527437809
   ffi (1.17.4-x86_64-darwin) sha256=aa70390523cf3235096cf64962b709b4cfbd5c082a2cb2ae714eb0fe2ccda496
   ffi (1.17.4-x86_64-linux-gnu) sha256=9d3db14c2eae074b382fa9c083fe95aec6e0a1451da249eab096c34002bc752d
   ffi (1.17.4-x86_64-linux-musl) sha256=3fdf9888483de005f8ef8d1cf2d3b20d86626af206cbf780f6a6a12439a9c49e
@@ -427,6 +436,8 @@ CHECKSUMS
   herb (0.11.2-arm-linux-gnu) sha256=f7f7d1ecf69670a39911b7d159705e55d2f0f9f3e935cf27f29a02e4723a6445
   herb (0.11.2-arm-linux-musl) sha256=677d0e8676f96448c4e0a82da6e772c90f6de43e48ef13987f57518472d69568
   herb (0.11.2-arm64-darwin) sha256=7a5e23818c3f784690384fc111eae50d6993723eb0c172a8a72d0be167281d78
+  herb (0.11.2-x86-linux-gnu) sha256=8ca9621760c7369b291a4656983b1323b7aab1961f58181d96c20acd93d30634
+  herb (0.11.2-x86-linux-musl) sha256=9bc1d44e03f7ae36da91aa4e1870202becbf9469f8cc93e0070be0f8c22b9e8e
   herb (0.11.2-x86_64-darwin) sha256=3c44bbfac81d95e5760fa6e20054c4ac6d2aeaca28dcee5df83dcd43adf84897
   herb (0.11.2-x86_64-linux-gnu) sha256=2627fe909e7e6b0548926573d87a2e12b6d65bc85964832d34abf5ba165bfc37
   herb (0.11.2-x86_64-linux-musl) sha256=aa6e7aa38d44de757d3076e331234f55ed2f392c2bd0203a3aa4ceea0b6bdd3e
@@ -509,6 +520,8 @@ CHECKSUMS
   sqlite3 (2.10.2-arm-linux-gnu) sha256=762f609ef891463226b472d3df66aea84d5466ff4376d3ccf4a059718c4ce9c9
   sqlite3 (2.10.2-arm-linux-musl) sha256=833623eaf1157b1b85d1c0830e3e8f9beb3bb95a9bec3d252f20557a50e9803a
   sqlite3 (2.10.2-arm64-darwin) sha256=5b0d235ea037e6dcd1b8387a19d73be571917db9f93044d35741cf933a21a37d
+  sqlite3 (2.10.2-x86-linux-gnu) sha256=46a02a29e9ae452824082388be5c24fd26f133b14bdd268610c6aa9a8d924c44
+  sqlite3 (2.10.2-x86-linux-musl) sha256=38980cf01eb2e4ac1c0755964d60b3d743ccf00686798a626bab852ff4cd3d1e
   sqlite3 (2.10.2-x86_64-darwin) sha256=fd2c67b49d313031af112e172c83ab321681a2b4996bf882eefac50be7bea08f
   sqlite3 (2.10.2-x86_64-linux-gnu) sha256=ca92731ab464df9cae503fa1a439a549e2724f6953c8c05a7769b59366e38f15
   sqlite3 (2.10.2-x86_64-linux-musl) sha256=b9f8fc62f3e0eb8966b41de251b492b4c8e9d1b23559beb6e150ad7f8d590941
@@ -542,4 +555,4 @@ RUBY VERSION
   ruby 4.0.9
 
 BUNDLED WITH
-  4.0.24
+  4.1.0
